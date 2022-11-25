@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "8776392562",
+    "project_id": "ovpbiotech-27019",
+    "storage_bucket": "ovpbiotech-27019.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:8776392562:android:4eca447109ce76723107eb",
+        "android_client_info": {
+          "package_name": "com.ovpbiotech.OVPBiotech"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "8776392562-69jqpoauf2ue19kmbfu0c06nlkqlmunh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjQHgoHFsPQv4tOAqf0WNvLIrY_bP7VYQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "8776392562-69jqpoauf2ue19kmbfu0c06nlkqlmunh.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "8776392562-hu3brfdcshjlq57jd7njo060i9t9dubc.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.ovpbiotech.OVPBiotech"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
