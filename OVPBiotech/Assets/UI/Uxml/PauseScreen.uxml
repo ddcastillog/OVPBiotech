@@ -1,0 +1,26 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/PauseScreen.uss?fileID=7433441132597879392&amp;guid=5a2eb5b505d44f248bda8b0e86354e06&amp;type=3#PauseScreen" />
+    <ui:VisualElement name="pause-screen-center-anchor" style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; opacity: 1;">
+        <ui:VisualElement name="pause-screen-overlay" class="pause-screen-overlay" />
+        <ui:VisualElement name="pause-screen-panel" class="pause-screen-panel" style="cursor: url(&apos;project://database/Assets/UI/Textures/Cursors/Cursor_A.png?fileID=2800000&amp;guid=0fc53ad8e877049c3aef54a3f8a1e01a&amp;type=3#Cursor_A&apos;); background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-977145710678940932&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#Window_bg_02&apos;);">
+            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" style="position: absolute; top: 0; height: auto; width: 100%; align-items: center; justify-content: center;">
+                <ui:Label text="Juego Pausado" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label" />
+            </ui:VisualElement>
+            <ui:VisualElement name="pause-screen-body" picking-mode="Ignore" style="align-items: center; height: 490px; position: absolute; top: 100px; width: 94%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px;">
+                <ui:VisualElement style="flex-direction: row;">
+                    <ui:VisualElement name="VisualElement" style="flex-direction: row;">
+                        <ui:Label text="Musica" display-tooltip-when-elided="true" style="font-size: 39px; -unity-font-style: bold; -unity-font-definition: url(&apos;project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&amp;guid=4e008579d9e985040974fa631b2f2b80&amp;type=2#ChelaOne-Regular SDF 1&apos;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(0, 0, 0, 0.59); -unity-text-align: middle-left;" />
+                        <ui:Button display-tooltip-when-elided="true" class="settings-music__on" style="background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=5227287869758188567&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#icon_hard_currency&apos;); -unity-background-scale-mode: stretch-to-fill; width: 96px; height: 96px;" />
+                    </ui:VisualElement>
+                    <ui:VisualElement name="VisualElement" style="flex-direction: row;">
+                        <ui:Label text="SFX" display-tooltip-when-elided="true" style="font-size: 39px; -unity-font-definition: url(&apos;project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&amp;guid=4e008579d9e985040974fa631b2f2b80&amp;type=2#ChelaOne-Regular SDF 1&apos;); color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgba(0, 0, 0, 0.59); -unity-font-style: bold; -unity-text-align: middle-left;" />
+                        <ui:Button display-tooltip-when-elided="true" class="settings-sfx__on" style="background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=5227287869758188567&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#icon_hard_currency&apos;); -unity-background-scale-mode: stretch-to-fill; width: 96px; height: 96px;" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:Button text="Reanudar" display-tooltip-when-elided="true" name="pause-screen__resume-button" class="pause-screen-button" style="margin-bottom: 21px; background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-8790900261754014932&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#bt_08&apos;);" />
+                <ui:Button text="Volver al menu" display-tooltip-when-elided="true" name="pause-screen__quit-button" class="pause-screen-button" style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=2806649073008273026&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#bt_12&apos;);" />
+            </ui:VisualElement>
+            <ui:Button display-tooltip-when-elided="true" name="pause-screen__back-button" class="pause-screen__back-button" style="cursor: url(&apos;project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&amp;guid=f3c815d95da3a483385620d7bd8fc545&amp;type=3#Cursor_B&apos;); background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=6694284940762046380&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#icon_close&apos;);" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
