@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using System;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // note: this uses JsonUtility for demo purposes only; for production work, consider a more performant solution like MessagePack (https://msgpack.org/index.html) 
     // or Protocol Buffers (https://developers.google.com/protocol-buffers)

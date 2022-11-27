@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // holds basic level information (label name, level number, scene name for loading, thumbnail graphic for display, etc.)
     [CreateAssetMenu(fileName = "Assets/Resources/GameData/Levels/LevelData", menuName = "UIToolkitDemo/Level", order = 11)]

@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
 
     // links to additional UI Toolkit resources

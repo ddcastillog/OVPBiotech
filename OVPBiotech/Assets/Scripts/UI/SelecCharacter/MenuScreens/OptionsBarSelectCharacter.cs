@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 
 namespace OVPBiotechSpace
 {
-    public class OptionsBar : MenuScreen
+    public class OptionsBarSelectCharacter : MenuScreen
     {
         // string IDs
         const string k_OptionsButton = "options-bar__button"; 

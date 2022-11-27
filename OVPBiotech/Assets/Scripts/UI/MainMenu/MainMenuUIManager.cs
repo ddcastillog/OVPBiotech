@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 using UnityEngine.Serialization;
 using System;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // high-level manager for the various parts of the Main Menu UI. Here we use one master UXML and one UIDocument.
     // We allow the individual parts of the user interface to have separate UIDocuments if needed (but not shown in this example).
@@ -25,8 +25,7 @@ namespace UIToolkitDemo
         [SerializeField] MenuBar m_MenuToolbar;
 
         [Header("Full-screen overlays")]
-        [Tooltip("Full-screen overlays block other controls until dismissed.")]
-        [SerializeField] MenuScreen m_InventoryScreen;
+        [Tooltip("Full-screen overlays block other controls until dismissed.")]        
         [SerializeField] SettingsScreen m_SettingsScreen;
 
         List<MenuScreen> m_AllModalScreens = new List<MenuScreen>();

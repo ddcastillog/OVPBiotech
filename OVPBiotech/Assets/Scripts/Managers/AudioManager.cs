@@ -3,7 +3,7 @@ using UnityEngine.Audio;
 using System.Linq;
 using System;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // super basic component for playing sounds; use static methods to play effects from anywhere
 

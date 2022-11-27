@@ -4,7 +4,7 @@ using UnityEngine;
 using System;
 using UnityEngine.SceneManagement;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     [RequireComponent(typeof(SaveManager))]
     public class GameDataManager : MonoBehaviour

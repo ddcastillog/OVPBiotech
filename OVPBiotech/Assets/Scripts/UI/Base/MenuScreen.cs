@@ -5,7 +5,7 @@ using UnityEngine.UIElements;
 using System;
 
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // This is a base class for a functional unit of the Main Menu (a panel or a full-screen UI).
 

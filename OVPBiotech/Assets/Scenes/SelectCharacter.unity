@@ -790,6 +790,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1754308152}
   - component: {fileID: 1754308153}
+  - component: {fileID: 1754308154}
   m_Layer: 0
   m_Name: MenuSelectCharacter
   m_TagString: Untagged
@@ -829,6 +830,20 @@ MonoBehaviour:
   sourceAsset: {fileID: 9197481963319205126, guid: fa2c1d81ac604ad4da4622db737b46fe,
     type: 3}
   m_SortingOrder: 0
+--- !u!114 &1754308154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1754308151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7516597fd6fc255428c6ccb20dc586a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_OptionsToolbar: {fileID: 0}
+  m_SettingsScreen: {fileID: 0}
 --- !u!1001 &1791824664
 PrefabInstance:
   m_ObjectHideFlags: 0

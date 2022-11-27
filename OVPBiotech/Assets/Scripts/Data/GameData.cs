@@ -3,7 +3,7 @@ using UnityEngine.UIElements;
 using System;
 
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // stores consumable data (resources)
     [System.Serializable]

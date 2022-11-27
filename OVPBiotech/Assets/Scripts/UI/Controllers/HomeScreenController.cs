@@ -3,7 +3,7 @@ using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using System;
 
-namespace UIToolkitDemo
+namespace OVPBiotechSpace
 {
     // non-UI logic for HomeScreen
     public class HomeScreenController : MonoBehaviour
