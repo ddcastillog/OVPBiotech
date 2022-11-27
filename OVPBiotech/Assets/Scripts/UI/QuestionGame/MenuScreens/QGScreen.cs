@@ -55,7 +55,7 @@ namespace OVPBiotechSpace
                 Assert.IsNull(task.Exception);
                 questionsList = task.Result.ConvertTo<List<Question>>();
                 Debug.Log("Hola");
-                Debug.Log(questionsList[0].);
+                Debug.Log(questionsList[0].q_option1);
             });
         }
     }
