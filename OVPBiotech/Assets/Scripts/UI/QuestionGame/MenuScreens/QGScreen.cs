@@ -7,6 +7,7 @@ using Firebase.Firestore;
 using Firebase.Extensions;
 using UnityEngine.Assertions;
 using Unity.VisualScripting;
+using System;
 
 namespace OVPBiotechSpace
 {
@@ -19,15 +20,14 @@ namespace OVPBiotechSpace
         const string k_IsCorrect = "bnt-IsCorrect";
         const string k_IsIncorrect = "btn-IsIncorrect";
         FirebaseFirestore db;
+        Label m_lblQuestion;
         List<Button> m_BtnQuestions = new List<Button>();
-        List<Question> questionsList;
-        void OnEnable()
-        {
-           
-        }
+        List<Question> questionsList = new List<Question>();
+        int indexQuestions = 0;            
         protected override void SetVisualElements()
         {
             base.SetVisualElements();
+            m_lblQuestion = m_Root.Q<Label>(k_lblQuestion);
             for (int i = 1; i < 5; i++)
             {
                 m_BtnQuestions.Add(m_Root.Q<Button>(k_BtnQuestions + i));
@@ -45,18 +45,44 @@ namespace OVPBiotechSpace
         }
         private void IsAnswerCorrect(ClickEvent e, int index)
         {
-            AudioManager.PlayVictorySound();
-            m_BtnQuestions[index].AddToClassList(k_IsCorrect);
+            if (indexQuestions < questionsList.Count)
+            {
+                if (questionsList[indexQuestions].q_option_correct == (index+1))
+                {
+                    AudioManager.PlayVictorySound();
+                    m_BtnQuestions[index].AddToClassList(k_IsCorrect);
+                }
+                else
+                {
+                    AudioManager.PlayDefeatSound();
+                    m_BtnQuestions[index].AddToClassList(k_IsIncorrect);
+                }
+                indexQuestions++;
+                NextQuestions();
+            }            
         }
         void getQuestions()
         {            
             db.Collection(pathquestion).GetSnapshotAsync().ContinueWithOnMainThread(task =>
             {
-                Assert.IsNull(task.Exception);
-                questionsList = task.Result.ConvertTo<List<Question>>();
-                Debug.Log("Hola");
-                Debug.Log(questionsList[0].q_option1);
-            });
+                QuerySnapshot snapshot = task.Result;                 
+                foreach (DocumentSnapshot document in snapshot.Documents)
+                {
+                    questionsList.Add(document.ConvertTo<Question>());                   
+                }
+                NextQuestions();
+            });            
+        }
+        void NextQuestions()
+        {
+            if (indexQuestions < questionsList.Count)
+            {
+                m_lblQuestion.text= questionsList[indexQuestions].q_question;
+                m_BtnQuestions[0].text = questionsList[indexQuestions].q_option1;
+                m_BtnQuestions[1].text = questionsList[indexQuestions].q_option2;
+                m_BtnQuestions[2].text = questionsList[indexQuestions].q_option3;
+                m_BtnQuestions[3].text = questionsList[indexQuestions].q_option4;                
+            }
         }
     }
 }
