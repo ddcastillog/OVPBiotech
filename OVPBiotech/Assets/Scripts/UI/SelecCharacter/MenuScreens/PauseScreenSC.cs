@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using System.Collections;
 using System.Linq;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace OVPBiotechSpace
 {
@@ -13,10 +14,11 @@ namespace OVPBiotechSpace
 
     // This controls general settings for the game. Many of these options are non-functional in this demo but
     // show how to sync data from a UI with the GameDataManager.
-    public class PauseScreen : MenuScreen
+    public class PauseScreenSC : MenuScreenSC
     {
         public static event Action SettingsShown;
-        public static event Action<GameData> SettingsUpdated;      
+        public static event Action<GameData> SettingsUpdated;
+        public static event Action MainMenuExited;
 
         // string IDs
         const string k_PanelBackButton = "settings-screen__back-button";        
@@ -27,11 +29,15 @@ namespace OVPBiotechSpace
 
         const string k_PanelActiveClass = "settings__panel";
         const string k_PanelInactiveClass = "settings__panel--inactive";        
-        const string k_SettingsPanel = "settings__panel";
+        const string k_SettingsPanel = "settings__panel";        
+        const string k_ResumeButton = "pause-screen__resume-button";
+        const string k_QuitButton = "pause-screen__quit-button";
 
-        
+
         Button m_Music;
-        Button m_Sfx; 
+        Button m_Sfx;
+        Button m_ResumeButton;
+        Button m_QuitButton;
         VisualElement m_PanelBackButton;
 
         // root node for transitions
@@ -68,6 +74,8 @@ namespace OVPBiotechSpace
             m_PanelBackButton = m_Root.Q(k_PanelBackButton);
             m_Music = m_Root.Q<Button>(k_music);
             m_Sfx = m_Root.Q<Button>(k_sfx);
+            m_ResumeButton = m_Root.Q<Button>(k_ResumeButton);
+            m_QuitButton = m_Root.Q<Button>(k_QuitButton);
             m_Panel = m_Root.Q(k_SettingsPanel);
         }
 
@@ -75,8 +83,27 @@ namespace OVPBiotechSpace
         {
             m_PanelBackButton?.RegisterCallback<ClickEvent>(ClosePanel);
             m_Music?.RegisterCallback<ClickEvent>(ChangeMusicVolume);
-            m_Sfx?.RegisterCallback<ClickEvent>(ChangeSfxVolume);      
-        }       
+            m_Sfx?.RegisterCallback<ClickEvent>(ChangeSfxVolume);
+            m_ResumeButton?.RegisterCallback<ClickEvent>(changeResumeButtton);
+            m_QuitButton?.RegisterCallback<ClickEvent>(changeQuitButton);
+        } 
+        void changeResumeButtton(ClickEvent e)
+        {
+            m_Panel.RemoveFromClassList(k_PanelActiveClass);
+            m_Panel.AddToClassList(k_PanelInactiveClass);
+
+            AudioManager.PlayDefaultButtonSound();
+
+            SettingsUpdated?.Invoke(m_SettingsData);
+
+            HideScreen();
+            
+        }
+        void changeQuitButton(ClickEvent e)
+        {
+            MainMenuExited?.Invoke();
+            SceneManager.LoadScene(0);
+        }
 
         void ChangeSfxVolume(ClickEvent evt)
         {

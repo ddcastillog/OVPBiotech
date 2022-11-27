@@ -23,7 +23,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=-4355731583856638786&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#bt_08');
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-6374868163866768044&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_10');
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;

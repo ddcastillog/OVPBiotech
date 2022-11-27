@@ -33,15 +33,20 @@ namespace OVPBiotechSpace
         {
             SettingsScreen.SettingsShown += OnSettingsShown;
             SettingsScreen.SettingsUpdated += OnSettingsUpdated;
+            PauseScreenSC.SettingsShown += OnSettingsShown;
+            PauseScreenSC.SettingsUpdated += OnSettingsUpdated;
+            PauseScreenQG.SettingsShown += OnSettingsShown;
+            PauseScreenQG.SettingsUpdated += OnSettingsUpdated;
         }
 
         void OnDisable()
         {
             SettingsScreen.SettingsShown -= OnSettingsShown;
             SettingsScreen.SettingsUpdated -= OnSettingsUpdated;
-
-           
-
+            PauseScreenSC.SettingsShown -= OnSettingsShown;
+            PauseScreenSC.SettingsUpdated -= OnSettingsUpdated;
+            PauseScreenQG.SettingsShown -= OnSettingsShown;
+            PauseScreenQG.SettingsUpdated -= OnSettingsUpdated;
         }
         public GameData NewGame()
         {

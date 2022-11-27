@@ -1,0 +1,7 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/SCScreen.uss?fileID=7433441132597879392&amp;guid=a37c989378b716948864d7c59732b01a&amp;type=3#SCScreen" />
+    <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
+    <ui:VisualElement class="countainer">
+        <ui:Button text="Comenzar" display-tooltip-when-elided="true" name="btn-Start-game" class="btn-play" />
+    </ui:VisualElement>
+</ui:UXML>

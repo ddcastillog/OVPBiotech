@@ -39,13 +39,15 @@ namespace OVPBiotechSpace
         void OnEnable()
         {
             SettingsScreen.SettingsUpdated += OnSettingsUpdated;
-            
+            PauseScreenSC.SettingsUpdated += OnSettingsUpdated;
+            PauseScreenQG.SettingsUpdated += OnSettingsUpdated;
         }
 
         void OnDisable()
         {
             SettingsScreen.SettingsUpdated -= OnSettingsUpdated;
-           
+            PauseScreenSC.SettingsUpdated += OnSettingsUpdated;
+            PauseScreenQG.SettingsUpdated += OnSettingsUpdated;
         }
 
         // plays one-shot audio

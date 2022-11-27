@@ -1,0 +1,21 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/SCScreen.uss?fileID=7433441132597879392&amp;guid=a37c989378b716948864d7c59732b01a&amp;type=3#SCScreen" />
+    <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
+    <ui:VisualElement class="countainer">
+        <ui:VisualElement style="width: 100%; height: 50%;">
+            <ui:VisualElement style="width: 100%; height: 35%; align-items: center;">
+                <ui:Label text="Pregunta" display-tooltip-when-elided="true" name="lbl-question" class="lbl-question" style="height: 100%; width: 97%;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="width: 100%; height: 65%; flex-direction: column; justify-content: space-between;">
+                <ui:VisualElement class="countainer-answer">
+                    <ui:Button text="Respuesta 1" display-tooltip-when-elided="true" name="btn-option1" class="btn-play" />
+                    <ui:Button text="Respuesta 2" display-tooltip-when-elided="true" name="btn-option2" class="btn-play" />
+                </ui:VisualElement>
+                <ui:VisualElement class="countainer-answer">
+                    <ui:Button text="Respuesta 3" display-tooltip-when-elided="true" name="btn-option3" class="btn-play" />
+                    <ui:Button text="Respuesta 4" display-tooltip-when-elided="true" name="btn-option4" class="btn-play" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>
