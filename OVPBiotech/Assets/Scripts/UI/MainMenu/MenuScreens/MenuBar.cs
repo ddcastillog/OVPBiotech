@@ -12,8 +12,7 @@ namespace OVPBiotechSpace
         // menu button (bottom)
         const string k_HomeScreenMenuButton = "menu__home-button";
         const string k_CharScreenMenuButton = "menu__char-button";
-        const string k_InfoScreenMenuButton = "menu__info-button";
-        const string k_ShopScreenMenuButton = "menu__shop-button";
+        const string k_InfoScreenMenuButton = "menu__info-button";       
         const string k_MailScreenMenuButton = "menu__mail-button";
 
         const string k_MenuMarker = "menu__current-marker";
@@ -38,8 +37,7 @@ namespace OVPBiotechSpace
         // UI Buttons
         Button m_HomeScreenMenuButton;
         Button m_CharScreenMenuButton;
-        Button m_InfoScreenMenuButton;
-        Button m_ShopScreenMenuButton;
+        Button m_InfoScreenMenuButton;        
         Button m_MailScreenMenuButton;
 
         VisualElement m_MenuMarker;
@@ -53,8 +51,7 @@ namespace OVPBiotechSpace
 
             m_HomeScreenMenuButton = m_Root.Q<Button>(k_HomeScreenMenuButton);
             m_CharScreenMenuButton = m_Root.Q<Button>(k_CharScreenMenuButton);
-            m_InfoScreenMenuButton = m_Root.Q<Button>(k_InfoScreenMenuButton);
-            m_ShopScreenMenuButton = m_Root.Q<Button>(k_ShopScreenMenuButton);
+            m_InfoScreenMenuButton = m_Root.Q<Button>(k_InfoScreenMenuButton);            
             m_MailScreenMenuButton = m_Root.Q<Button>(k_MailScreenMenuButton);
 
             m_MenuMarker = m_Root.Q(k_MenuMarker);
@@ -69,8 +66,7 @@ namespace OVPBiotechSpace
             // register action when each button is clicked
             m_HomeScreenMenuButton?.RegisterCallback<ClickEvent>(ShowHomeScreen);
             m_CharScreenMenuButton?.RegisterCallback<ClickEvent>(ShowCharScreen);
-            m_InfoScreenMenuButton?.RegisterCallback<ClickEvent>(ShowInfoScreen);
-            m_ShopScreenMenuButton?.RegisterCallback<ClickEvent>(ShowShopScreen);
+            m_InfoScreenMenuButton?.RegisterCallback<ClickEvent>(ShowInfoScreen);            
             m_MailScreenMenuButton?.RegisterCallback<ClickEvent>(ShowMailScreen);
 
             // waits for interface to build (GeometryChangedEvent), otherwise marker can miss target
@@ -103,20 +99,7 @@ namespace OVPBiotechSpace
             ClickMarker(evt);
 
         }
-        public void ShowShopScreen(ClickEvent evt)
-        {
-            
-            ActivateButton(m_ShopScreenMenuButton);
-            ClickMarker(evt);
-
-        }
-        public void ShowShopScreen()
-        {
-            
-            ActivateButton(m_ShopScreenMenuButton);
-            MoveActiveMarker(m_ShopScreenMenuButton);
-
-        }
+        
         void ShowMailScreen(ClickEvent evt)
         {           
             ActivateButton(m_MailScreenMenuButton);

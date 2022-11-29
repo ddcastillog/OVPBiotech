@@ -81,14 +81,8 @@ namespace OVPBiotechSpace
         public void ShowInfoScreen()
         {
             ShowModalScreen(m_InfoModalScreen);
-        }    
-
-        // opens the Shop Screen directly to a specific tab (e.g. to gold or gem shop) from the Options Bar
-        public void ShowShopScreen(string tabName)
-        {
-            m_MenuToolbar?.ShowShopScreen();
-           
-        }
+        }     
+       
         // overlay screen methods
         public void ShowSettingsScreen()
         {

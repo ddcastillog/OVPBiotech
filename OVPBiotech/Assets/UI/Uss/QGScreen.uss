@@ -112,7 +112,7 @@
 .countainer-expert-off {
     width: 500px;
     height: 100%;
-    background-image: url('project://database/Assets/Art%20Gameplay/icon/1184394.png?fileID=21300000&guid=48580ac03b4207f468c7812e1acfd03e&type=3#1184394');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/Character2.png?fileID=21300000&guid=17b585968fa6f824189efef48f87d251&type=3#Character2');
     flex-direction: column-reverse;
     transition-duration: 0.25s;
     display: none;

@@ -195,6 +195,7 @@ namespace OVPBiotechSpace
         {
             if (!used5050)
             {
+                AudioManager.PlayDefaultButtonSound();
                 int[] wrongAnswers = new int[2];
                 do
                 {
@@ -221,6 +222,7 @@ namespace OVPBiotechSpace
         {
             if (!usedAudience)
             {
+                AudioManager.PlayDefaultButtonSound();
                 usedAudience = true;
                 m_audience.style.backgroundImage = new StyleBackground(usedAudienceSprite);
                 int[] results = new int[4];
@@ -334,6 +336,7 @@ namespace OVPBiotechSpace
         {
             if (!usedSwitch)
             {
+                AudioManager.PlayDefaultButtonSound();
                 indexQuestions++;
                 NextQuestions();
                 usedSwitch = true;
@@ -344,6 +347,7 @@ namespace OVPBiotechSpace
         {
             if (!usedExpert)
             {
+                AudioManager.PlayDefaultButtonSound();
                 usedExpert = true;
                 m_expert.style.backgroundImage = new StyleBackground(usedExpertSprite);
                 if (used5050Right)

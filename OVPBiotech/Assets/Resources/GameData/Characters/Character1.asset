@@ -16,4 +16,4 @@ MonoBehaviour:
   description: "Es un bi\xF3logo del desarrollo brit\xE1nico. Sus descubrimientos
     relativos a clonaci\xF3n le valieron el Premio Nobel de Fisiolog\xEDa o Medicina
     en 2012"
-  btnImage: {fileID: 21300000, guid: 48580ac03b4207f468c7812e1acfd03e, type: 3}
+  btnImage: {fileID: 21300000, guid: 02f00eb122b26874e8b7aa6fd61ae299, type: 3}

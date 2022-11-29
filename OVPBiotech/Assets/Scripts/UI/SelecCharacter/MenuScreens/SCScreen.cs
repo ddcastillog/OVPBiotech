@@ -55,6 +55,7 @@ namespace OVPBiotechSpace
         }
         private void btnSC(ClickEvent e, int index)
         {
+            AudioManager.PlayDefaultButtonSound();
             showChracter(index);
         }
         private void showChracter(int index)

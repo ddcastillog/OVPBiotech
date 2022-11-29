@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Level1Data
   m_EditorClassIdentifier: 
   levelNumber: 1
-  levelLabel: The Dragon's Lair
-  thumbnail: {fileID: 21300000, guid: d0a5ab6f8b7cc0c449907191ee339dcd, type: 3}
+  levelLabel: "Quieres ser Biotecn\xF3logo?"
+  thumbnail: {fileID: 21300000, guid: 3977b78e03893dc4a939334c733ea9d8, type: 3}
   sceneName: SelectCharacter

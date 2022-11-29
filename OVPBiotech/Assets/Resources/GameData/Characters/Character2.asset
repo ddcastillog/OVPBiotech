@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Mary-Dell Chilton
   description: "Es una de las fundadoras de la biotecnolog\xEDa moderna en plantas"
-  btnImage: {fileID: 21300000, guid: 48580ac03b4207f468c7812e1acfd03e, type: 3}
+  btnImage: {fileID: 21300000, guid: 17b585968fa6f824189efef48f87d251, type: 3}
