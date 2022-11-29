@@ -342,7 +342,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1604718913182635227, guid: ac794248e9b1e8a4195696f279f2d1cc,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 62b2032b111d8489aadd6b3e1b476a8d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: d96f23af00ec1dc4eb9f6237115b8851, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1201,7 +1201,6 @@ MonoBehaviour:
   m_InfoModalScreen: {fileID: 1039473098}
   m_OptionsToolbar: {fileID: 0}
   m_MenuToolbar: {fileID: 1633792406}
-  m_InventoryScreen: {fileID: 0}
   m_SettingsScreen: {fileID: 1324237450}
 --- !u!114 &2045776439
 MonoBehaviour:

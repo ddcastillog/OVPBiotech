@@ -3,11 +3,11 @@
     margin-right: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
-    width: 500px;
-    height: 90px;
+    width: 90%;
+    height: 25%;
     -unity-font-style: normal;
     -unity-font: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
-    font-size: 39px;
+    font-size: 80px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
     background-color: rgba(243, 156, 18, 0);
@@ -141,8 +141,8 @@
 
 .pause-screen-panel {
     background-color: rgba(41, 128, 185, 0);
-    width: 720px;
-    height: 620px;
+    width: 900px;
+    height: 750px;
     align-items: center;
     justify-content: center;
     opacity: 1;
@@ -203,18 +203,22 @@
     font-size: 39px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgba(243, 156, 18, 0);
+    background-color: rgb(0, 0, 0);
     -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=5227287869758188567&guid=40b81b4b44acdfb4584319d79163acb2&type=3#icon_hard_currency');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/Music.png?fileID=21300000&guid=a42047421aaf60249a19941b7753faed&type=3#Music');
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     transition-duration: 0.25s;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
 }
 
 .settings-music__off {
-    background-image: url('project://database/Assets/UI/Textures/Misc/icon-sword.png?fileID=21300000&guid=be3fd89f9d573492c9d4c61fa1dbc395&type=3#icon-sword');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/Music_Off.png?fileID=21300000&guid=533ca1ada62cd4c47bf3d5237a50db1b&type=3#Music_Off');
 }
 
 .settings-sfx__on {
@@ -229,22 +233,26 @@
     font-size: 39px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgba(243, 156, 18, 0);
+    background-color: rgb(0, 0, 0);
     -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=5227287869758188567&guid=40b81b4b44acdfb4584319d79163acb2&type=3#icon_hard_currency');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/SFX.png?fileID=21300000&guid=9dc7ec46b4d9e7e478fdfc97d3519d67&type=3#SFX');
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     transition-duration: 0.25s;
+    border-top-left-radius: 35px;
+    border-bottom-left-radius: 35px;
+    border-top-right-radius: 35px;
+    border-bottom-right-radius: 35px;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
 }
 
 .settings-sfx__off {
-    background-image: url('project://database/Assets/UI/Textures/Misc/icon-sword.png?fileID=21300000&guid=be3fd89f9d573492c9d4c61fa1dbc395&type=3#icon-sword');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/SFX_Off.png?fileID=21300000&guid=7099c3ec32d00fe46945090d6a189b3f&type=3#SFX_Off');
 }
 
 .settings-music__on:hover {
-    background-color: rgba(241, 196, 15, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
@@ -254,7 +262,6 @@
 }
 
 .settings-sfx__on:hover {
-    background-color: rgba(241, 196, 15, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);

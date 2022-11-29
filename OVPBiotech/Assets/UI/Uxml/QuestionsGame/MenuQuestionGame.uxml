@@ -1,8 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="QGMain" src="project://database/Assets/UI/Uxml/QuestionsGame/QGMain.uxml?fileID=9197481963319205126&amp;guid=d1ef0c04476d5c64cb2ee24ded0891cd&amp;type=3#QGMain" />
     <ui:Template name="OptionsBar" src="project://database/Assets/UI/Uxml/OptionsBar.uxml?fileID=9197481963319205126&amp;guid=1f7c51bb9190976498e000a6f9926f95&amp;type=3#OptionsBar" />
     <ui:Template name="PauseScreen" src="project://database/Assets/UI/Uxml/PauseScreen.uxml?fileID=9197481963319205126&amp;guid=f910f0cedcaa5104daa6f49e54ef48ce&amp;type=3#PauseScreen" />
-    <ui:Template name="QGMain" src="project://database/Assets/UI/Uxml/QuestionsGame/QGMain.uxml?fileID=9197481963319205126&amp;guid=d1ef0c04476d5c64cb2ee24ded0891cd&amp;type=3#QGMain" />
+    <ui:Template name="QGWinScreen" src="project://database/Assets/UI/Uxml/QuestionsGame/QGScoreScreen.uxml?fileID=9197481963319205126&amp;guid=546a7b4fdc564ef4b89efb764cb2b376&amp;type=3#QGScoreScreen" />
     <ui:Instance template="QGMain" name="QGMain" style="width: 100%; height: 100%; position: absolute; left: 0; top: 0;" />
     <ui:Instance template="OptionsBar" name="OptionsBar" style="top: 0; right: 0; position: absolute;" />
     <ui:Instance template="PauseScreen" name="PauseScreen" style="width: 100%; height: 100%; display: none;" />
+    <ui:Instance template="QGWinScreen" name="QGScoreScreen" style="display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%;" />
 </ui:UXML>

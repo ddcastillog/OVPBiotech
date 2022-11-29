@@ -1,0 +1,129 @@
+.lbl-question {
+    width: 100%;
+    height: 100%;
+    color: rgb(255, 255, 255);
+    font-size: 100px;
+    -unity-text-outline-width: 2px;
+    -unity-text-outline-color: rgba(0, 0, 0, 0.78);
+    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-font-style: bold;
+    -unity-text-align: upper-center;
+}
+
+.countainer-answer {
+    width: 100%;
+    height: 48%;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.btn-question {
+    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    font-size: 100px;
+    transition-duration: 0.25s;
+    background-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-7420503179515022226&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_11');
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    flex-grow: 1;
+}
+
+.countainer {
+    width: 100%;
+    height: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    display: flex;
+    transition-duration: 0.25s;
+    translate: 100% 0;
+}
+
+.qg-panel-active {
+    translate: 0 0;
+}
+
+.bnt-IsCorrect {
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-6374868163866768044&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_10');
+    scale: 1.1 1.1;
+}
+
+.btn-IsIncorrect {
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=2806649073008273026&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_12');
+    scale: 1.1 1.1;
+}
+
+.btn-wildcards {
+    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-image-tint-color: rgb(255, 255, 255);
+    width: 128px;
+    height: 96px;
+    transition-duration: 0.25s;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0);
+    color: rgba(210, 210, 210, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+}
+
+.btn-wildcards:hover {
+    scale: 1.1 1.1;
+    -unity-background-image-tint-color: rgb(255, 203, 0);
+}
+
+.btn-wildcards-used {
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/5050_used.png?fileID=21300000&guid=bd5f2653197c0294d8525919af3b9949&type=3#5050_used');
+}
+
+.lbl-percentage {
+    -unity-font-style: bold;
+    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    -unity-text-align: middle-center;
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    background-color: rgba(233, 131, 131, 0);
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-8790900261754014932&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_08');
+    width: 17%;
+    display: none;
+}
+
+.countainer-percentage {
+    width: 48%;
+    flex-direction: row;
+}
+
+.visibility-off {
+    visibility: hidden;
+}
+
+.display-on {
+    display: flex;
+}
+
+.countainer-expert-off {
+    width: 500px;
+    height: 100%;
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/1184394.png?fileID=21300000&guid=48580ac03b4207f468c7812e1acfd03e&type=3#1184394');
+    flex-direction: column-reverse;
+    transition-duration: 0.25s;
+    display: none;
+    translate: 100% 0;
+}
+
+.countainer-expert-on {
+    display: flex;
+    translate: 0 0;
+}
+
+.btn-wildcards-test {
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/5050_used.png?fileID=21300000&guid=bd5f2653197c0294d8525919af3b9949&type=3#5050_used');
+}

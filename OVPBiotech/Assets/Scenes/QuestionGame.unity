@@ -438,6 +438,11 @@ MonoBehaviour:
   m_ScreenName: QGScreen
   m_MainMenuUIManager: {fileID: 1943209221}
   m_Document: {fileID: 1943209219}
+  pathquestion: question
+  used5050Sprite: {fileID: 21300000, guid: bd5f2653197c0294d8525919af3b9949, type: 3}
+  usedAudienceSprite: {fileID: 21300000, guid: 21f605159df6c0049836fe233b12a8f0, type: 3}
+  usedSwitchSprite: {fileID: 21300000, guid: 991b7bbe4a2c20a47865288d2f648681, type: 3}
+  usedExpertSprite: {fileID: 21300000, guid: 98ed12c9a8af865498c60fb1d152670f, type: 3}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -758,7 +763,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 1604718913182635227, guid: ac794248e9b1e8a4195696f279f2d1cc,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 62b2032b111d8489aadd6b3e1b476a8d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: e45f0d642a26cc64a97c2b6adb299ede, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1009,6 +1014,7 @@ Transform:
   - {fileID: 986289887}
   - {fileID: 1319854075}
   - {fileID: 514840758}
+  - {fileID: 2140783713}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1027,6 +1033,7 @@ MonoBehaviour:
   m_QGScreen: {fileID: 514840759}
   m_OptionsToolbar: {fileID: 986289888}
   m_PauseScreen: {fileID: 1319854076}
+  m_QGScoreScreen: {fileID: 2140783712}
 --- !u!1 &1975463277
 GameObject:
   m_ObjectHideFlags: 0
@@ -1056,5 +1063,52 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2140783711
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2140783713}
+  - component: {fileID: 2140783712}
+  m_Layer: 0
+  m_Name: QGScoreScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2140783712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140783711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 132507f5a115ffe41b25709ed08f78c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScreenName: QGScoreScreen
+  m_MainMenuUIManager: {fileID: 1943209221}
+  m_Document: {fileID: 1943209219}
+--- !u!4 &2140783713
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140783711}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1943209220}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

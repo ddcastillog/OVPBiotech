@@ -21,6 +21,7 @@ namespace OVPBiotechSpace
         [Header("Full-screen overlays")]
         [Tooltip("Full-screen overlays block other controls until dismissed.")]        
         [SerializeField] PauseScreenQG m_PauseScreen;
+        [SerializeField] QGScoreScreen m_QGScoreScreen;
         UIDocument m_MainMenuDocument;
         List<MenuScreenQG> m_AllModalScreens = new List<MenuScreenQG>();
         public UIDocument MainMenuDocument => m_MainMenuDocument;
@@ -64,6 +65,11 @@ namespace OVPBiotechSpace
         public void ShowSettingsScreen()
         {
             m_PauseScreen?.ShowScreen();
+        }
+        // overlay screen methods
+        public void ShowQGScoreScreen()
+        {
+            m_QGScoreScreen?.ShowScreen();
         }
     }     
     
