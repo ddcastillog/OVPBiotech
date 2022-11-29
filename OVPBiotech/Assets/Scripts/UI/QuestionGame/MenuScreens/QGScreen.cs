@@ -210,6 +210,8 @@ namespace OVPBiotechSpace
                 used5050Right = true;
                 m_BtnOptions[wrongAnswers[0] - 1].AddToClassList(k_visibilityOff);
                 m_BtnOptions[wrongAnswers[1] - 1].AddToClassList(k_visibilityOff);
+                m_lblOptions[wrongAnswers[0] - 1].RemoveFromClassList(k_displayOn);
+                m_lblOptions[wrongAnswers[1] - 1].RemoveFromClassList(k_displayOn);
                 isAnswerAvailable[wrongAnswers[0] - 1] = false;
                 isAnswerAvailable[wrongAnswers[1] - 1] = false;
                 m_5050.style.backgroundImage = new StyleBackground(used5050Sprite);                
