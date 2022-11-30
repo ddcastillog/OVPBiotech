@@ -17,11 +17,11 @@ namespace OVPBiotechSpace
         Button m_lblBack;
         void OnEnable()
         {
-            QGScreen.updateScore += setScore;
+            QGScreen.UpdateScore += UpdateScore;
         }
         void OnDisable()
         {
-            QGScreen.updateScore -= setScore;
+            QGScreen.UpdateScore -= UpdateScore;
         }
         protected override void SetVisualElements()
         {
@@ -30,7 +30,7 @@ namespace OVPBiotechSpace
             m_lblReplay = m_Root.Q<Button>(k_lblReplay);
             m_lblBack = m_Root.Q<Button>(k_lblBack);
         }
-        void setScore(String score)
+        void UpdateScore(String score)
         {
             m_lblScore.text = score;
         }
@@ -38,9 +38,9 @@ namespace OVPBiotechSpace
         protected override void RegisterButtonCallbacks()
         {
             m_lblReplay?.RegisterCallback<ClickEvent>(Replay);
-            m_lblBack?.RegisterCallback<ClickEvent>(back);
+            m_lblBack?.RegisterCallback<ClickEvent>(Back);
         }
-        void back(ClickEvent e)
+        void Back(ClickEvent e)
         {
             SceneManager.LoadScene(0);
         }

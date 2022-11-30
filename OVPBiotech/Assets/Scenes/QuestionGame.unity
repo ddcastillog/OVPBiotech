@@ -513,10 +513,6 @@ MonoBehaviour:
   m_MainMenuUIManager: {fileID: 1943209221}
   m_Document: {fileID: 1943209219}
   pathquestion: question
-  used5050Sprite: {fileID: 21300000, guid: bd5f2653197c0294d8525919af3b9949, type: 3}
-  usedAudienceSprite: {fileID: 21300000, guid: 21f605159df6c0049836fe233b12a8f0, type: 3}
-  usedSwitchSprite: {fileID: 21300000, guid: 991b7bbe4a2c20a47865288d2f648681, type: 3}
-  usedExpertSprite: {fileID: 21300000, guid: 98ed12c9a8af865498c60fb1d152670f, type: 3}
 --- !u!1 &961739749
 GameObject:
   m_ObjectHideFlags: 0
@@ -682,6 +678,62 @@ MonoBehaviour:
   m_ScreenName: OptionsBarQG
   m_MainMenuUIManager: {fileID: 1943209221}
   m_Document: {fileID: 1943209219}
+--- !u!1 &1001709112
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1001709113}
+  - component: {fileID: 1001709114}
+  m_Layer: 0
+  m_Name: WildcardScreen
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1001709113
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001709112}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1943209220}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1001709114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1001709112}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b4ae0e70db978f64e8592701d2fd2ffa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ScreenName: WildcardScreen
+  m_MainMenuUIManager: {fileID: 1943209221}
+  m_Document: {fileID: 1943209219}
+  normal5050Sprite: {fileID: 21300000, guid: b8528bacbcb1fa34ab10309a63b118f7, type: 3}
+  normalAudienceSprite: {fileID: 21300000, guid: 00f78474f5a29b744b13dfaba6330678,
+    type: 3}
+  normalSwitchSprite: {fileID: 21300000, guid: 5fe0be33724e51b41aa07854418e1f2a, type: 3}
+  normalExpertSprite: {fileID: 21300000, guid: 9767541c83cbc1347bd2c3dc948ddc0b, type: 3}
+  used5050Sprite: {fileID: 21300000, guid: bd5f2653197c0294d8525919af3b9949, type: 3}
+  usedAudienceSprite: {fileID: 21300000, guid: 21f605159df6c0049836fe233b12a8f0, type: 3}
+  usedSwitchSprite: {fileID: 21300000, guid: 991b7bbe4a2c20a47865288d2f648681, type: 3}
+  usedExpertSprite: {fileID: 21300000, guid: 98ed12c9a8af865498c60fb1d152670f, type: 3}
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1141,7 @@ Transform:
   - {fileID: 1319854075}
   - {fileID: 514840758}
   - {fileID: 2140783713}
+  - {fileID: 1001709113}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

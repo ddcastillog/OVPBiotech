@@ -1,9 +1,10 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="WildcardScreen" src="project://database/Assets/UI/Uxml/QuestionsGame/WildcardScreen.uxml?fileID=9197481963319205126&amp;guid=cce88d8fc92ea9242b073528076cbaa4&amp;type=3#WildcardScreen" />
     <Style src="project://database/Assets/UI/Uss/QGScreen.uss?fileID=7433441132597879392&amp;guid=b0b9fd08449c71d48b125a4b99d7d46b&amp;type=3#QGScreen" />
     <ui:VisualElement name="QGPanel" class="countainer">
         <ui:VisualElement style="width: 100%; height: 50%;">
             <ui:VisualElement style="width: 100%; height: 35%; align-items: center;">
-                <ui:Label text="Pregunta" display-tooltip-when-elided="true" name="lbl-question" class="lbl-question" style="height: 100%; width: 95%; white-space: normal; background-color: rgba(0, 0, 0, 0.59);" />
+                <ui:Label text="Pregunta" display-tooltip-when-elided="true" name="lbl-question" class="lbl-question" style="height: 100%; width: 100%; white-space: normal; background-color: rgba(0, 0, 0, 0.59);" />
             </ui:VisualElement>
             <ui:VisualElement style="width: 100%; height: 65%; flex-direction: column; justify-content: space-between;">
                 <ui:VisualElement class="countainer-answer">
@@ -28,16 +29,6 @@
                 </ui:VisualElement>
             </ui:VisualElement>
         </ui:VisualElement>
-        <ui:VisualElement style="width: 100%; height: auto; margin-left: 15px; flex-direction: row; justify-content: space-between;">
-            <ui:VisualElement>
-                <ui:Button display-tooltip-when-elided="true" name="btn-5050" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/5050_normal.png?fileID=21300000&amp;guid=b8528bacbcb1fa34ab10309a63b118f7&amp;type=3#5050_normal&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="btn-audience" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/audience_normal.png?fileID=21300000&amp;guid=00f78474f5a29b744b13dfaba6330678&amp;type=3#audience_normal&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="btn-switch" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/switch_2_normal.png?fileID=21300000&amp;guid=5fe0be33724e51b41aa07854418e1f2a&amp;type=3#switch_2_normal&apos;);" />
-                <ui:Button display-tooltip-when-elided="true" name="btn-expert" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/expert_normal.png?fileID=2800000&amp;guid=9767541c83cbc1347bd2c3dc948ddc0b&amp;type=3#expert_normal&apos;);" />
-            </ui:VisualElement>
-            <ui:VisualElement name="countainer-expertV" class="countainer-expert-off">
-                <ui:Label text="Creo que la respuesta es ...." display-tooltip-when-elided="true" name="lbl-Expert" style="font-size: 70px; -unity-font-definition: url(&apos;project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&amp;guid=4e008579d9e985040974fa631b2f2b80&amp;type=2#ChelaOne-Regular SDF 1&apos;); -unity-font-style: bold; width: 100%; -unity-text-align: upper-center; -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(0, 0, 0); white-space: normal; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.47);" />
-            </ui:VisualElement>
-        </ui:VisualElement>
+        <ui:Instance template="WildcardScreen" name="WildcardScreen" style="width: 100%;" />
     </ui:VisualElement>
 </ui:UXML>
