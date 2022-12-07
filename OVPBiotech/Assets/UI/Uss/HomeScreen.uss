@@ -5,6 +5,7 @@
     -unity-text-align: middle-center;
     align-items: center;
     justify-content: center;
+    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
 }
 
 .play-level__banner {
@@ -23,7 +24,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     color: rgb(236, 240, 241);
-    font-size: 250%;
+    font-size: 100px;
     -unity-font-style: bold;
     left: 0;
     right: 0;
@@ -34,6 +35,8 @@
     top: 68%;
     position: absolute;
     height: 15%;
+    white-space: nowrap;
+    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
 }
 
 .play-level__button {
@@ -96,7 +99,7 @@
     display: flex;
     position: absolute;
     background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=388201365816350442&guid=40b81b4b44acdfb4584319d79163acb2&type=3#frame_01');
-    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
+    -unity-background-image-tint-color: rgb(255, 255, 255);
     border-left-width: 0;
     border-right-width: 0;
     border-top-width: 0;
