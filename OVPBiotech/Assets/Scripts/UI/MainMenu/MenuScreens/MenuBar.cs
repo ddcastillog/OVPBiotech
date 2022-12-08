@@ -95,7 +95,7 @@ namespace OVPBiotechSpace
         void ShowInfoScreen(ClickEvent evt)
         {
             ActivateButton(m_InfoScreenMenuButton);
-            m_MainMenuUIManager?.ShowInfoScreen();
+            //m_MainMenuUIManager?.ShowInfoScreen();
             ClickMarker(evt);
 
         }

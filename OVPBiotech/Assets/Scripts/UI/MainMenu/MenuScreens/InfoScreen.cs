@@ -9,11 +9,11 @@ namespace OVPBiotechSpace
     public class InfoScreen : MenuScreen
     {
         [Header("URLs")]
-        [SerializeField] string m_GetInfoURL = "https://unity.com/features/ui-toolkit";
-        [SerializeField] string m_DocsURL = "https://docs.unity3d.com/Packages/com.unity.ui@latest";
-        [SerializeField] string m_ForumURL = "https://forum.unity.com/forums/ui-toolkit.178/";
-        [SerializeField] string m_BlogURL = "https://blog.unity.com/topic/user-interface";
-        [SerializeField] string m_AssetStoreURL = "https://assetstore.unity.com/2d/gui";
+        [SerializeField] string m_GetInfoURL = "https://biotecnologia.utn.edu.ec/";
+        [SerializeField] string m_DocsURL = "https://biotecnologia.utn.edu.ec/";
+        [SerializeField] string m_ForumURL = "https://biotecnologia.utn.edu.ec/";
+        [SerializeField] string m_BlogURL = "https://biotecnologia.utn.edu.ec/";
+        [SerializeField] string m_AssetStoreURL = "https://biotecnologia.utn.edu.ec/";
 
         const string k_GetInfoButton = "info-signup__button";
         const string k_DocsButton = "info-content__docs-button";

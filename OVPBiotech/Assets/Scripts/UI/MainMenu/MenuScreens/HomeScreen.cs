@@ -62,7 +62,7 @@ namespace OVPBiotechSpace
         // shows the level information
         public void ShowLevelInfo(int levelNumber, string levelName, Sprite thumbnail)
         {
-            m_LevelNumber.text = "Level " + levelNumber;
+            m_LevelNumber.text = "Nivel " + levelNumber;
             m_LevelLabel.text = levelName;
             m_LevelThumbnail.style.backgroundImage = new StyleBackground(thumbnail);
         }

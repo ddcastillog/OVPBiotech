@@ -220,7 +220,7 @@
 }
 
 .settings-music__off {
-    background-image: none;
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/Music_Off.png?fileID=21300000&guid=533ca1ada62cd4c47bf3d5237a50db1b&type=3#Music_Off');
 }
 
 .settings-sfx__on {

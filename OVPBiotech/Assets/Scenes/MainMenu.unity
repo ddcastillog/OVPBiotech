@@ -756,11 +756,11 @@ MonoBehaviour:
   m_ScreenName: InfoScreen
   m_MainMenuUIManager: {fileID: 2045776438}
   m_Document: {fileID: 2045776439}
-  m_GetInfoURL: https://unity.com/features/ui-toolkit
-  m_DocsURL: https://docs.unity3d.com/Packages/com.unity.ui@latest
-  m_ForumURL: https://forum.unity.com/forums/ui-toolkit.178/
-  m_BlogURL: https://blog.unity.com/topic/user-interface
-  m_AssetStoreURL: https://assetstore.unity.com/2d/gui
+  m_GetInfoURL: https://biotecnologia.utn.edu.ec
+  m_DocsURL: https://biotecnologia.utn.edu.ec
+  m_ForumURL: https://biotecnologia.utn.edu.ec
+  m_BlogURL: https://biotecnologia.utn.edu.ec
+  m_AssetStoreURL: https://biotecnologia.utn.edu.ec
 --- !u!1 &1160234425
 GameObject:
   m_ObjectHideFlags: 0
