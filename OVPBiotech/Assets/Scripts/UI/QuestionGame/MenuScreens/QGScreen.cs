@@ -15,6 +15,8 @@ namespace OVPBiotechSpace
     {
         [SerializeField]
         private string pathquestion = "question";
+        [SerializeField]
+        private List<GameObject> character;
 
         #region  UI-Style
         const string k_BtnOptions = "btn-option";
@@ -34,11 +36,11 @@ namespace OVPBiotechSpace
         VisualElement m_QGPanel;
         List<Button> m_BtnOptions = new List<Button>();
         List<Label> m_lblOptions = new List<Label>();
-        List<Question> questionsList = new List<Question>();
+        List<Question> questionsList;
         int indexQuestions = 0;
         bool isClick = true;
         private int correctAnswerOptions = 0;
-        private int AnswerQuestions = 0;
+        private int AnswerQuestions = 0;        
         //Action
         public static event Action<String> UpdateScore;
         public static event Action<int> UpdateQuestions;
@@ -51,15 +53,20 @@ namespace OVPBiotechSpace
             WildcardScreen.Update5050 += update5050;
             WildcardScreen.UpdateAudience += updateAudience;
             WildcardScreen.UpdateSwitch += updateSwitch;
+            SaveManager.GameDataLoaded += OnGameDataLoaded;
         }
 
         void OnDisable()
         {
             QGScoreScreen.ReplayGame -= ReplayGame;
+            WildcardScreen.Update5050 -= update5050;
+            WildcardScreen.UpdateAudience -= updateAudience;
+            WildcardScreen.UpdateSwitch -= updateSwitch;
+            SaveManager.GameDataLoaded -= OnGameDataLoaded;
         }
         protected override void SetVisualElements()
         {
-            base.SetVisualElements();
+            base.SetVisualElements();                            
             m_lblQuestion = m_Root.Q<Label>(k_lblQuestion);
             m_QGPanel = m_Root.Q<VisualElement>(k_QGPanel);
             for (int i = 1; i < 5; i++)
@@ -77,6 +84,20 @@ namespace OVPBiotechSpace
             {
                 m_BtnOptions[i]?.RegisterCallback<ClickEvent, int>(IsAnswerCorrect, i);
             }
+        }
+        void getQuestions()
+        {
+            questionsList = new List<Question>();
+            db.Collection(pathquestion).GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            {
+                QuerySnapshot snapshot = task.Result;
+                foreach (DocumentSnapshot document in snapshot.Documents)
+                {
+                    questionsList.Add(document.ConvertTo<Question>());
+                }
+                NextQuestions();
+                m_QGPanel.AddToClassList(k_QGPanelActive);
+            });
         }
         private void IsAnswerCorrect(ClickEvent e, int index)
         {
@@ -128,27 +149,14 @@ namespace OVPBiotechSpace
             NextQuestions();
             m_QGPanel.AddToClassList(k_QGPanelActive);
         }
-        void getQuestions()
-        {
-            db.Collection(pathquestion).GetSnapshotAsync().ContinueWithOnMainThread(task =>
-            {
-                QuerySnapshot snapshot = task.Result;
-                foreach (DocumentSnapshot document in snapshot.Documents)
-                {
-                    questionsList.Add(document.ConvertTo<Question>());
-                }
-                NextQuestions();
-                m_QGPanel.AddToClassList(k_QGPanelActive);
-            });
-        }
         void NextQuestions()
         {
             for (int i = 0; i < 4; i++)
             {
-                m_BtnOptions[i].RemoveFromClassList(k_visibilityOff);               
+                m_BtnOptions[i].RemoveFromClassList(k_visibilityOff);
                 m_lblOptions[i].RemoveFromClassList(k_displayOn);
             }
-            
+
             if (indexQuestions < questionsList.Count)
             {
                 UpdateQuestions.Invoke(questionsList[indexQuestions].q_option_correct);
@@ -160,7 +168,7 @@ namespace OVPBiotechSpace
             }
             else
             {
-                m_QGPanel.RemoveFromClassList(k_QGPanelActive);                
+                m_QGPanel.RemoveFromClassList(k_QGPanelActive);
                 UpdateScore.Invoke(correctAnswerOptions + "/" + AnswerQuestions);
                 m_MainMenuUIManager?.ShowQGScoreScreen();
             }
@@ -174,10 +182,10 @@ namespace OVPBiotechSpace
             m_lblOptions[wrongAnswers[1] - 1].RemoveFromClassList(k_displayOn);
         }
         void updateAudience(int[] results, bool used5050)
-        {            
+        {
             for (int i = 0; i < 4; i++)
             {
-                if (results[i] != 0 ||!used5050)
+                if (results[i] != 0 || !used5050)
                 {
                     m_lblOptions[i].AddToClassList(k_displayOn);
                     m_lblOptions[i].text = results[i] + "%";
@@ -190,5 +198,15 @@ namespace OVPBiotechSpace
             NextQuestions();
         }
         #endregion
+        // syncs saved data from the GameDataManager to the UI elements
+        void OnGameDataLoaded(GameData gameData)
+        {
+            if (gameData == null)
+                return;
+            if (gameData.selectCharacter < character.Count)
+            {
+                character[gameData.selectCharacter].SetActive(true);
+            }
+        }
     }
 }

@@ -3,7 +3,21 @@ guid: b4ae0e70db978f64e8592701d2fd2ffa
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - m_MainMenuUIManager: {instanceID: 0}
+  - m_Document: {instanceID: 0}
+  - normal5050Sprite: {fileID: 21300000, guid: b8528bacbcb1fa34ab10309a63b118f7, type: 3}
+  - normalAudienceSprite: {fileID: 21300000, guid: 00f78474f5a29b744b13dfaba6330678,
+      type: 3}
+  - normalSwitchSprite: {fileID: 21300000, guid: 5fe0be33724e51b41aa07854418e1f2a,
+      type: 3}
+  - normalExpertSprite: {fileID: 21300000, guid: 9767541c83cbc1347bd2c3dc948ddc0b,
+      type: 3}
+  - used5050Sprite: {fileID: 21300000, guid: bd5f2653197c0294d8525919af3b9949, type: 3}
+  - usedAudienceSprite: {fileID: 21300000, guid: 21f605159df6c0049836fe233b12a8f0,
+      type: 3}
+  - usedSwitchSprite: {fileID: 21300000, guid: 991b7bbe4a2c20a47865288d2f648681, type: 3}
+  - usedExpertSprite: {fileID: 21300000, guid: 98ed12c9a8af865498c60fb1d152670f, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

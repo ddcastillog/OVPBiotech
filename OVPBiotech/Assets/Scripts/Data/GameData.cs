@@ -10,17 +10,20 @@ namespace OVPBiotechSpace
     public class GameData
     {   
 
-        public string username;   
+        public string username;
+        public int selectCharacter;
 
         public bool musicVolume;
-        public bool sfxVolume;    
+        public bool sfxVolume;
+       
 
         // constructor, starting values
         public GameData()
         {   // settings
             this.musicVolume = true;
             this.sfxVolume = true;
-            this.username = "GUEST_123456";           
+            this.username = "GUEST_123456";
+            this.selectCharacter = 0;
         }
 
         public string ToJson()
