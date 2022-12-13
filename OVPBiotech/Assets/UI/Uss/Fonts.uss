@@ -1,0 +1,3 @@
+.font-normal {
+    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
+}

@@ -31,5 +31,7 @@ namespace OVPBiotechSpace
         public string q_explanation { get; set; }
         [FirestoreProperty]
         public bool published { get; set; }
+        [FirestoreProperty]
+        public string auth { get; set; }        
     }
 }

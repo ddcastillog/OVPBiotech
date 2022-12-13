@@ -98,7 +98,7 @@
     -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
     -unity-font-style: normal;
     font-size: 55px;
-    -unity-text-align: upper-center;
+    -unity-text-align: middle-center;
 }
 
 .info-bottom-button-label {

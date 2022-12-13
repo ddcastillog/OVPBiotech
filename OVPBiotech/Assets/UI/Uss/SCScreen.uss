@@ -11,7 +11,6 @@
 }
 
 .btn-play {
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
     font-size: 100px;
     transition-duration: 0.25s;
     background-color: rgba(0, 0, 0, 0);
@@ -19,6 +18,7 @@
     -unity-background-image-tint-color: rgb(255, 255, 255);
     width: 48%;
     color: rgb(255, 255, 255);
+    -unity-font-definition: none;
 }
 
 .countainer-SC {

@@ -5,9 +5,7 @@
     font-size: 550%;
     -unity-text-outline-width: 1px;
     -unity-text-outline-color: rgba(0, 0, 0, 0.78);
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
     -unity-text-align: middle-center;
-    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
     white-space: normal;
 }
 
@@ -16,24 +14,6 @@
     height: 48%;
     flex-direction: row;
     justify-content: space-around;
-}
-
-.btn-question {
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
-    font-size: 350%;
-    transition-duration: 0.25s;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-7420503179515022226&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_11');
-    -unity-background-image-tint-color: rgb(255, 255, 255);
-    color: rgb(255, 255, 255);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
-    white-space: normal;
-    flex-grow: 1;
-    flex-basis: 83%;
 }
 
 .countainer {
@@ -50,16 +30,6 @@
     translate: 0 0;
 }
 
-.bnt-IsCorrect {
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-6374868163866768044&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_10');
-    scale: 1.1 1.1;
-}
-
-.btn-IsIncorrect {
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=2806649073008273026&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_12');
-    scale: 1.1 1.1;
-}
-
 .btn-wildcards {
     -unity-background-scale-mode: scale-to-fit;
     -unity-background-image-tint-color: rgb(255, 255, 255);
@@ -68,7 +38,6 @@
     transition-duration: 0.25s;
     margin-bottom: 10px;
     background-color: rgba(255, 255, 255, 0);
-    color: rgba(210, 210, 210, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
@@ -98,7 +67,6 @@
     background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-8790900261754014932&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_08');
     width: 17%;
     display: none;
-    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
     white-space: normal;
 }
 
@@ -132,4 +100,30 @@
 
 .btn-wildcards-test {
     background-image: url('project://database/Assets/Art%20Gameplay/icon/5050_used.png?fileID=21300000&guid=bd5f2653197c0294d8525919af3b9949&type=3#5050_used');
+}
+
+.btn-question {
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-7420503179515022226&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_11');
+    font-size: 350%;
+    -unity-font-style: bold;
+    flex-grow: 1;
+    flex-basis: 80px;
+    white-space: normal;
+    color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0);
+    border-left-color: rgba(0, 0, 0, 0);
+    border-right-color: rgba(0, 0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0);
+    border-bottom-color: rgba(0, 0, 0, 0);
+    transition-duration: 0.25s;
+}
+
+.bnt-IsCorrect {
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-6374868163866768044&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_10');
+    scale: 1.1 1.1;
+}
+
+.btn-IsIncorrect {
+    scale: 1.1 1.1;
+    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=2806649073008273026&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_12');
 }

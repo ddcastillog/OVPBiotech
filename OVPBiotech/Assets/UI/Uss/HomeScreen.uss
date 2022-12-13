@@ -50,6 +50,7 @@
     color: rgb(255, 255, 255);
     cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B') 10 11;
     transition-duration: 0.25s;
+    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
 }
 
 .play-level__button:hover {

@@ -6,7 +6,6 @@
     width: 90%;
     height: 25%;
     -unity-font-style: normal;
-    -unity-font: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
     font-size: 70px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
@@ -57,8 +56,6 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     transition-duration: 0.25s;
-    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
-    -unity-font-definition: none;
 }
 
 .pause-screen__back-button:hover {
@@ -121,7 +118,6 @@
     font-size: 47px;
     -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
     -unity-text-outline-color: rgb(255, 255, 255);
-    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
 }
 
 .pause-screen-overlay {
