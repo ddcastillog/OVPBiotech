@@ -22,8 +22,7 @@
     border-top-width: 0;
     border-bottom-width: 0;
     -unity-text-align: upper-center;
-    -unity-font-style: normal;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-font-style: normal;    
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
     -unity-text-outline-color: rgb(255, 255, 255);
     color: rgb(255, 255, 255);
@@ -72,8 +71,7 @@
     -unity-font-style: normal;
     font-size: 39px;
     color: rgb(141, 91, 38);
-    -unity-text-align: middle-center;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-text-align: middle-center;    
     background-color: rgba(0, 0, 0, 0);
     -unity-text-outline-width: 0;
 }
@@ -104,8 +102,7 @@
     -unity-font-style: normal;
     font-size: 61px;
     color: rgb(255, 255, 255);
-    -unity-text-align: middle-center;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-text-align: middle-center;    
     text-shadow: 3px 3px 1px rgba(0, 0, 0, 0.5);
     background-color: rgba(0, 0, 0, 0);
     -unity-text-outline-width: 0;
@@ -136,13 +133,11 @@
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    border-bottom-color: rgba(0, 0, 0, 0);   
 }
 
 .unity-base-popup-field__text {
-    background-color: rgba(0, 0, 0, 0);
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    background-color: rgba(0, 0, 0, 0);   
     -unity-font-style: normal;
     -unity-text-align: upper-left;
     left: 9px;
@@ -169,8 +164,7 @@
     margin-left: 0;
     margin-right: 0;
     margin-top: 0;
-    margin-bottom: 0;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    margin-bottom: 0;   
     color: rgb(142, 91, 38);
     cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
 }

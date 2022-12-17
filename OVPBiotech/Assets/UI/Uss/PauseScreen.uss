@@ -5,7 +5,7 @@
     margin-bottom: 10px;
     width: 90%;
     height: 25%;
-    -unity-font-style: normal;
+    -unity-font-style: bold;
     font-size: 70px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
@@ -29,13 +29,13 @@
 }
 
 .pause-screen-button:active {
-    background-color: rgba(255, 255, 255, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     scale: 1.1 1.1;
     transition-duration: 0.2s;
+    background-image: url('project://database/Assets/Art%20Gameplay/PNG/yellow_button01.png?fileID=21300000&guid=3468235354f84f74dbbe4eedfd44a209&type=3#yellow_button01');
 }
 
 .pause-screen__back-button {
@@ -69,11 +69,11 @@
 }
 
 .pause-screen__back-button:active {
-    background-color: rgba(255, 255, 255, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/Art%20Gameplay/PNG/red_button00.png?fileID=21300000&guid=374b283bb8d283f49818db5a78750024&type=3#red_button00');
 }
 
 .unity-base-slider__tracker {
@@ -96,8 +96,7 @@
     font-size: 40px;
     -unity-text-align: upper-left;
     color: rgb(141, 91, 38);
-    -unity-text-outline-color: rgba(0, 0, 0, 0);
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-text-outline-color: rgba(0, 0, 0, 0);    
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
@@ -115,8 +114,7 @@
     height: 100px;
     -unity-text-align: middle-center;
     color: rgb(253, 240, 219);
-    font-size: 47px;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    font-size: 47px;   
     -unity-text-outline-color: rgb(255, 255, 255);
 }
 
@@ -196,14 +194,12 @@
     margin-bottom: 10px;
     width: 500px;
     height: 90px;
-    -unity-font-style: normal;
-    -unity-font: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-font-style: normal;    
     font-size: 39px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgb(0, 0, 0);
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
-    background-image: url('project://database/Assets/Art%20Gameplay/icon/Music.png?fileID=21300000&guid=a42047421aaf60249a19941b7753faed&type=3#Music');
+    background-color: rgb(0, 0, 0);    
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/musicOn.png?fileID=21300000&guid=19998deea48ab3e4c9259a29407173ad&type=3#musicOn');
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
@@ -216,7 +212,7 @@
 }
 
 .settings-music__off {
-    background-image: url('project://database/Assets/Art%20Gameplay/icon/Music_Off.png?fileID=21300000&guid=533ca1ada62cd4c47bf3d5237a50db1b&type=3#Music_Off');
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/musicOff.png?fileID=21300000&guid=ae6a4277a766c8a4389f739de5319873&type=3#musicOff');
 }
 
 .settings-sfx__on {
@@ -226,14 +222,12 @@
     margin-bottom: 10px;
     width: 500px;
     height: 90px;
-    -unity-font-style: normal;
-    -unity-font: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-font-style: normal;    
     font-size: 39px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgb(0, 0, 0);
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
-    background-image: url('project://database/Assets/Art%20Gameplay/icon/SFX.png?fileID=21300000&guid=9dc7ec46b4d9e7e478fdfc97d3519d67&type=3#SFX');
+    background-color: rgb(0, 0, 0);    
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/audioOn.png?fileID=21300000&guid=b217f4b0910e54b4f90e8b43c8f4e8b4&type=3#audioOn');
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
@@ -247,7 +241,7 @@
 }
 
 .settings-sfx__off {
-    background-image: url('project://database/Assets/Art%20Gameplay/icon/SFX_Off.png?fileID=21300000&guid=7099c3ec32d00fe46945090d6a189b3f&type=3#SFX_Off');
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/audioOff.png?fileID=21300000&guid=6a66fcd106efe0c48a618e55cc3fe61c&type=3#audioOff');
 }
 
 .settings-music__on:hover {

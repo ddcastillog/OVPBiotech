@@ -107,8 +107,7 @@
     flex-basis: 54%;
     bottom: 15px;
     right: 27%;
-    -unity-text-align: middle-right;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-text-align: middle-right;    
     width: 86px;
     top: -6px;
     color: rgb(253, 240, 219);

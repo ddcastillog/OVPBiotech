@@ -54,8 +54,7 @@
 }
 
 .lbl-percentage {
-    -unity-font-style: bold;
-    -unity-font-definition: url('project://database/Assets/UI/Fonts/ChelaOne-Regular%20SDF%201.asset?fileID=11400000&guid=4e008579d9e985040974fa631b2f2b80&type=2#ChelaOne-Regular SDF 1');
+    -unity-font-style: bold;    
     font-size: 55px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
@@ -103,27 +102,28 @@
 }
 
 .btn-question {
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-7420503179515022226&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_11');
+    background-image: url('project://database/Assets/Art%20Gameplay/PNG/blue_button13.png?fileID=21300000&guid=774d4892e90c36247aa447a4a0f5eba3&type=3#blue_button13');
     font-size: 350%;
     -unity-font-style: bold;
     flex-grow: 1;
     flex-basis: 80px;
     white-space: normal;
-    color: rgb(255, 255, 255);
-    background-color: rgba(255, 255, 255, 0);
+    color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     transition-duration: 0.25s;
+    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
 }
 
 .bnt-IsCorrect {
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-6374868163866768044&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_10');
-    scale: 1.1 1.1;
+    scale: 1.05 1.05;
+    -unity-background-image-tint-color: rgba(53, 255, 0, 255);
 }
 
 .btn-IsIncorrect {
-    scale: 1.1 1.1;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=2806649073008273026&guid=40b81b4b44acdfb4584319d79163acb2&type=3#bt_12');
+    scale: 1.05 1.05;
+    -unity-background-image-tint-color: rgba(255, 0, 0, 255);
 }
