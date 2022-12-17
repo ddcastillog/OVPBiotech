@@ -38,30 +38,25 @@
 }
 
 .play-level__button {
-    position: absolute;
-    width: 258px;
-    height: 66px;
-    bottom: 17px;
+    width: 450px;
+    height: 200px;
     -unity-font-style: bold;
-    font-size: 35px;
+    font-size: 120px;
     color: rgb(255, 255, 255);
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B') 10 11;
     transition-duration: 0.25s;
     background-color: rgba(0, 0, 0, 0);
     background-image: url('project://database/Assets/Art%20Gameplay/PNG/yellow_button02.png?fileID=21300000&guid=fb7d46e54a7b2374f9e2edea9f2649ab&type=3#yellow_button02');
     -unity-background-image-tint-color: rgb(255, 202, 58);
+    position: absolute;
+    bottom: 70px;
 }
 
 .play-level__button:hover {
     position: absolute;
-    width: 258px;
-    height: 66px;
-    bottom: 17px;
+    bottom: 50px;
     -unity-font-style: bold;
-    font-size: 35px;
     background-color: rgba(243, 156, 18, 0);
     color: rgb(255, 255, 255);
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B') 10 11;
     transition-duration: 0.25s;
     scale: 1.1 1.1;
     -unity-background-image-tint-color: rgb(243, 156, 18);
@@ -70,7 +65,6 @@
 .play-level__button:active {
     background-color: rgba(255, 255, 255, 0);
     -unity-background-image-tint-color: rgb(0, 110, 255);
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B') 24 17;
 }
 
 .play-level__panel {
@@ -124,51 +118,4 @@
     left: 0;
     position: relative;
     top: -57%;
-}
-
-.chat__panel-icon {
-    width: 87px;
-    height: 68px;
-    left: 4%;
-    top: 23%;
-}
-
-.chat__panel-text {
-    flex-basis: 70%;
-    flex-grow: 3;
-    background-color: rgba(149, 165, 166, 0.25);
-    padding-left: 0;
-    padding-right: 0;
-    padding-top: 0;
-    padding-bottom: 0;
-    margin-left: 2%;
-    margin-right: 2%;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    flex-wrap: nowrap;
-    font-size: 25px;
-    white-space: normal;
-    color: rgb(255, 255, 255);
-    -unity-font-style: bold;
-}
-
-.chat__panel-bg {
-    opacity: 1;
-    flex-grow: 0;
-    height: 94%;
-    width: 100%;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=538741276683817778&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#Window_bg_01');
-    background-color: rgba(255, 255, 255, 0);
-    bottom: 0;
-}
-
-.chat__panel-parent {
-    background-image: none;
-    margin-bottom: -12px;
-    -unity-background-image-tint-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-    bottom: -38%;
-    min-height: 165px;
-    -unity-background-scale-mode: stretch-to-fill;
-    align-items: center;
 }

@@ -10,7 +10,7 @@ namespace OVPBiotechSpace
     [CreateAssetMenu(fileName = "Assets/Resources/GameData/Characters/Character", menuName = "UIToolkitDemo/Character", order = 11)]
     public class Character : ScriptableObject
     {
-        public string name;
+        public string nombre;
         public string description;
         public Sprite btnImage;
     }

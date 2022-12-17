@@ -8,8 +8,7 @@ namespace OVPBiotechSpace
     // links to additional UI Toolkit resources
     public class InfoScreen : MenuScreen
     {
-        [Header("URLs")]
-        [SerializeField] string m_GetInfoURL = "https://biotecnologia.utn.edu.ec/";
+        [Header("URLs")]        
         [SerializeField] string m_DocsURL = "https://biotecnologia.utn.edu.ec/";
         [SerializeField] string m_ForumURL = "https://biotecnologia.utn.edu.ec/";
         [SerializeField] string m_BlogURL = "https://biotecnologia.utn.edu.ec/";
