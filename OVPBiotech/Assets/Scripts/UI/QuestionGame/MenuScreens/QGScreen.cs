@@ -18,6 +18,8 @@ namespace OVPBiotechSpace
         private string pathcategory = "category";
         [SerializeField]
         private List<GameObject> character;
+        [SerializeField]
+        private int maxQuestions;
 
         #region  UI-Style
         const string k_BtnOptions = "btn-option";
@@ -41,13 +43,15 @@ namespace OVPBiotechSpace
         List<Question> questionsListAll = new List<Question>();
         List<DifficultyLevel> difficultyLevelList = new List<DifficultyLevel>();
         List<Category> categoryList = new List<Category>();
-        int indexQuestions = 0;
-        int indexDifficultyLevel = 0;
-        int indexDifficultyLevelScale;
-        bool isClick = true;
+        //Questions
+        private int indexQuestionsRandom;
         private int correctAnswerOptions = 0;
         private int AnswerQuestions = 0;
         private int AnswerQuestionsConsecutively = 0;
+
+        int indexDifficultyLevel = 0;
+        int indexDifficultyLevelScale;
+        bool isClick = true;
         //Action
         public static event Action<String> UpdateScore;
         public static event Action<int> UpdateQuestions;
@@ -110,8 +114,7 @@ namespace OVPBiotechSpace
                     difficultyLevelList.Add(document.ConvertTo<DifficultyLevel>());
                 }
                 if (difficultyLevelList.Count > 0)
-                {
-                    indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
+                {                    
                     db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
                     {
                         QuerySnapshot snapshot = task.Result;
@@ -131,49 +134,34 @@ namespace OVPBiotechSpace
         }
         void getQuestions()
         {
+            indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
             questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
-            while (questionsList.Count <= 0 && indexDifficultyLevel < difficultyLevelList.Count)
-            {
-                if (indexDifficultyLevelScale < difficultyLevelList[indexDifficultyLevel].max)
-                {
-                    indexDifficultyLevelScale++;
-                }
-                else
-                {
-                    indexDifficultyLevel++;
-                    if (indexDifficultyLevel < difficultyLevelList.Count)
-                    {
-                        indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
-                    }
-                }
-                questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
-                print(questionsList.Count);
-            }
-            if (questionsList.Count > 0)
-            {
-                NextQuestions();
-            }
-            else
-            {
-                print("No hay preguntas");
-            }
-        }        
+            NextQuestions();
+        }
         private void IsAnswerCorrect(ClickEvent e, int index)
         {
             if (isClick)
             {
-                if (indexQuestions < questionsList.Count)
+                if (indexQuestionsRandom < questionsList.Count)
                 {
-                    if (questionsList[indexQuestions].q_option_correct == (index + 1))
+                    if (questionsList[indexQuestionsRandom].q_option_correct == (index + 1))
                     {
                         AudioManager.PlayVictorySound();
                         correctAnswerOptions++;
+                        //Remove questions use
+                        questionsListAll.Remove(questionsList[indexQuestionsRandom]);
+                        questionsList.RemoveAt(indexQuestionsRandom);                        
+                        //add
                         AnswerQuestionsConsecutively++;
                         StartCoroutine("animationCorrect", index);
                     }
                     else
                     {
                         AudioManager.PlayDefeatSound();
+                        //Remove questions
+                        questionsListAll.Remove(questionsList[indexQuestionsRandom]);
+                        questionsList.RemoveAt(indexQuestionsRandom);
+                        //reset
                         AnswerQuestionsConsecutively = 0;
                         StartCoroutine("animationIncorrect", index);
                     }
@@ -187,7 +175,6 @@ namespace OVPBiotechSpace
             m_BtnOptions[index].AddToClassList(k_IsCorrect);
             yield return new WaitForSeconds(.5f);
             m_BtnOptions[index].RemoveFromClassList(k_IsCorrect);
-            indexQuestions++;
             NextQuestions();
             isClick = true;
         }
@@ -197,31 +184,111 @@ namespace OVPBiotechSpace
             m_BtnOptions[index].AddToClassList(k_IsIncorrect);
             yield return new WaitForSeconds(.5f);
             m_BtnOptions[index].RemoveFromClassList(k_IsIncorrect);
-            indexQuestions++;
             NextQuestions();
             isClick = true;
         }
         void ReplayGame()
         {
-            ResetGame.Invoke();
-            indexQuestions = 0;
+            ResetGame.Invoke();            
             correctAnswerOptions = 0;
             AnswerQuestions = 0;
-            NextQuestions();
-            m_QGPanel.AddToClassList(k_QGPanelActive);
+            if (difficultyLevelList.Count > 0)
+            {               
+                db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
+                {
+                    questionsListAll = new List<Question>();
+                    QuerySnapshot snapshot = task.Result;
+                    foreach (DocumentSnapshot document in snapshot.Documents)
+                    {
+                        questionsListAll.Add(document.ConvertTo<Question>());
+                    }
+                    getQuestions();
+                });
+
+            }
+            else
+            {
+                print("No hay niveles de dificultad");
+            }            
         }
+
         void NextQuestions()
         {
             ResetStyle();
-            if (indexQuestions < questionsList.Count)
+            if (questionsListAll.Count > 0 && AnswerQuestions < maxQuestions)
             {
+                //Aumento de nivel
+                if (AnswerQuestionsConsecutively >= 2 && AnswerQuestionsConsecutively % 2 == 0)
+                {
+                    if (indexDifficultyLevelScale < difficultyLevelList[indexDifficultyLevel].max)
+                    {
+                        indexDifficultyLevelScale++;
+                        questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+                    }
+                    else
+                    {                        
+                        if ((indexDifficultyLevel+1) < difficultyLevelList.Count)
+                        {
+                            indexDifficultyLevel++;
+                            indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
+                            questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+                        }
+                    }                    
+                }
+                if (AnswerQuestionsConsecutively <= 0)
+                {
+                    if (indexDifficultyLevelScale > difficultyLevelList[indexDifficultyLevel].min)
+                    {
+                        indexDifficultyLevelScale--;
+                        questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+                    }
+                    else
+                    {
+                        if ((indexDifficultyLevel -1) >= 0)
+                        {
+                            indexDifficultyLevel--;
+                            indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].max;
+                            questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+                        }
+                    }
+                }
+                if (questionsList.Count > 0)
+                {
+                    indexQuestionsRandom = UnityEngine.Random.Range(0, questionsList.Count);
+                }
+                else
+                {
+                    while (questionsList.Count <= 0)
+                    {
+                        if (indexDifficultyLevelScale < difficultyLevelList[indexDifficultyLevel].max)
+                        {
+                            indexDifficultyLevelScale++;
+                        }
+                        else
+                        {
+                            indexDifficultyLevel++;
+                            if (indexDifficultyLevel < difficultyLevelList.Count)
+                            {
+                                indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
+                            }
+                            else
+                            {
+                                indexDifficultyLevel = 0;
+                                indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
+                            }
+                        }
+                        questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+                    }
+                }
+                print("Scala: "+indexDifficultyLevelScale);
+                print("Nivel: " + indexDifficultyLevel);
                 m_QGPanel.AddToClassList(k_QGPanelActive);
-                UpdateQuestions.Invoke(questionsList[indexQuestions].q_option_correct);
-                m_lblQuestion.text = questionsList[indexQuestions].q_question;
-                m_BtnOptions[0].text = questionsList[indexQuestions].q_option1;
-                m_BtnOptions[1].text = questionsList[indexQuestions].q_option2;
-                m_BtnOptions[2].text = questionsList[indexQuestions].q_option3;
-                m_BtnOptions[3].text = questionsList[indexQuestions].q_option4;
+                UpdateQuestions.Invoke(questionsList[indexQuestionsRandom].q_option_correct);
+                m_lblQuestion.text = questionsList[indexQuestionsRandom].q_question;
+                m_BtnOptions[0].text = questionsList[indexQuestionsRandom].q_option1;
+                m_BtnOptions[1].text = questionsList[indexQuestionsRandom].q_option2;
+                m_BtnOptions[2].text = questionsList[indexQuestionsRandom].q_option3;
+                m_BtnOptions[3].text = questionsList[indexQuestionsRandom].q_option4;
             }
             else
             {
@@ -259,7 +326,6 @@ namespace OVPBiotechSpace
         }
         void updateSwitch()
         {
-            indexQuestions++;
             NextQuestions();
         }
         #endregion

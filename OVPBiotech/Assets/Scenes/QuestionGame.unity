@@ -528,10 +528,13 @@ MonoBehaviour:
   m_MainMenuUIManager: {fileID: 1943209221}
   m_Document: {fileID: 1943209219}
   pathquestion: question
+  pathdifficultyLevel: difficultyLevel
+  pathcategory: category
   character:
   - {fileID: 1869734982}
   - {fileID: 1979171510}
   - {fileID: 645782479}
+  maxQuestions: 5
 --- !u!1 &645782479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2af2dded0b7ff514e86195fecf57eb3e,
