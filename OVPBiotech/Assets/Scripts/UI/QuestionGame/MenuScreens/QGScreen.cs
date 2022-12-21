@@ -114,7 +114,7 @@ namespace OVPBiotechSpace
                     difficultyLevelList.Add(document.ConvertTo<DifficultyLevel>());
                 }
                 if (difficultyLevelList.Count > 0)
-                {                    
+                {
                     db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
                     {
                         QuerySnapshot snapshot = task.Result;
@@ -150,7 +150,7 @@ namespace OVPBiotechSpace
                         correctAnswerOptions++;
                         //Remove questions use
                         questionsListAll.Remove(questionsList[indexQuestionsRandom]);
-                        questionsList.RemoveAt(indexQuestionsRandom);                        
+                        questionsList.RemoveAt(indexQuestionsRandom);
                         //add
                         AnswerQuestionsConsecutively++;
                         StartCoroutine("animationCorrect", index);
@@ -189,11 +189,11 @@ namespace OVPBiotechSpace
         }
         void ReplayGame()
         {
-            ResetGame.Invoke();            
+            ResetGame.Invoke();
             correctAnswerOptions = 0;
             AnswerQuestions = 0;
             if (difficultyLevelList.Count > 0)
-            {               
+            {
                 db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
                 {
                     questionsListAll = new List<Question>();
@@ -209,7 +209,7 @@ namespace OVPBiotechSpace
             else
             {
                 print("No hay niveles de dificultad");
-            }            
+            }
         }
 
         void NextQuestions()
@@ -226,14 +226,14 @@ namespace OVPBiotechSpace
                         questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
                     }
                     else
-                    {                        
-                        if ((indexDifficultyLevel+1) < difficultyLevelList.Count)
+                    {
+                        if ((indexDifficultyLevel + 1) < difficultyLevelList.Count)
                         {
                             indexDifficultyLevel++;
                             indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
                             questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
                         }
-                    }                    
+                    }
                 }
                 if (AnswerQuestionsConsecutively <= 0)
                 {
@@ -244,7 +244,7 @@ namespace OVPBiotechSpace
                     }
                     else
                     {
-                        if ((indexDifficultyLevel -1) >= 0)
+                        if ((indexDifficultyLevel - 1) >= 0)
                         {
                             indexDifficultyLevel--;
                             indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].max;
@@ -280,8 +280,10 @@ namespace OVPBiotechSpace
                         questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
                     }
                 }
-                print("Scala: "+indexDifficultyLevelScale);
-                print("Nivel: " + indexDifficultyLevel);
+                print("Scala: " + indexDifficultyLevelScale + "\n" + "Nivel: "
+                    + difficultyLevelList[indexDifficultyLevel].name + "\n" +
+                    "consecutivo: " + AnswerQuestionsConsecutively);
+
                 m_QGPanel.AddToClassList(k_QGPanelActive);
                 UpdateQuestions.Invoke(questionsList[indexQuestionsRandom].q_option_correct);
                 m_lblQuestion.text = questionsList[indexQuestionsRandom].q_question;
