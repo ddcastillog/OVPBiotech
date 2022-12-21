@@ -5,6 +5,7 @@ using System;
 using Firebase.Firestore;
 using Firebase.Extensions;
 
+
 namespace OVPBiotechSpace
 {
     public class HomeScreen : MenuScreen
@@ -20,7 +21,7 @@ namespace OVPBiotechSpace
         private string pathdifficultyLevel = "difficultyLevel";
         [SerializeField]
         private string pathcategory = "category";
-        
+       
 
         protected override void SetVisualElements()
         {
@@ -30,8 +31,7 @@ namespace OVPBiotechSpace
         }
         void getData()
         {
-            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
-            //db.TerminateAsync();
+            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;            
             //db.ClearPersistenceAsync();
             db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
             {

@@ -13,9 +13,7 @@ namespace OVPBiotechSpace
         [SerializeField]
         private string pathquestion = "question";
         [SerializeField]
-        private string pathdifficultyLevel = "difficultyLevel";
-        [SerializeField]
-        private string pathcategory = "category";
+        private string pathdifficultyLevel = "difficultyLevel";        
         [SerializeField]
         private List<GameObject> character;
         [SerializeField]
@@ -43,8 +41,7 @@ namespace OVPBiotechSpace
         List<Label> m_lblOptions = new List<Label>();
         List<Question> questionsList = new List<Question>();
         List<Question> questionsListAll = new List<Question>();
-        List<DifficultyLevel> difficultyLevelList = new List<DifficultyLevel>();
-        List<Category> categoryList = new List<Category>();
+        List<DifficultyLevel> difficultyLevelList = new List<DifficultyLevel>();        
         //Questions
         private int indexQuestionsRandom;
         private int correctAnswerOptions = 0;
@@ -100,14 +97,7 @@ namespace OVPBiotechSpace
         }
         void GetData()
         {
-            db.Collection(pathcategory).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
-            {
-                QuerySnapshot snapshot = task.Result;
-                foreach (DocumentSnapshot document in snapshot.Documents)
-                {
-                    categoryList.Add(document.ConvertTo<Category>());
-                }
-            });
+            
             db.Collection(pathdifficultyLevel).OrderBy("min").GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
             {
                 QuerySnapshot snapshot = task.Result;
