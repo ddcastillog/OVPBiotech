@@ -2,11 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
-using UnityEngine.SceneManagement;
 using Firebase.Firestore;
 using Firebase.Extensions;
-using UnityEngine.Assertions;
-using Unity.VisualScripting;
 using System;
 
 namespace OVPBiotechSpace
@@ -15,6 +12,10 @@ namespace OVPBiotechSpace
     {
         [SerializeField]
         private string pathquestion = "question";
+        [SerializeField]
+        private string pathdifficultyLevel = "difficultyLevel";
+        [SerializeField]
+        private string pathcategory = "category";
         [SerializeField]
         private List<GameObject> character;
 
@@ -36,11 +37,17 @@ namespace OVPBiotechSpace
         VisualElement m_QGPanel;
         List<Button> m_BtnOptions = new List<Button>();
         List<Label> m_lblOptions = new List<Label>();
-        List<Question> questionsList;
+        List<Question> questionsList = new List<Question>();
+        List<Question> questionsListAll = new List<Question>();
+        List<DifficultyLevel> difficultyLevelList = new List<DifficultyLevel>();
+        List<Category> categoryList = new List<Category>();
         int indexQuestions = 0;
+        int indexDifficultyLevel = 0;
+        int indexDifficultyLevelScale;
         bool isClick = true;
         private int correctAnswerOptions = 0;
-        private int AnswerQuestions = 0;        
+        private int AnswerQuestions = 0;
+        private int AnswerQuestionsConsecutively = 0;
         //Action
         public static event Action<String> UpdateScore;
         public static event Action<int> UpdateQuestions;
@@ -66,7 +73,7 @@ namespace OVPBiotechSpace
         }
         protected override void SetVisualElements()
         {
-            base.SetVisualElements();                            
+            base.SetVisualElements();
             m_lblQuestion = m_Root.Q<Label>(k_lblQuestion);
             m_QGPanel = m_Root.Q<VisualElement>(k_QGPanel);
             for (int i = 1; i < 5; i++)
@@ -75,7 +82,7 @@ namespace OVPBiotechSpace
                 m_lblOptions.Add(m_Root.Q<Label>(k_lblOptions + i));
             }
             db = FirebaseFirestore.DefaultInstance;
-            getQuestions();
+            GetData();
         }
 
         protected override void RegisterButtonCallbacks()
@@ -85,20 +92,72 @@ namespace OVPBiotechSpace
                 m_BtnOptions[i]?.RegisterCallback<ClickEvent, int>(IsAnswerCorrect, i);
             }
         }
-        void getQuestions()
+        void GetData()
         {
-            questionsList = new List<Question>();
-            db.Collection(pathquestion).GetSnapshotAsync().ContinueWithOnMainThread(task =>
+            db.Collection(pathcategory).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
             {
                 QuerySnapshot snapshot = task.Result;
                 foreach (DocumentSnapshot document in snapshot.Documents)
                 {
-                    questionsList.Add(document.ConvertTo<Question>());
+                    categoryList.Add(document.ConvertTo<Category>());
                 }
-                NextQuestions();
-                m_QGPanel.AddToClassList(k_QGPanelActive);
+            });
+            db.Collection(pathdifficultyLevel).OrderBy("min").GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
+            {
+                QuerySnapshot snapshot = task.Result;
+                foreach (DocumentSnapshot document in snapshot.Documents)
+                {
+                    difficultyLevelList.Add(document.ConvertTo<DifficultyLevel>());
+                }
+                if (difficultyLevelList.Count > 0)
+                {
+                    indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
+                    db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
+                    {
+                        QuerySnapshot snapshot = task.Result;
+                        foreach (DocumentSnapshot document in snapshot.Documents)
+                        {
+                            questionsListAll.Add(document.ConvertTo<Question>());
+                        }
+                        getQuestions();
+                    });
+
+                }
+                else
+                {
+                    print("No hay niveles de dificultad");
+                }
             });
         }
+        void getQuestions()
+        {
+            questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+            while (questionsList.Count <= 0 && indexDifficultyLevel < difficultyLevelList.Count)
+            {
+                if (indexDifficultyLevelScale < difficultyLevelList[indexDifficultyLevel].max)
+                {
+                    indexDifficultyLevelScale++;
+                }
+                else
+                {
+                    indexDifficultyLevel++;
+                    if (indexDifficultyLevel < difficultyLevelList.Count)
+                    {
+                        indexDifficultyLevelScale = difficultyLevelList[indexDifficultyLevel].min;
+                    }
+                }
+                questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
+                print(questionsList.Count);
+            }
+            if (questionsList.Count > 0)
+            {
+                NextQuestions();
+            }
+            else
+            {
+                print("No hay preguntas");
+            }
+        }        
         private void IsAnswerCorrect(ClickEvent e, int index)
         {
             if (isClick)
@@ -109,11 +168,13 @@ namespace OVPBiotechSpace
                     {
                         AudioManager.PlayVictorySound();
                         correctAnswerOptions++;
+                        AnswerQuestionsConsecutively++;
                         StartCoroutine("animationCorrect", index);
                     }
                     else
                     {
                         AudioManager.PlayDefeatSound();
+                        AnswerQuestionsConsecutively = 0;
                         StartCoroutine("animationIncorrect", index);
                     }
                     AnswerQuestions++;
@@ -151,14 +212,10 @@ namespace OVPBiotechSpace
         }
         void NextQuestions()
         {
-            for (int i = 0; i < 4; i++)
-            {
-                m_BtnOptions[i].RemoveFromClassList(k_visibilityOff);
-                m_lblOptions[i].RemoveFromClassList(k_displayOn);
-            }
-
+            ResetStyle();
             if (indexQuestions < questionsList.Count)
             {
+                m_QGPanel.AddToClassList(k_QGPanelActive);
                 UpdateQuestions.Invoke(questionsList[indexQuestions].q_option_correct);
                 m_lblQuestion.text = questionsList[indexQuestions].q_question;
                 m_BtnOptions[0].text = questionsList[indexQuestions].q_option1;
@@ -171,6 +228,14 @@ namespace OVPBiotechSpace
                 m_QGPanel.RemoveFromClassList(k_QGPanelActive);
                 UpdateScore.Invoke(correctAnswerOptions + "/" + AnswerQuestions);
                 m_MainMenuUIManager?.ShowQGScoreScreen();
+            }
+        }
+        void ResetStyle()
+        {
+            for (int i = 0; i < 4; i++)
+            {
+                m_BtnOptions[i].RemoveFromClassList(k_visibilityOff);
+                m_lblOptions[i].RemoveFromClassList(k_displayOn);
             }
         }
         #region Metodo Action

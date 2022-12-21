@@ -111,7 +111,7 @@
 
 .unity-base-popup-field {
     padding-top: -6px;
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-base-popup-field__arrow {
@@ -121,11 +121,11 @@
     -unity-background-scale-mode: scale-to-fit;
     display: flex;
     -unity-background-image-tint-color: rgb(255, 255, 255);
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-base-field__label {
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-popup-field__input {
@@ -166,14 +166,14 @@
     margin-top: 0;
     margin-bottom: 0;   
     color: rgb(142, 91, 38);
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-toggle__checkmark {
     display: flex;
     width: 50px;
     height: 50px;
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
     border-left-width: 3px;
     border-right-width: 3px;
     border-top-width: 3px;
@@ -190,19 +190,19 @@
 
 .unity-toggle__input {
     display: flex;
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-base-slider__input {
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 RadioButton {
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-radio-button__input {
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 .unity-radio-button__checkmark-background {
@@ -231,7 +231,7 @@ RadioButton {
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B');
+    
 }
 
 #unity-tracker {
@@ -250,7 +250,7 @@ RadioButton {
     max-width: 90%;
     min-width: 90%;
     left: 5%;
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_A.png?fileID=2800000&guid=0fc53ad8e877049c3aef54a3f8a1e01a&type=3#Cursor_A');
+    
 }
 
 .unity-text-field__input {
@@ -266,7 +266,7 @@ RadioButton {
     border-bottom-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_A.png?fileID=2800000&guid=0fc53ad8e877049c3aef54a3f8a1e01a&type=3#Cursor_A');
+    
 }
 
 .settings__panel {

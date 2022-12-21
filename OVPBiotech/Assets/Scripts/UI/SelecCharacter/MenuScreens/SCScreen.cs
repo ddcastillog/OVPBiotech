@@ -80,7 +80,7 @@ namespace OVPBiotechSpace
                 models[i].SetActive(false);
             }
             models[index].SetActive(true);
-            m_lblName.text = Characters[index].name;
+            m_lblName.text = Characters[index].nombre;
             m_lblDescription.text = Characters[index].description;
         }
         private void BtnStartGame(ClickEvent e)

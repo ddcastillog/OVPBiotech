@@ -87,7 +87,7 @@
     transition-property: opacity;
     transition-duration: 0.1s;
     transition-delay: 0.1s;
-    cursor: url('project://database/Assets/UI/Textures/Cursors/Cursor_B.png?fileID=2800000&guid=f3c815d95da3a483385620d7bd8fc545&type=3#Cursor_B') 10 11;
+    
 }
 
 .slide-toggle__label--inactive {    
