@@ -534,7 +534,8 @@ MonoBehaviour:
   - {fileID: 1869734982}
   - {fileID: 1979171510}
   - {fileID: 645782479}
-  maxQuestions: 5
+  maxQuestions: 15
+  rangeLevelUpDifficulty: 2
 --- !u!1 &645782479 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 2af2dded0b7ff514e86195fecf57eb3e,

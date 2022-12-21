@@ -20,6 +20,8 @@ namespace OVPBiotechSpace
         private List<GameObject> character;
         [SerializeField]
         private int maxQuestions;
+        [SerializeField]
+        private int rangeLevelUpDifficulty;
 
         #region  UI-Style
         const string k_BtnOptions = "btn-option";
@@ -218,7 +220,7 @@ namespace OVPBiotechSpace
             if (questionsListAll.Count > 0 && AnswerQuestions < maxQuestions)
             {
                 //Aumento de nivel
-                if (AnswerQuestionsConsecutively >= 2 && AnswerQuestionsConsecutively % 2 == 0)
+                if (AnswerQuestionsConsecutively >= rangeLevelUpDifficulty && AnswerQuestionsConsecutively % rangeLevelUpDifficulty == 0)
                 {
                     if (indexDifficultyLevelScale < difficultyLevelList[indexDifficultyLevel].max)
                     {
@@ -283,7 +285,6 @@ namespace OVPBiotechSpace
                 print("Scala: " + indexDifficultyLevelScale + "\n" + "Nivel: "
                     + difficultyLevelList[indexDifficultyLevel].name + "\n" +
                     "consecutivo: " + AnswerQuestionsConsecutively);
-
                 m_QGPanel.AddToClassList(k_QGPanelActive);
                 UpdateQuestions.Invoke(questionsList[indexQuestionsRandom].q_option_correct);
                 m_lblQuestion.text = questionsList[indexQuestionsRandom].q_question;
