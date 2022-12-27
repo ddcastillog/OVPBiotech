@@ -54,7 +54,7 @@
 }
 
 .lbl-percentage {
-    -unity-font-style: bold;    
+    -unity-font-style: bold;
     font-size: 55px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
@@ -102,28 +102,33 @@
 }
 
 .btn-question {
-    background-image: url('project://database/Assets/Art%20Gameplay/PNG/blue_button13.png?fileID=21300000&guid=774d4892e90c36247aa447a4a0f5eba3&type=3#blue_button13');
     font-size: 350%;
     -unity-font-style: bold;
     flex-grow: 1;
     flex-basis: 80px;
     white-space: normal;
-    color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    transition-duration: 0.25s;
-    -unity-background-image-tint-color: rgba(255, 255, 255, 255);
+    color: rgb(255, 255, 255);
+    background-color: rgba(25, 130, 196, 255);
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-right-color: rgba(0, 0, 0, 0.39);
+    border-top-color: rgba(0, 0, 0, 0.39);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
 }
 
 .bnt-IsCorrect {
     scale: 1.05 1.05;
-    -unity-background-image-tint-color: rgba(53, 255, 0, 255);
+    background-color: rgb(138, 201, 38);
 }
 
 .btn-IsIncorrect {
     scale: 1.05 1.05;
-    -unity-background-image-tint-color: rgba(255, 0, 0, 255);
+    background-color: rgb(255, 89, 94);
 }

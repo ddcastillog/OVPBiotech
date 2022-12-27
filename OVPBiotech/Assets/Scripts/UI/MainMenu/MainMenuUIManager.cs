@@ -9,15 +9,16 @@ namespace OVPBiotechSpace
 {
     // high-level manager for the various parts of the Main Menu UI. Here we use one master UXML and one UIDocument.
     // We allow the individual parts of the user interface to have separate UIDocuments if needed (but not shown in this example).
-    
+
     [RequireComponent(typeof(UIDocument))]
     public class MainMenuUIManager : MonoBehaviour
     {
 
         [Header("Modal Menu Screens")]
         [Tooltip("Only one modal interface can appear on-screen at a time.")]
-        [SerializeField] HomeScreen m_HomeModalScreen;       
-        [SerializeField] InfoScreen m_InfoModalScreen;       
+        [SerializeField] HomeScreen m_HomeModalScreen;
+        [SerializeField] InfoScreen m_InfoModalScreen;
+        [SerializeField] CategoryScreen m_CategoryModalScreen;
 
         [Header("Toolbars")]
         [Tooltip("Toolbars remain active at all times unless explicitly disabled.")]
@@ -25,7 +26,7 @@ namespace OVPBiotechSpace
         [SerializeField] MenuBar m_MenuToolbar;
 
         [Header("Full-screen overlays")]
-        [Tooltip("Full-screen overlays block other controls until dismissed.")]        
+        [Tooltip("Full-screen overlays block other controls until dismissed.")]
         [SerializeField] SettingsScreen m_SettingsScreen;
 
         List<MenuScreen> m_AllModalScreens = new List<MenuScreen>();
@@ -48,10 +49,11 @@ namespace OVPBiotechSpace
         void SetupModalScreens()
         {
             if (m_HomeModalScreen != null)
-                m_AllModalScreens.Add(m_HomeModalScreen);           
-
+                m_AllModalScreens.Add(m_HomeModalScreen);
             if (m_InfoModalScreen != null)
-                m_AllModalScreens.Add(m_InfoModalScreen);           
+                m_AllModalScreens.Add(m_InfoModalScreen);
+            if (m_CategoryModalScreen != null)
+                m_AllModalScreens.Add(m_CategoryModalScreen);
         }
 
         // shows one screen at a time
@@ -69,26 +71,29 @@ namespace OVPBiotechSpace
                 }
             }
         }
-
-        // methods to toggle screens on/off
+        
 
         // modal screen methods 
         public void ShowHomeScreen()
         {
             ShowModalScreen(m_HomeModalScreen);
-        }       
+        }
 
         public void ShowInfoScreen()
         {
             ShowModalScreen(m_InfoModalScreen);
-        }     
-       
+        }
+        public void ShowCategoryScreen()
+        {
+            ShowModalScreen(m_CategoryModalScreen);
+        }
+
         // overlay screen methods
         public void ShowSettingsScreen()
         {
             m_SettingsScreen?.ShowScreen();
         }
 
-    }     
-    
+    }
+
 }

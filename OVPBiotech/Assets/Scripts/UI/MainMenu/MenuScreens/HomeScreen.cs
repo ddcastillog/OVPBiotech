@@ -18,10 +18,7 @@ namespace OVPBiotechSpace
         [SerializeField]
         private string pathquestion = "question";
         [SerializeField]
-        private string pathdifficultyLevel = "difficultyLevel";
-        [SerializeField]
-        private string pathcategory = "category";
-       
+        private string pathdifficultyLevel = "difficultyLevel";   
 
         protected override void SetVisualElements()
         {
@@ -29,10 +26,10 @@ namespace OVPBiotechSpace
             m_PlayLevelButton = m_Root.Q(k_PlayLevelButtonName);           
             getData();
         }
-        void getData()
+         void getData()
         {
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;            
-            //db.ClearPersistenceAsync();
+            db.ClearPersistenceAsync();
             db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
             {
                 if (task.Result.Count <= 0)
@@ -46,14 +43,7 @@ namespace OVPBiotechSpace
                 {
                     db.Collection(pathdifficultyLevel).GetSnapshotAsync();
                 }
-            });
-            db.Collection(pathcategory).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
-            {
-                if (task.Result.Count <= 0)
-                {
-                    db.Collection(pathcategory).GetSnapshotAsync();
-                }
-            });
+            });           
         }
         
 

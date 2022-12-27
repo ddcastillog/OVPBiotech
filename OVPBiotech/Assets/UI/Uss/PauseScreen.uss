@@ -9,33 +9,6 @@
     font-size: 70px;
     color: rgb(255, 255, 255);
     -unity-text-align: middle-center;
-    background-color: rgba(243, 156, 18, 0);
-    background-image: url('normal');
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    transition-duration: 0.25s;
-}
-
-.pause-screen-button:hover {
-    background-color: rgba(241, 196, 15, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    transition-duration: 0.25s;
-    scale: 1.1 1.1;
-}
-
-.pause-screen-button:active {
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    scale: 1.1 1.1;
-    transition-duration: 0.2s;
-    background-image: url('project://database/Assets/Art%20Gameplay/PNG/yellow_button01.png?fileID=21300000&guid=3468235354f84f74dbbe4eedfd44a209&type=3#yellow_button01');
 }
 
 .pause-screen__back-button {

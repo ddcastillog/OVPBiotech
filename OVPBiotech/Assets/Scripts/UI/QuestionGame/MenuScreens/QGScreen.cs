@@ -13,7 +13,7 @@ namespace OVPBiotechSpace
         [SerializeField]
         private string pathquestion = "question";
         [SerializeField]
-        private string pathdifficultyLevel = "difficultyLevel";        
+        private string pathdifficultyLevel = "difficultyLevel";
         [SerializeField]
         private List<GameObject> character;
         [SerializeField]
@@ -41,7 +41,8 @@ namespace OVPBiotechSpace
         List<Label> m_lblOptions = new List<Label>();
         List<Question> questionsList = new List<Question>();
         List<Question> questionsListAll = new List<Question>();
-        List<DifficultyLevel> difficultyLevelList = new List<DifficultyLevel>();        
+        List<DifficultyLevel> difficultyLevelList = new List<DifficultyLevel>();
+        List<String> categorySaves = new List<String>();
         //Questions
         private int indexQuestionsRandom;
         private int correctAnswerOptions = 0;
@@ -97,7 +98,7 @@ namespace OVPBiotechSpace
         }
         void GetData()
         {
-            
+
             db.Collection(pathdifficultyLevel).OrderBy("min").GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
             {
                 QuerySnapshot snapshot = task.Result;
@@ -107,16 +108,22 @@ namespace OVPBiotechSpace
                 }
                 if (difficultyLevelList.Count > 0)
                 {
-                    db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
+                    if (categorySaves.Count > 0)
                     {
-                        QuerySnapshot snapshot = task.Result;
-                        foreach (DocumentSnapshot document in snapshot.Documents)
+                        db.Collection(pathquestion).WhereIn("q_category", categorySaves).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
                         {
-                            questionsListAll.Add(document.ConvertTo<Question>());
-                        }
+                            QuerySnapshot snapshot = task.Result;                            
+                            foreach (DocumentSnapshot document in snapshot.Documents)
+                            {
+                                questionsListAll.Add(document.ConvertTo<Question>());
+                            }
+                            getQuestions();
+                        });
+                    }
+                    else
+                    {
                         getQuestions();
-                    });
-
+                    }              
                 }
                 else
                 {
@@ -319,6 +326,9 @@ namespace OVPBiotechSpace
         }
         void updateSwitch()
         {
+            //Remove questions
+            questionsListAll.Remove(questionsList[indexQuestionsRandom]);
+            questionsList.RemoveAt(indexQuestionsRandom);
             NextQuestions();
         }
         #endregion
@@ -327,6 +337,13 @@ namespace OVPBiotechSpace
         {
             if (gameData == null)
                 return;
+            foreach (var c in gameData.categoryList)
+            {
+                if (c.IsSelect)
+                {
+                    categorySaves.Add(c.id);
+                }
+            }            
             if (gameData.selectCharacter < character.Count)
             {
                 character[gameData.selectCharacter].SetActive(true);

@@ -7,26 +7,14 @@ using System.Linq;
 using System.Collections.Generic;
 
 namespace OVPBiotechSpace
-{
-
-    // pairs a Theme StyleSheet with a seasonal variation/themes (e.g. Christmas, Halloween, etc.)
-    [Serializable]
-    public class ThemeSettings
-    {
-        public string theme;
-        public ThemeStyleSheet tss;
-    }
+{ 
 
     // This controls general settings for the game. Many of these options are non-functional in this demo but
     // show how to sync data from a UI with the GameDataManager.
     public class SettingsScreen : MenuScreen
     {
         public static event Action SettingsShown;
-        public static event Action<GameData> SettingsUpdated;
-
-        [Space]
-        [Tooltip("Define StyleSheets associated with each Theme. Each MenuScreen may have its own StyleSheet.")]
-        [SerializeField] List<ThemeSettings> m_ThemeSettings;
+        public static event Action<GameData> SettingsUpdated;        
 
         // string IDs
         const string k_PanelBackButton = "settings-screen__back-button";        

@@ -39,32 +39,13 @@
 
 .play-level__button {
     width: 450px;
-    height: 200px;
+    height: 180px;
     -unity-font-style: bold;
     font-size: 120px;
     color: rgb(255, 255, 255);
-    transition-duration: 0.25s;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url('project://database/Assets/Art%20Gameplay/PNG/yellow_button02.png?fileID=21300000&guid=fb7d46e54a7b2374f9e2edea9f2649ab&type=3#yellow_button02');
-    -unity-background-image-tint-color: rgb(255, 202, 58);
     position: absolute;
     bottom: 70px;
-}
-
-.play-level__button:hover {
-    position: absolute;
-    bottom: 50px;
-    -unity-font-style: bold;
-    background-color: rgba(243, 156, 18, 0);
-    color: rgb(255, 255, 255);
-    transition-duration: 0.25s;
-    scale: 1.1 1.1;
-    -unity-background-image-tint-color: rgb(243, 156, 18);
-}
-
-.play-level__button:active {
-    background-color: rgba(255, 255, 255, 0);
-    -unity-background-image-tint-color: rgb(0, 110, 255);
+    -unity-text-align: middle-center;
 }
 
 .play-level__panel {

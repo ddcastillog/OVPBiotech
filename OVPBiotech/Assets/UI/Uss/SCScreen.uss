@@ -5,20 +5,13 @@
     align-items: flex-end;
 }
 
-.btn-play:hover {
-    scale: 1.1 1.1;
-}
-
 .btn-play {
     font-size: 100px;
-    transition-duration: 0.25s;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: url('project://database/Assets/Art%20Gameplay/PNG/green_button04.png?fileID=21300000&guid=b8235f1b00ef23e4aaa732d65af16c6b&type=3#green_button04');
-    -unity-background-image-tint-color: rgb(71, 144, 26);
     width: 48%;
     color: rgb(255, 255, 255);
     -unity-font-definition: none;
     -unity-font-style: bold;
+    height: auto;
 }
 
 .countainer-SC {
@@ -34,13 +27,23 @@
     transition-duration: 0.25s;
     width: 29%;
     height: 82%;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=5005378826688267500&guid=40b81b4b44acdfb4584319d79163acb2&type=3#Char_fx_frame');
-    -unity-background-scale-mode: stretch-to-fill;
     margin-right: 0;
     margin-left: 3.2%;
     margin-top: 3%;
     justify-content: center;
     align-items: center;
+    border-left-color: rgba(106, 76, 147, 255);
+    border-right-color: rgba(106, 76, 147, 255);
+    border-top-color: rgba(106, 76, 147, 255);
+    border-bottom-color: rgba(106, 76, 147, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
 }
 
 .btn-sc:hover {

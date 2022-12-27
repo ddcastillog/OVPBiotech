@@ -155,90 +155,107 @@ GroupBox {
     transition-duration: 0.5s;
 }
 
-.button-gray {
-    position: absolute;
-    width: 26%;
-    height: 34%;
-    top: 59%;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=536820708226765884&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#bt_09');
-    background-color: rgba(0, 0, 0, 0);
-    font-size: 34px;
-    color: rgb(236, 240, 241);
-    text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.38);
-}
-
-.button-gray:hover {
-    -unity-background-image-tint-color: rgb(243, 156, 18);
-    scale: 1.1 1.1;
-    transition-duration: 0.25s;
-}
-
-.button-gray:active {
-    -unity-background-image-tint-color: rgb(219, 92, 5);
-}
-
-.button-orange {
-    position: absolute;
-    width: 36%;
-    height: 95px;
-    top: 50%;
-    -unity-font-style: bold;
-    font-size: 63px;
-    color: rgb(255, 255, 255);
-    background-color: rgba(0, 0, 0, 0);
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.39);
-}
-
-.button-orange:hover {
-    -unity-background-image-tint-color: rgb(230, 126, 34);
-}
-
-.button-orange:active {
-    background-color: rgb(255, 255, 255);
-    -unity-background-image-tint-color: rgb(211, 84, 0);
-}
-
-.button-orange--inactive {
-    position: absolute;
-    width: 36%;
-    height: 95px;
-    top: 50%;
-    -unity-font-style: bold;
-    font-size: 45px;
-    color: rgb(255, 255, 255);
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=-4355731583856638786&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#bt_08');
-    transition-duration: 0.25s;
-    background-color: rgba(0, 0, 0, 0);
-    -unity-background-image-tint-color: rgb(103, 102, 102);
-    text-shadow: 5px 5px 2px rgba(0, 0, 0, 0.39);
-}
-
 .button-green {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=-7958151757775347986&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#bt_10');
-    border-left-width: 0;
-    border-right-width: 0;
-    border-top-width: 0;
-    border-bottom-width: 0;
-    height: 15%;
-    width: 100%;
-    top: 82%;
-    position: absolute;
-    margin-bottom: 2%;
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
+    background-color: rgba(138, 201, 38, 255);
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-right-color: rgba(0, 0, 0, 0.39);
+    border-top-color: rgba(0, 0, 0, 0.39);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-duration: 0.25s;
 }
 
 .button-green:hover {
-    -unity-background-image-tint-color: rgb(255, 226, 124);
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=-4355731583856638786&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#bt_08');
-    transition-duration: 0.2s;
+    scale: 1.1 1.1;
 }
 
 .button-green:active {
-    -unity-background-image-tint-color: rgb(255, 177, 0);
+    background-color: rgba(124, 202, 0, 255);
+}
+
+.button-yellow {
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
+    background-color: rgba(255, 202, 58, 255);
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-right-color: rgba(0, 0, 0, 0.39);
+    border-top-color: rgba(0, 0, 0, 0.39);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-duration: 0.25s;
+}
+
+.button-yellow:hover {
+    scale: 1.1 1.1;
+}
+
+.button-yellow:active {
+    background-color: rgba(255, 186, 0, 255);
+}
+
+.button-red {
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
+    background-color: rgba(255, 89, 94, 255);
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-right-color: rgba(0, 0, 0, 0.39);
+    border-top-color: rgba(0, 0, 0, 0.39);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-duration: 0.25s;
+}
+
+.button-red:hover {
+    scale: 1.1 1.1;
+}
+
+.button-red:active {
+    background-color: rgba(255, 0, 8, 255);
+}
+
+.button-blue {
+    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
+    background-color: rgba(25, 130, 196, 255);
+    border-left-color: rgba(0, 0, 0, 0.39);
+    border-right-color: rgba(0, 0, 0, 0.39);
+    border-top-color: rgba(0, 0, 0, 0.39);
+    border-bottom-color: rgba(0, 0, 0, 0.39);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    transition-duration: 0.25s;
+}
+
+.button-blue:hover {
+    scale: 1.1 1.1;
+}
+
+.button-blue:active {
+    background-color: rgba(0, 93, 152, 255);
+}
+
+.font-normal {
+    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=d7da37d5a4298b14a9999ca8a306057d&type=3#NotInter-Regular');
+    -unity-font-definition: none;
 }

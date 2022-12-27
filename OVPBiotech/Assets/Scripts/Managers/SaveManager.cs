@@ -38,6 +38,7 @@ namespace OVPBiotechSpace
             PauseScreenQG.SettingsShown += OnSettingsShown;
             PauseScreenQG.SettingsUpdated += OnSettingsUpdated;
             SCScreen.SettingsUpdated += OnSettingsUpdated;
+            CategoryScreen.SettingsUpdated += OnSettingsUpdated;
         }
 
         void OnDisable()
@@ -49,6 +50,7 @@ namespace OVPBiotechSpace
             PauseScreenQG.SettingsShown -= OnSettingsShown;
             PauseScreenQG.SettingsUpdated -= OnSettingsUpdated;
             SCScreen.SettingsUpdated -= OnSettingsUpdated;
+            CategoryScreen.SettingsUpdated -= OnSettingsUpdated;
         }
         public GameData NewGame()
         {

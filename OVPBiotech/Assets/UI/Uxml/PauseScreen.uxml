@@ -1,9 +1,9 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Uss/PauseScreen.uss?fileID=7433441132597879392&amp;guid=5a2eb5b505d44f248bda8b0e86354e06&amp;type=3#PauseScreen" />
-    <Style src="project://database/Assets/UI/Uss/Fonts.uss?fileID=7433441132597879392&amp;guid=ef2389dc11658624bbe2b51d440b5411&amp;type=3#Fonts" />
+    <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement name="pause-screen-center-anchor" style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; opacity: 1;">
         <ui:VisualElement name="pause-screen-overlay" class="pause-screen-overlay" />
-        <ui:VisualElement name="settings__panel" class="pause-screen-panel" style="guid=0fc53ad8e877049c3aef54a3f8a1e01a&amp;type=3#Cursor_A&apos;); background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-977145710678940932&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#Window_bg_02&apos;);">
+        <ui:VisualElement name="settings__panel" class="pause-screen-panel">
             <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" style="height: 13%; width: 100%; align-items: center; justify-content: center;">
                 <ui:Label text="Configuración" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label font-normal" style="font-size: 60px; -unity-font-style: bold;" />
             </ui:VisualElement>
@@ -18,10 +18,10 @@
                         <ui:Button display-tooltip-when-elided="true" name="settings-screen-sfx" class="settings-sfx__on" style="-unity-background-scale-mode: stretch-to-fill; width: 128px; height: 128px;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:Button text="Reanudar" display-tooltip-when-elided="true" name="pause-screen__resume-button" class="pause-screen-button font-normal" style="margin-bottom: 21px; background-image: url(&apos;project://database/Assets/Art%20Gameplay/PNG/yellow_button00.png?fileID=21300000&amp;guid=d5e3e6de3d0737942a99a1a5a2a9ae5e&amp;type=3#yellow_button00&apos;);" />
-                <ui:Button text="Volver al menu" display-tooltip-when-elided="true" name="pause-screen__quit-button" class="pause-screen-button font-normal" style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px; background-image: url(&apos;project://database/Assets/Art%20Gameplay/PNG/red_button01.png?fileID=21300000&amp;guid=15a2f41cfc9ca9e4ab9b75f8f2ae0e04&amp;type=3#red_button01&apos;);" />
+                <ui:Button text="Reanudar" display-tooltip-when-elided="true" name="pause-screen__resume-button" class="pause-screen-button font-normal button-green" style="margin-bottom: 21px;" />
+                <ui:Button text="Volver al menu" display-tooltip-when-elided="true" name="pause-screen__quit-button" class="pause-screen-button font-normal button-red" style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
             </ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button" style="type=3#Cursor_B&apos;); background-image: url(&apos;project://database/Assets/UI/Textures/UI_atlas.psb?fileID=6694284940762046380&amp;guid=40b81b4b44acdfb4584319d79163acb2&amp;type=3#icon_close&apos;);" />
+            <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

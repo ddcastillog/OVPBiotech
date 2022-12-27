@@ -1,7 +1,7 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <ui:Template name="WildcardScreen" src="project://database/Assets/UI/Uxml/QuestionsGame/WildcardScreen.uxml?fileID=9197481963319205126&amp;guid=cce88d8fc92ea9242b073528076cbaa4&amp;type=3#WildcardScreen" />
     <Style src="project://database/Assets/UI/Uss/QGScreen.uss?fileID=7433441132597879392&amp;guid=b0b9fd08449c71d48b125a4b99d7d46b&amp;type=3#QGScreen" />
-    <Style src="project://database/Assets/UI/Uss/Fonts.uss?fileID=7433441132597879392&amp;guid=ef2389dc11658624bbe2b51d440b5411&amp;type=3#Fonts" />
+    <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement name="QGPanel" class="countainer">
         <ui:VisualElement style="width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.71);">
             <ui:VisualElement style="width: 100%; height: 35%; align-items: center;">
