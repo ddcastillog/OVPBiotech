@@ -3,8 +3,8 @@
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement name="pause-screen-center-anchor" style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; opacity: 1;">
         <ui:VisualElement name="pause-screen-overlay" class="pause-screen-overlay" />
-        <ui:VisualElement name="settings__panel" class="pause-screen-panel">
-            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" style="height: 13%; width: 100%; align-items: center; justify-content: center;">
+        <ui:VisualElement name="settings__panel" class="pause-screen-panel window">
+            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" class="header" style="height: 13%; width: 90%; align-items: center; justify-content: center;">
                 <ui:Label text="Configuración" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label font-normal" style="font-size: 60px; -unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:VisualElement name="pause-screen-body" picking-mode="Ignore" style="align-items: center; height: 87%; width: 94%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; justify-content: center;">

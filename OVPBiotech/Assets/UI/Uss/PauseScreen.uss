@@ -12,13 +12,13 @@
 }
 
 .pause-screen__back-button {
-    right: 26px;
-    top: 14px;
+    right: 0;
+    top: 0;
     position: absolute;
     -unity-font-style: bold;
     font-size: 25px;
-    width: 50px;
-    height: 50px;
+    width: 128px;
+    height: 128px;
     -unity-text-align: upper-center;
     background-color: rgba(243, 156, 18, 0);
     color: rgb(255, 255, 255);
@@ -28,7 +28,7 @@
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
     transition-duration: 0.25s;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=6694284940762046380&guid=40b81b4b44acdfb4584319d79163acb2&type=3#icon_close');
+    background-image: url('project://database/Packages/com.unity.collab-proxy/Editor/PlasticSCM/Assets/Images/d_secondarytabclosehover@2x.png?fileID=21300000&guid=9aa4348290784b2468144a97eb15d8d7&type=3#d_secondarytabclosehover@2x');
 }
 
 .pause-screen__back-button:hover {
@@ -107,7 +107,6 @@
     align-items: center;
     justify-content: center;
     opacity: 1;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-977145710678940932&guid=40b81b4b44acdfb4584319d79163acb2&type=3#Window_bg_02');
 }
 
 #unity-dragger {

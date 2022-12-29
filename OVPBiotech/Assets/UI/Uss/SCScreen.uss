@@ -18,7 +18,7 @@
     width: 48%;
     height: 350px;
     margin-bottom: 15px;
-    background-color: rgba(255, 255, 255, 255);
+    background-color: rgb(255, 255, 255);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -31,24 +31,13 @@
     transition-duration: 0.25s;
     justify-content: center;
     align-items: center;
-    border-left-color: rgb(106, 76, 147);
-    border-right-color: rgb(106, 76, 147);
-    border-top-color: rgb(106, 76, 147);
-    border-bottom-color: rgb(106, 76, 147);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-left-width: 10px;
-    border-right-width: 10px;
-    border-top-width: 10px;
-    border-bottom-width: 10px;
     width: 300px;
     height: 300px;
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=3653846607988770107&guid=731db58f2972a21478ec835df26b724d&type=3#Frame');
 }
 
 .btn-sc:active {

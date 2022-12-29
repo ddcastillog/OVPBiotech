@@ -158,7 +158,7 @@ GroupBox {
 .button-green {
     text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
     transition-duration: 0.25s;
-    background-image: url('project://database/Assets/Buttons/PNG/28button_green.png?fileID=21300000&guid=131de190cb93c60499d0da6a2b7c592d&type=3#28button_green');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=-8616977061711729957&guid=731db58f2972a21478ec835df26b724d&type=3#bt_1');
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
@@ -178,7 +178,7 @@ GroupBox {
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
-    background-image: url('project://database/Assets/Buttons/PNG/30button_red.png?fileID=21300000&guid=8fc9feebf624bba43a9df1301ccf1d8e&type=3#30button_red');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=8973064444734235189&guid=731db58f2972a21478ec835df26b724d&type=3#bt_3');
 }
 
 .button-yellow:active {
@@ -188,7 +188,7 @@ GroupBox {
 .button-red {
     text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
     transition-duration: 0.25s;
-    background-image: url('project://database/Assets/Buttons/PNG/30button_red.png?fileID=21300000&guid=8fc9feebf624bba43a9df1301ccf1d8e&type=3#30button_red');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=-6103510439115109692&guid=731db58f2972a21478ec835df26b724d&type=3#bt_2');
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
@@ -203,7 +203,7 @@ GroupBox {
 .button-blue {
     text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
     transition-duration: 0.25s;
-    background-image: url('project://database/Assets/Buttons/PNG/29button_blue.png?fileID=21300000&guid=2a941afa0b6b78c4ab83921ab447685b&type=3#29button_blue');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=4843837793986924557&guid=731db58f2972a21478ec835df26b724d&type=3#bt_4');
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);
     border-right-color: rgba(0, 0, 0, 0);
@@ -218,4 +218,12 @@ GroupBox {
 .font-normal {
     -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=d7da37d5a4298b14a9999ca8a306057d&type=3#NotInter-Regular');
     -unity-font-definition: none;
+}
+
+.header {
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=8804265812005365362&guid=731db58f2972a21478ec835df26b724d&type=3#Header');
+}
+
+.window {
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=3829800692723876191&guid=731db58f2972a21478ec835df26b724d&type=3#Window_bg');
 }
