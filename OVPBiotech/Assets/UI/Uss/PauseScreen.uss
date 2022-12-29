@@ -41,14 +41,6 @@
     scale: 1.1 1.1;
 }
 
-.pause-screen__back-button:active {
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-    background-image: url('project://database/Assets/Art%20Gameplay/PNG/red_button00.png?fileID=21300000&guid=374b283bb8d283f49818db5a78750024&type=3#red_button00');
-}
-
 .unity-base-slider__tracker {
 }
 

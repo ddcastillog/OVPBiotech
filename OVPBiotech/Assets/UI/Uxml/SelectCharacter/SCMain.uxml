@@ -7,6 +7,6 @@
             <ui:Label text="John Craig" display-tooltip-when-elided="true" name="lbl-name" class="font-normal" style="width: 100%; height: 25%; -unity-font-style: bold; color: rgb(255, 202, 58); font-size: 80px; -unity-text-align: upper-center; white-space: normal;" />
             <ui:Label text="Es un biólogo y empresario estadounidense. Fue el presidente fundador de Celera Genomics, haciéndose famoso al arrancar su propio Proyecto Genoma Humano en 1999." display-tooltip-when-elided="true" name="lbl-description" class="font-normal" style="width: 100%; height: 70%; color: rgb(255, 255, 255); font-size: 40px; white-space: normal; -unity-text-align: upper-center;" />
         </ui:VisualElement>
-        <ui:VisualElement name="countainer-btnSC" class="countainer-SC" />
+        <ui:ScrollView name="countainer-btnSC" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="countainer-SC" />
     </ui:VisualElement>
 </ui:UXML>

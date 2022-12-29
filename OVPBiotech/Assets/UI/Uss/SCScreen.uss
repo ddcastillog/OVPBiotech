@@ -18,24 +18,23 @@
     width: 48%;
     height: 350px;
     margin-bottom: 15px;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=-5051795970207228551&guid=40b81b4b44acdfb4584319d79163acb2&type=3#Window_bg_03');
+    background-color: rgba(255, 255, 255, 255);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    align-items: center;
     flex-direction: row;
-    flex-wrap: wrap;
 }
 
 .btn-sc {
     transition-duration: 0.25s;
-    width: 29%;
-    height: 82%;
-    margin-right: 0;
-    margin-left: 3.2%;
-    margin-top: 3%;
     justify-content: center;
     align-items: center;
-    border-left-color: rgba(106, 76, 147, 255);
-    border-right-color: rgba(106, 76, 147, 255);
-    border-top-color: rgba(106, 76, 147, 255);
-    border-bottom-color: rgba(106, 76, 147, 255);
+    border-left-color: rgb(106, 76, 147);
+    border-right-color: rgb(106, 76, 147);
+    border-top-color: rgb(106, 76, 147);
+    border-bottom-color: rgb(106, 76, 147);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -44,10 +43,16 @@
     border-right-width: 10px;
     border-top-width: 10px;
     border-bottom-width: 10px;
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-.btn-sc:hover {
-    scale: 1.1 1.1;
+.btn-sc:active {
+    scale: 1.05 1.05;
 }
 
 .btn-image {

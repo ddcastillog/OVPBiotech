@@ -22,7 +22,7 @@ namespace OVPBiotechSpace
         private string pathCharacters = "GameData/Characters";
         //variables
         Button m_BtnStartGame;
-        VisualElement m_countainerBtnSC;
+        ScrollView m_countainerBtnSC;
         Label m_lblName;
         Label m_lblDescription;
         private Character[] Characters;
@@ -42,7 +42,7 @@ namespace OVPBiotechSpace
         {
             base.SetVisualElements();
             m_BtnStartGame = m_Root.Q<Button>(k_BtnStartGame);
-            m_countainerBtnSC = m_Root.Q<VisualElement>(k_countainerBtnSC);
+            m_countainerBtnSC = m_Root.Q<ScrollView>(k_countainerBtnSC);
             m_lblName = m_Root.Q<Label>(k_lblName);
             m_lblDescription = m_Root.Q<Label>(k_lblDescription);
             Characters = Resources.LoadAll<Character>(pathCharacters);
