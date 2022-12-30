@@ -4,7 +4,7 @@
     <ui:VisualElement name="pause-screen-center-anchor" style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; opacity: 1;">
         <ui:VisualElement name="pause-screen-overlay" class="pause-screen-overlay" />
         <ui:VisualElement name="settings__panel" class="pause-screen-panel window">
-            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" class="header" style="height: 13%; width: 90%; align-items: center; justify-content: center;">
+            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" class="header" style="height: 13%; width: 80%; align-items: center; justify-content: center; position: absolute; top: -30px;">
                 <ui:Label text="Configuración" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label font-normal" style="font-size: 60px; -unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:VisualElement name="pause-screen-body" picking-mode="Ignore" style="align-items: center; height: 87%; width: 94%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; justify-content: center;">

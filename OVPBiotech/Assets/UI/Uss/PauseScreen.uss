@@ -79,7 +79,7 @@
     height: 100px;
     -unity-text-align: middle-center;
     color: rgb(253, 240, 219);
-    font-size: 47px;
+    font-size: 60px;
     -unity-text-outline-color: rgb(255, 255, 255);
 }
 

@@ -222,6 +222,7 @@ GroupBox {
 
 .header {
     background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=8804265812005365362&guid=731db58f2972a21478ec835df26b724d&type=3#Header');
+    -unity-background-image-tint-color: rgba(255, 0, 153, 255);
 }
 
 .window {

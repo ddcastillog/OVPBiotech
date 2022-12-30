@@ -3,7 +3,7 @@
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement style="position: absolute; left: 0; top: 0; width: 100%; height: 100%;">
         <ui:VisualElement name="info__catgory" class="window" style="width: 69%; height: 80%; position: absolute; left: 19%; top: 14%; background-color: rgba(0, 0, 0, 0); align-items: center;">
-            <ui:VisualElement class="header" style="width: 95%; height: 16%;">
+            <ui:VisualElement class="header" style="width: 80%; height: 16%; top: -30px; position: relative;">
                 <ui:Label text="Categorias" display-tooltip-when-elided="true" name="Label" class="font-normal" style="width: 100%; height: 100%; font-size: 90px; text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75); -unity-text-align: upper-center; color: rgb(255, 255, 255);" />
             </ui:VisualElement>
             <ui:ScrollView name="scroll__categoria" touch-scroll-type="Clamped" mode="Vertical" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" style="width: 95%; height: 84%;">

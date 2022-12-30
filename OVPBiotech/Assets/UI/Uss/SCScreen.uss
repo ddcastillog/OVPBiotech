@@ -7,7 +7,7 @@
 
 .btn-play {
     font-size: 100px;
-    width: 48%;
+    width: 80%;
     color: rgb(255, 255, 255);
     -unity-font-definition: none;
     -unity-font-style: bold;
@@ -15,10 +15,9 @@
 }
 
 .countainer-SC {
-    width: 48%;
+    width: 100%;
     height: 350px;
     margin-bottom: 15px;
-    background-color: rgb(255, 255, 255);
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     border-top-right-radius: 20px;
@@ -37,11 +36,14 @@
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=3653846607988770107&guid=731db58f2972a21478ec835df26b724d&type=3#Frame');
+    background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2010x.png?fileID=21300000&guid=16d46dbc21e0c8b41bb10f990a737636&type=3#Square Outline - 10x');
+    background-color: rgba(135, 135, 135, 255);
 }
 
 .btn-sc:active {
     scale: 1.05 1.05;
+    -unity-background-image-tint-color: rgba(255, 0, 0, 255);
+    background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2014x.png?fileID=21300000&guid=93336f57323910b41a642ef84a91679e&type=3#Square Outline - 14x');
 }
 
 .btn-image {

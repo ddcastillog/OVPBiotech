@@ -45,9 +45,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_MainAudioMixer: {fileID: 24100000, guid: ac794248e9b1e8a4195696f279f2d1cc, type: 2}
-  m_DefaultButtonSound: {fileID: 8300000, guid: c5270734ff02ea2468e4a4085ab2c04f,
+  m_DefaultButtonSound: {fileID: 8300000, guid: 7541256652c8520439cc1d114678ddfe,
     type: 3}
-  m_AltButtonSound: {fileID: 8300000, guid: 7f69ba1545c43434a8578dc6fa42e2e4, type: 3}
+  m_AltButtonSound: {fileID: 8300000, guid: 62cbc11087e0e13428202f666bf68755, type: 3}
   m_TransactionSound: {fileID: 8300000, guid: e39d7f8311ca34f4cbd60756b352e8da, type: 3}
   m_DefaultWarningSound: {fileID: 8300000, guid: 8181bfb7372b845489e06e586b9977fc,
     type: 3}

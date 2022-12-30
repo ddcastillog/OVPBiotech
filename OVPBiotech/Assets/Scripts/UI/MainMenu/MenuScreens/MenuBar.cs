@@ -32,7 +32,7 @@ namespace OVPBiotechSpace
         // marker movement
         const int k_MoveTime = 150;
         const float k_Spacing = 100f;
-        const float k_yOffset = -8f;
+        const float k_yOffset = -25f;
 
         // UI Buttons
         Button m_HomeScreenMenuButton;
