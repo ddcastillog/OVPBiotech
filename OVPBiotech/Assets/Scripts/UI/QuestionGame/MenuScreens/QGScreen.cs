@@ -23,6 +23,7 @@ namespace OVPBiotechSpace
 
         #region  UI-Style
         const string k_BtnOptions = "btn-option";
+        const string k_LblText = "lbl-text";
         const string k_lblOptions = "lbl-option";
         const string k_lblQuestion = "lbl-question";
         const string k_IsCorrect = "bnt-IsCorrect";
@@ -38,6 +39,7 @@ namespace OVPBiotechSpace
         Label m_lblQuestion;
         VisualElement m_QGPanel;
         List<Button> m_BtnOptions = new List<Button>();
+        List<Label> m_LblText = new List<Label>();
         List<Label> m_lblOptions = new List<Label>();
         List<Question> questionsList = new List<Question>();
         List<Question> questionsListAll = new List<Question>();
@@ -84,6 +86,7 @@ namespace OVPBiotechSpace
             {
                 m_BtnOptions.Add(m_Root.Q<Button>(k_BtnOptions + i));
                 m_lblOptions.Add(m_Root.Q<Label>(k_lblOptions + i));
+                m_LblText.Add(m_Root.Q<Label>(k_LblText + i));
             }
             db = FirebaseFirestore.DefaultInstance;
             GetData();
@@ -278,6 +281,7 @@ namespace OVPBiotechSpace
                         }
                         questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
                     }
+                    indexQuestionsRandom = UnityEngine.Random.Range(0, questionsList.Count);
                 }
                 print("Scala: " + indexDifficultyLevelScale + "\n" + "Nivel: "
                     + difficultyLevelList[indexDifficultyLevel].name + "\n" +
@@ -285,10 +289,10 @@ namespace OVPBiotechSpace
                 m_QGPanel.AddToClassList(k_QGPanelActive);
                 UpdateQuestions.Invoke(questionsList[indexQuestionsRandom].q_option_correct);
                 m_lblQuestion.text = questionsList[indexQuestionsRandom].q_question;
-                m_BtnOptions[0].text = questionsList[indexQuestionsRandom].q_option1;
-                m_BtnOptions[1].text = questionsList[indexQuestionsRandom].q_option2;
-                m_BtnOptions[2].text = questionsList[indexQuestionsRandom].q_option3;
-                m_BtnOptions[3].text = questionsList[indexQuestionsRandom].q_option4;
+                m_LblText[0].text = questionsList[indexQuestionsRandom].q_option1;
+                m_LblText[1].text = questionsList[indexQuestionsRandom].q_option2;
+                m_LblText[2].text = questionsList[indexQuestionsRandom].q_option3;
+                m_LblText[3].text = questionsList[indexQuestionsRandom].q_option4;
             }
             else
             {

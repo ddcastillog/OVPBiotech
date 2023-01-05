@@ -216,13 +216,13 @@ GroupBox {
 }
 
 .font-normal {
-    -unity-font: url('project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=2230732570650464555&guid=d7da37d5a4298b14a9999ca8a306057d&type=3#NotInter-Regular');
+    -unity-font: url('project://database/Assets/UI/Fonts/Roboto-Regular.ttf?fileID=12800000&guid=a61b2d76efb7de240ac4689ccb2382d6&type=3#Roboto-Regular');
     -unity-font-definition: none;
 }
 
 .header {
     background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=8804265812005365362&guid=731db58f2972a21478ec835df26b724d&type=3#Header');
-    -unity-background-image-tint-color: rgba(255, 0, 153, 255);
+    -unity-background-image-tint-color: rgb(255, 0, 153);
 }
 
 .window {

@@ -28,22 +28,9 @@ namespace OVPBiotechSpace
         }
          void getData()
         {
-            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;            
-            db.ClearPersistenceAsync();
-            db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
-            {
-                if (task.Result.Count <= 0)
-                {
-                    db.Collection(pathquestion).GetSnapshotAsync();
-                }
-            });
-            db.Collection(pathdifficultyLevel).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
-            {
-                if (task.Result.Count <= 0)
-                {
-                    db.Collection(pathdifficultyLevel).GetSnapshotAsync();
-                }
-            });           
+            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;      
+            db.Collection(pathquestion).GetSnapshotAsync();
+            db.Collection(pathdifficultyLevel).GetSnapshotAsync();                    
         }
         
 

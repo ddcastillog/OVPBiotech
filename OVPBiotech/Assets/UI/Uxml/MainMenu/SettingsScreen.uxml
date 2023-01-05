@@ -7,19 +7,21 @@
             <ui:VisualElement name="settings-screen-header" picking-mode="Ignore" class="header" style="position: absolute; top: -30px; height: auto; width: 80%; align-items: center; justify-content: center;">
                 <ui:Label text="Configuración" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label font-normal" />
             </ui:VisualElement>
-            <ui:VisualElement name="settings-screen-body" picking-mode="Ignore" style="align-items: center; height: 490px; position: absolute; top: 100px; width: 94%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; justify-content: center;">
-                <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="VisualElement" style="flex-direction: row;">
-                        <ui:Label text="Musica" display-tooltip-when-elided="true" class="font-normal" style="font-size: 60px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-width: 2px; -unity-text-outline-color: rgba(0, 0, 0, 0.59); -unity-text-align: middle-left;" />
-                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-music" class="settings-music__on" style="-unity-background-scale-mode: stretch-to-fill; width: 128px; height: 128px;" />
+            <ui:VisualElement name="settings-screen-body" picking-mode="Ignore" class="body">
+                <ui:VisualElement style="flex-direction: column; width: 90%;">
+                    <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between;">
+                        <ui:Label text="Musica" display-tooltip-when-elided="true" class="font-normal lbl-font" />
+                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-music" class="settings-music__on" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="VisualElement" style="flex-direction: row;">
-                        <ui:Label text="SFX" display-tooltip-when-elided="true" class="font-normal" style="font-size: 60px; color: rgb(255, 255, 255); -unity-text-outline-width: 2px; -unity-text-outline-color: rgba(0, 0, 0, 0.59); -unity-font-style: bold; -unity-text-align: middle-left;" />
-                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-sfx" class="settings-sfx__on" style="-unity-background-scale-mode: stretch-to-fill; width: 128px; height: 128px;" />
+                    <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between;">
+                        <ui:Label text="SFX" display-tooltip-when-elided="true" class="font-normal lbl-font" />
+                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-sfx" class="settings-sfx__on" />
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button" />
+            <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button button-blue" style="position: absolute; bottom: 30px;">
+                <ui:VisualElement class="icon-save" />
+            </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

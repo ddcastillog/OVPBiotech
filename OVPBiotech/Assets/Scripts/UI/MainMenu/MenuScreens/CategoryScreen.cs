@@ -14,15 +14,13 @@ namespace OVPBiotechSpace
         [SerializeField]
         private string pathcategory = "category";
         const string k_CountainerCategory = "countainer__categoria";
-        const string k_styleVSCategory = "vs-category";
-        const string k_styleVSCategoryActive = "vs-category-active";
-        const string k_lblCategory = "lbl-category";
+        const string k_styleTgCategory = "tg-category";
         VisualElement m_CountainerCategory;
         GameData gameData;
 
         private List<Category> categoryList = new List<Category>();
         public static event Action<GameData> SettingsUpdated;
-        List<VisualElement> listBtn;
+
         void OnEnable()
         {
             SaveManager.GameDataLoaded += OnGameDataLoaded;
@@ -48,25 +46,15 @@ namespace OVPBiotechSpace
         {
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
             QuerySnapshot categorys;
-            categorys = await db.Collection(pathcategory).GetSnapshotAsync(Source.Cache);
-            if (categorys.Count > 0)
+            categorys = await db.Collection(pathcategory).GetSnapshotAsync();
+            foreach (DocumentSnapshot document in categorys.Documents)
             {
-                foreach (DocumentSnapshot document in categorys.Documents)
-                {
-                    categoryList.Add(document.ConvertTo<Category>());
-                }
+                categoryList.Add(document.ConvertTo<Category>());
             }
-            else
-            {
-                categorys = await db.Collection(pathcategory).GetSnapshotAsync();
-                foreach (DocumentSnapshot document in categorys.Documents)
-                {
-                    categoryList.Add(document.ConvertTo<Category>());
-                }
-            }
-            initBtnCategory();
+
+            initToggleCategory();
         }
-        void initBtnCategory()
+        void initToggleCategory()
         {
             if (this.gameData.categoryList.Count <= 0)
             {
@@ -83,7 +71,7 @@ namespace OVPBiotechSpace
                     CategorySave auxList = this.gameData.categoryList.Find(a => a.id == c.id);
                     if (auxList != null)
                     {
-                        aux.Add(new CategorySave(c.id, auxList.IsSelect));                        
+                        aux.Add(new CategorySave(c.id, auxList.IsSelect));
                     }
                     else
                     {
@@ -94,38 +82,21 @@ namespace OVPBiotechSpace
             }
             for (int i = 0; i < categoryList.Count; i++)
             {
-                VisualElement aux = new VisualElement();
-                aux.AddToClassList(k_styleVSCategory);
-                if (this.gameData.categoryList[i].IsSelect)
-                {
-                    aux.AddToClassList(k_styleVSCategoryActive);
-                }
-                aux?.RegisterCallback<ClickEvent, int>(BtnCategory, i);
-                //image
-                Label text = new Label();
-                text.AddToClassList(k_lblCategory);
-                text.text = categoryList[i].name;
-                //Addd
-                aux.Add(text);
-                m_CountainerCategory?.Add(aux);
+                Toggle tg = new Toggle();
+                tg.AddToClassList(k_styleTgCategory);
+                tg.value = this.gameData.categoryList[i].IsSelect;
+                tg?.RegisterCallback<ChangeEvent<bool>, int>(BtnCategory, i);
+                tg.text = categoryList[i].name;
+                m_CountainerCategory?.Add(tg);
             }
-            listBtn = (List<VisualElement>)m_CountainerCategory.Children();
+
 
         }
-        private void BtnCategory(ClickEvent e, int index)
+        private void BtnCategory(ChangeEvent<bool> evt, int index)
         {
             AudioManager.PlayDefaultButtonSound();
-            listBtn[index].AddToClassList(k_styleVSCategoryActive);
-            if (this.gameData.categoryList[index].IsSelect)
-            {
-                this.gameData.categoryList[index].IsSelect = false;
-                listBtn[index].RemoveFromClassList(k_styleVSCategoryActive);
-            }
-            else
-            {
-                this.gameData.categoryList[index].IsSelect = true;
-                listBtn[index].AddToClassList(k_styleVSCategoryActive);
-            }                 
+            this.gameData.categoryList[index].IsSelect = evt.newValue;
+            this.gameData.categoryList[index].IsSelect = evt.newValue;
             SettingsUpdated?.Invoke(gameData);
         }
 

@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI/Uss/SCScreen.uss?fileID=7433441132597879392&amp;guid=a37c989378b716948864d7c59732b01a&amp;type=3#SCScreen" />
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement class="countainer">
-        <ui:VisualElement style="align-items: center; flex-direction: column-reverse; flex-wrap: nowrap; width: 50%; height: 100%;">
+        <ui:VisualElement style="align-items: center; flex-direction: column-reverse; flex-wrap: nowrap; width: 50%; height: 100%; right: 20px;">
             <ui:Button text="Comenzar" display-tooltip-when-elided="true" name="btn-Start-game" class="btn-play font-normal button-green" style="width: 60%;" />
             <ui:ScrollView name="countainer-btnSC" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="countainer-SC" style="background-color: rgba(79, 79, 79, 0.59);" />
             <ui:VisualElement style="width: 100%; height: 400px; justify-content: space-between; margin-bottom: 20px;">

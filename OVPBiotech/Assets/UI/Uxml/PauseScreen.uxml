@@ -4,24 +4,32 @@
     <ui:VisualElement name="pause-screen-center-anchor" style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; opacity: 1;">
         <ui:VisualElement name="pause-screen-overlay" class="pause-screen-overlay" />
         <ui:VisualElement name="settings__panel" class="pause-screen-panel window">
-            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" class="header" style="height: 13%; width: 80%; align-items: center; justify-content: center; position: absolute; top: -30px;">
+            <ui:VisualElement name="pause-screen-header" picking-mode="Ignore" class="header" style="height: auto; width: 80%; align-items: center; justify-content: center; position: absolute; top: -30px;">
                 <ui:Label text="Configuración" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label font-normal" style="font-size: 60px; -unity-font-style: bold;" />
             </ui:VisualElement>
-            <ui:VisualElement name="pause-screen-body" picking-mode="Ignore" style="align-items: center; height: 87%; width: 94%; padding-left: 20px; padding-right: 20px; padding-top: 20px; padding-bottom: 20px; justify-content: center;">
-                <ui:VisualElement style="flex-direction: row;">
-                    <ui:VisualElement name="VisualElement" style="flex-direction: row;">
-                        <ui:Label text="Musica" display-tooltip-when-elided="true" class="font-normal" style="font-size: 70px; -unity-font-style: bold; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0); -unity-text-align: middle-left;" />
+            <ui:VisualElement name="pause-screen-body" picking-mode="Ignore" class="body">
+                <ui:VisualElement style="flex-direction: column; width: 90%;">
+                    <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between;">
+                        <ui:Label text="Musica" display-tooltip-when-elided="true" class="font-normal lbl-font" />
                         <ui:Button display-tooltip-when-elided="true" name="settings-screen-music" class="settings-music__on" style="-unity-background-scale-mode: stretch-to-fill; width: 128px; height: 128px;" />
                     </ui:VisualElement>
-                    <ui:VisualElement name="VisualElement" style="flex-direction: row;">
-                        <ui:Label text="SFX" display-tooltip-when-elided="true" class="font-normal" style="font-size: 70px; color: rgb(255, 255, 255); -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0); -unity-font-style: bold; -unity-text-align: middle-left;" />
+                    <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between;">
+                        <ui:Label text="SFX" display-tooltip-when-elided="true" class="font-normal lbl-font" />
                         <ui:Button display-tooltip-when-elided="true" name="settings-screen-sfx" class="settings-sfx__on" style="-unity-background-scale-mode: stretch-to-fill; width: 128px; height: 128px;" />
                     </ui:VisualElement>
                 </ui:VisualElement>
-                <ui:Button text="Reanudar" display-tooltip-when-elided="true" name="pause-screen__resume-button" class="pause-screen-button font-normal button-green" style="margin-bottom: 21px;" />
-                <ui:Button text="Volver al menu" display-tooltip-when-elided="true" name="pause-screen__quit-button" class="pause-screen-button font-normal button-red" style="margin-left: 10px; margin-right: 10px; margin-top: 10px; margin-bottom: 10px;" />
             </ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button" />
+            <ui:VisualElement style="width: 100%; height: 128px; flex-direction: row; align-items: stretch; justify-content: center; position: absolute; bottom: 30px;">
+                <ui:Button display-tooltip-when-elided="true" name="pause-screen__resume-button" class="pause-screen-button font-normal button-green">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/return.png?fileID=21300000&amp;guid=8a7d75a743ae4434aa6cfb9f06e18faa&amp;type=3#return&apos;); width: 100%; height: 100%;" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button button-blue" style="margin-left: 20px;">
+                    <ui:VisualElement class="icon-save" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="pause-screen__quit-button" class="pause-screen-button font-normal button-red">
+                    <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/exit.png?fileID=21300000&amp;guid=9ff2f7e4f26498d4c9ae4d406ee3c3e7&amp;type=3#exit&apos;); width: 100%; height: 100%;" />
+                </ui:Button>
+            </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>
