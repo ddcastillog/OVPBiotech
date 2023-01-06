@@ -21,24 +21,30 @@ namespace OVPBiotechSpace
         const string k_PanelBackButton = "settings-screen__back-button";
         const string k_music = "settings-screen-music";
         const string k_sfx = "settings-screen-sfx";
+        const string k_iconMusic = "icon-music";
+        const string k_iconSfx = "icon-sfx";
         const string k_musicOff = "settings-music__off";
         const string k_SfxOff = "settings-sfx__off";
 
         const string k_PanelActiveClass = "settings__panel";
         const string k_PanelInactiveClass = "settings__panel--inactive";
         const string k_SettingsPanel = "settings__panel";
+        const string k_SettingsOverlay = "pause-screen-overlay";
         const string k_ResumeButton = "pause-screen__resume-button";
         const string k_QuitButton = "pause-screen__quit-button";
 
 
         Button m_Music;
         Button m_Sfx;
+        VisualElement m_iconMusic;
+        VisualElement m_iconSfx;
         Button m_ResumeButton;
         Button m_QuitButton;
         VisualElement m_PanelBackButton;
 
         // root node for transitions
         VisualElement m_Panel;
+        VisualElement m_SettingsOverlay;
 
         // temp storage to send back to GameDataManager
         GameData m_SettingsData;
@@ -71,9 +77,12 @@ namespace OVPBiotechSpace
             m_PanelBackButton = m_Root.Q(k_PanelBackButton);
             m_Music = m_Root.Q<Button>(k_music);
             m_Sfx = m_Root.Q<Button>(k_sfx);
+            m_iconMusic = m_Root.Q<VisualElement>(k_iconMusic);
+            m_iconSfx = m_Root.Q<VisualElement>(k_iconSfx);
             m_ResumeButton = m_Root.Q<Button>(k_ResumeButton);
             m_QuitButton = m_Root.Q<Button>(k_QuitButton);
             m_Panel = m_Root.Q(k_SettingsPanel);
+            m_SettingsOverlay = m_Root.Q(k_SettingsOverlay);
         }
 
         protected override void RegisterButtonCallbacks()
@@ -83,6 +92,7 @@ namespace OVPBiotechSpace
             m_Sfx?.RegisterCallback<ClickEvent>(ChangeSfxVolume);
             m_ResumeButton?.RegisterCallback<ClickEvent>(changeResumeButtton);
             m_QuitButton?.RegisterCallback<ClickEvent>(changeQuitButton);
+            m_SettingsOverlay?.RegisterCallback<ClickEvent>(ClosePanel);
         }
         void changeResumeButtton(ClickEvent e)
         {
@@ -108,11 +118,11 @@ namespace OVPBiotechSpace
             m_SettingsData.sfxVolume = m_SettingsData.sfxVolume ? false : true;
             if (m_SettingsData.sfxVolume)
             {
-                m_Sfx.RemoveFromClassList(k_SfxOff);
+                m_iconSfx.RemoveFromClassList(k_SfxOff);
             }
             else
             {
-                m_Sfx.AddToClassList(k_SfxOff);
+                m_iconSfx.AddToClassList(k_SfxOff);
             }
 
             // notify the GameDataManager
@@ -125,11 +135,11 @@ namespace OVPBiotechSpace
             m_SettingsData.musicVolume = m_SettingsData.musicVolume ? false : true;
             if (m_SettingsData.musicVolume)
             {
-                m_Music.RemoveFromClassList(k_musicOff);
+                m_iconMusic.RemoveFromClassList(k_musicOff);
             }
             else
             {
-                m_Music.AddToClassList(k_musicOff);
+                m_iconMusic.AddToClassList(k_musicOff);
             }
 
             // notify the GameDataManager
@@ -157,11 +167,11 @@ namespace OVPBiotechSpace
             m_SettingsData = gameData;
             if (!gameData.musicVolume)
             {
-                m_Music.AddToClassList(k_musicOff);
+                m_iconMusic.AddToClassList(k_musicOff);
             }
             if (!gameData.sfxVolume)
             {
-                m_Sfx.AddToClassList(k_SfxOff);
+                m_iconSfx.AddToClassList(k_SfxOff);
             }
 
             SettingsUpdated?.Invoke(m_SettingsData);

@@ -68,7 +68,7 @@
     border-right-width: 0;
     border-left-width: 2px;
     left: -11px;
-    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=-7549752461218190321&guid=731db58f2972a21478ec835df26b724d&type=3#Main_menu_button_01');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=8949586131026482976&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#Main_menu_button_01');
 }
 
 .menu__button:active {
@@ -108,7 +108,7 @@
     border-right-width: 0;
     border-left-width: 2px;
     left: -11px;
-    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=-7549752461218190321&guid=731db58f2972a21478ec835df26b724d&type=3#Main_menu_button_01');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=8949586131026482976&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#Main_menu_button_01');
 }
 
 .menu__background {
@@ -116,7 +116,7 @@
     height: 100%;
     opacity: 1;
     position: absolute;
-    background-image: url('project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=4411288471931253381&guid=731db58f2972a21478ec835df26b724d&type=3#Main_menu_bg');
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=-2662387196295667541&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#Main_menu_bg');
 }
 
 .menu__icon {

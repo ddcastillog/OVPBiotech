@@ -2,7 +2,7 @@
     <Style src="project://database/Assets/UI/Uss/QGWinScreen.uss?fileID=7433441132597879392&amp;guid=1e19d6ab4c3e0574aaf2637e0d57cbde&amp;type=3#QGWinScreen" />
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement class="countainer">
-        <ui:VisualElement class="window" style="width: 700px; height: 500px; -unity-background-scale-mode: stretch-to-fill;">
+        <ui:VisualElement class="window2" style="width: 700px; height: 500px; -unity-background-scale-mode: stretch-to-fill;">
             <ui:VisualElement style="width: 100%; height: 50%; align-items: center;">
                 <ui:Label text="Puntuación" display-tooltip-when-elided="true" class="font-normal header" style="width: 90%; height: 45%; font-size: 80px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(255, 255, 255); margin-top: 30px; background-color: rgba(0, 0, 0, 0); top: -80px;" />
                 <ui:Label text="5/10" display-tooltip-when-elided="true" name="lbl-score" class="font-normal" style="width: 100%; height: 45%; font-size: 120px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(0, 0, 0);" />

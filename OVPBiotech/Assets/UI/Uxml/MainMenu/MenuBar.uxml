@@ -19,7 +19,6 @@
                 <ui:VisualElement name="menu-boards-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/leaderboardsComplex.png?fileID=21300000&amp;guid=741f7d7f7dd052444b391f48a6e6e583&amp;type=3#leaderboardsComplex&apos;); background-color: rgba(255, 255, 255, 0);" />
                 <ui:Label text="Noticias" display-tooltip-when-elided="true" name="menu-mail-label" enable-rich-text="false" picking-mode="Ignore" class="menu-label menu__label font-normal" />
             </ui:Button>
-            <ui:VisualElement name="menu__current-marker" picking-mode="Ignore" class="menu-button-current-marker menu__current-marker" style="translate: 9px 0; width: 15px; height: 15%; justify-content: flex-start; max-width: 100%; max-height: 100%; -unity-background-image-tint-color: rgb(255, 255, 255); display: flex; opacity: 1; top: 80%; transform-origin: center; scale: 1 1; background-image: url(&apos;project://database/Assets/UI/Textures/ui_atlas2.psb?fileID=498443812830297252&amp;guid=731db58f2972a21478ec835df26b724d&amp;type=3#select&apos;);" />
         </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

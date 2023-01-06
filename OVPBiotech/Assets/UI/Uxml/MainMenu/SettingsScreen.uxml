@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/UI/Uss/PauseScreen.uss?fileID=7433441132597879392&amp;guid=5a2eb5b505d44f248bda8b0e86354e06&amp;type=3#PauseScreen" />
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement name="settings-screen-center-anchor" style="align-items: center; justify-content: center; position: absolute; width: 100%; height: 100%; opacity: 1;">
-        <ui:VisualElement name="settings-screen-overlay" class="pause-screen-overlay" />
-        <ui:VisualElement name="settings__panel" class="pause-screen-panel settings__panel window">
+        <ui:VisualElement name="settings-screen-overlay" class="pause-screen-overlay" style="background-color: rgba(0, 0, 0, 0.67);" />
+        <ui:VisualElement name="settings__panel" class="pause-screen-panel settings__panel window2">
             <ui:VisualElement name="settings-screen-header" picking-mode="Ignore" class="header" style="position: absolute; top: -30px; height: auto; width: 80%; align-items: center; justify-content: center;">
                 <ui:Label text="Configuración" display-tooltip-when-elided="true" name="pause-screen-label" picking-mode="Ignore" class="pause-screen-label font-normal" />
             </ui:VisualElement>
@@ -11,11 +11,15 @@
                 <ui:VisualElement style="flex-direction: column; width: 90%;">
                     <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between;">
                         <ui:Label text="Musica" display-tooltip-when-elided="true" class="font-normal lbl-font" />
-                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-music" class="settings-music__on" />
+                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-music" class="btn-settings-bg">
+                            <ui:VisualElement name="icon-music" class="settings-music__on" />
+                        </ui:Button>
                     </ui:VisualElement>
                     <ui:VisualElement name="VisualElement" style="flex-direction: row; justify-content: space-between;">
                         <ui:Label text="SFX" display-tooltip-when-elided="true" class="font-normal lbl-font" />
-                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-sfx" class="settings-sfx__on" />
+                        <ui:Button display-tooltip-when-elided="true" name="settings-screen-sfx" class="btn-settings-bg">
+                            <ui:VisualElement name="icon-sfx" class="settings-sfx__on" />
+                        </ui:Button>
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
