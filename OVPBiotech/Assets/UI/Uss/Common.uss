@@ -171,7 +171,6 @@ GroupBox {
 }
 
 .button-yellow {
-    text-shadow: 0 3px 2px rgba(0, 0, 0, 0.75);
     transition-duration: 0.25s;
     background-color: rgba(0, 0, 0, 0);
     border-left-color: rgba(0, 0, 0, 0);

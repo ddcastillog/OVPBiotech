@@ -11,6 +11,7 @@ namespace OVPBiotechSpace
     public class Character : ScriptableObject
     {
         public string nombre;
+        [TextArea]
         public string description;
         public Sprite btnImage;
     }

@@ -32,12 +32,16 @@ namespace OVPBiotechSpace
         const string k_QGPanel = "QGPanel";
         const string k_visibilityOff = "visibility-off";
         const string k_displayOn = "display-on";
+        const string k_vsExplanation = "vs-explanation";
+        const string k_lblExplanation = "lbl-explanation";        
         #endregion
 
         #region Variables
         FirebaseFirestore db;
         Label m_lblQuestion;
         VisualElement m_QGPanel;
+        VisualElement m_vsExplanation;
+        Label m_lblExplanation;
         List<Button> m_BtnOptions = new List<Button>();
         List<Label> m_LblText = new List<Label>();
         List<Label> m_lblOptions = new List<Label>();
@@ -82,6 +86,8 @@ namespace OVPBiotechSpace
             base.SetVisualElements();
             m_lblQuestion = m_Root.Q<Label>(k_lblQuestion);
             m_QGPanel = m_Root.Q<VisualElement>(k_QGPanel);
+            m_vsExplanation = m_Root.Q<VisualElement>(k_vsExplanation);
+            m_lblExplanation = m_Root.Q<Label>(k_lblExplanation);
             for (int i = 1; i < 5; i++)
             {
                 m_BtnOptions.Add(m_Root.Q<Button>(k_BtnOptions + i));
@@ -89,7 +95,7 @@ namespace OVPBiotechSpace
                 m_LblText.Add(m_Root.Q<Label>(k_LblText + i));
             }
             db = FirebaseFirestore.DefaultInstance;
-            GetData();
+            GetData();            
         }
 
         protected override void RegisterButtonCallbacks()
@@ -98,6 +104,7 @@ namespace OVPBiotechSpace
             {
                 m_BtnOptions[i]?.RegisterCallback<ClickEvent, int>(IsAnswerCorrect, i);
             }
+            m_vsExplanation?.RegisterCallback<ClickEvent>(ClickvsExplanation);
         }
         void GetData()
         {
@@ -140,6 +147,15 @@ namespace OVPBiotechSpace
             questionsList = questionsListAll.FindAll(q => q.q_scaleDifficulty == indexDifficultyLevelScale);
             NextQuestions();
         }
+        void ClickvsExplanation(ClickEvent e)
+        {
+            //Remove questions
+            questionsListAll.Remove(questionsList[indexQuestionsRandom]);
+            questionsList.RemoveAt(indexQuestionsRandom);
+            NextQuestions();
+            m_vsExplanation.RemoveFromClassList(k_displayOn);
+            isClick = true;
+        }
         private void IsAnswerCorrect(ClickEvent e, int index)
         {
             if (isClick)
@@ -149,20 +165,14 @@ namespace OVPBiotechSpace
                     if (questionsList[indexQuestionsRandom].q_option_correct == (index + 1))
                     {
                         AudioManager.PlayVictorySound();
-                        correctAnswerOptions++;
-                        //Remove questions use
-                        questionsListAll.Remove(questionsList[indexQuestionsRandom]);
-                        questionsList.RemoveAt(indexQuestionsRandom);
+                        correctAnswerOptions++;                        
                         //add
                         AnswerQuestionsConsecutively++;
                         StartCoroutine("animationCorrect", index);
                     }
                     else
                     {
-                        AudioManager.PlayDefeatSound();
-                        //Remove questions
-                        questionsListAll.Remove(questionsList[indexQuestionsRandom]);
-                        questionsList.RemoveAt(indexQuestionsRandom);
+                        AudioManager.PlayDefeatSound();                        
                         //reset
                         AnswerQuestionsConsecutively = 0;
                         StartCoroutine("animationIncorrect", index);
@@ -176,18 +186,24 @@ namespace OVPBiotechSpace
             isClick = false;
             m_BtnOptions[index].AddToClassList(k_IsCorrect);
             yield return new WaitForSeconds(.5f);
-            m_BtnOptions[index].RemoveFromClassList(k_IsCorrect);
-            NextQuestions();
-            isClick = true;
+            m_BtnOptions[index].RemoveFromClassList(k_IsCorrect);            
+            //Explication
+            m_lblExplanation.text = questionsList[indexQuestionsRandom].q_explanation;
+            m_vsExplanation.AddToClassList(k_displayOn);            
         }
         IEnumerator animationIncorrect(int index)
         {
             isClick = false;
             m_BtnOptions[index].AddToClassList(k_IsIncorrect);
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.4f);
             m_BtnOptions[index].RemoveFromClassList(k_IsIncorrect);
-            NextQuestions();
-            isClick = true;
+            yield return new WaitForSeconds(.2f);
+            m_BtnOptions[questionsList[indexQuestionsRandom].q_option_correct-1].AddToClassList(k_IsCorrect);
+            yield return new WaitForSeconds(0.8f);
+            m_BtnOptions[questionsList[indexQuestionsRandom].q_option_correct-1].RemoveFromClassList(k_IsCorrect);            
+            //Explication
+            m_lblExplanation.text = questionsList[indexQuestionsRandom].q_explanation;
+            m_vsExplanation.AddToClassList(k_displayOn);            
         }
         void ReplayGame()
         {
@@ -196,17 +212,23 @@ namespace OVPBiotechSpace
             AnswerQuestions = 0;
             if (difficultyLevelList.Count > 0)
             {
-                db.Collection(pathquestion).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
+                if (categorySaves.Count > 0)
                 {
-                    questionsListAll = new List<Question>();
-                    QuerySnapshot snapshot = task.Result;
-                    foreach (DocumentSnapshot document in snapshot.Documents)
+                    db.Collection(pathquestion).WhereIn("q_category", categorySaves).GetSnapshotAsync(Source.Cache).ContinueWithOnMainThread(task =>
                     {
-                        questionsListAll.Add(document.ConvertTo<Question>());
-                    }
+                        questionsListAll = new List<Question>();
+                        QuerySnapshot snapshot = task.Result;
+                        foreach (DocumentSnapshot document in snapshot.Documents)
+                        {
+                            questionsListAll.Add(document.ConvertTo<Question>());
+                        }
+                        getQuestions();
+                    });
+                }
+                else
+                {
                     getQuestions();
-                });
-
+                }
             }
             else
             {

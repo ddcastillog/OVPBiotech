@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc51b9f19ed71b43bae766be4cf9bcd, type: 3}
   m_Name: Character1
   m_EditorClassIdentifier: 
-  nombre: Nombre 1
-  description: "Es un bi\xF3logo del desarrollo brit\xE1nico. Sus descubrimientos
-    relativos a clonaci\xF3n le valieron el Premio Nobel de Fisiolog\xEDa o Medicina
-    en 2012"
+  nombre: James Watson
+  description: "Es un bi\xF3logo molecular, genetista y zo\xF3logo estadounidense.\r\nCoautor,
+    junto con Francis Crick, del art\xEDculo acad\xE9mico que propon\xEDa la estructura
+    de doble h\xE9lice de la mol\xE9cula de ADN."
   btnImage: {fileID: 21300000, guid: 02f00eb122b26874e8b7aa6fd61ae299, type: 3}

@@ -43,5 +43,17 @@
             </ui:VisualElement>
         </ui:VisualElement>
         <ui:Instance template="WildcardScreen" name="WildcardScreen" style="width: 100%;" />
+        <ui:VisualElement name="vs-explanation" class="countainer-explanation">
+            <ui:VisualElement class="window" style="width: 70%; height: 70%; align-items: center; justify-content: flex-start;">
+                <ui:VisualElement class="header" style="width: 65%; height: auto; top: -30px; position: absolute;">
+                    <ui:Label text="EXPLICACIÓN" display-tooltip-when-elided="true" focusable="true" name="Label" class="font-normal" style="height: auto; width: 100%; font-size: 100px; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold;" />
+                </ui:VisualElement>
+                <ui:Label display-tooltip-when-elided="true" name="lbl-explanation" class="font-normal" style="font-size: 65px; color: rgb(0, 0, 0); -unity-text-align: middle-center; width: 95%; white-space: normal; height: 76%; position: absolute; top: 100px;" />
+            </ui:VisualElement>
+            <ui:VisualElement style="flex-direction: row; position: absolute; bottom: 0; right: 0;">
+                <ui:Label text="Toca para continuar" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 50px; -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/next.png?fileID=21300000&amp;guid=a0e1698c538737d44a1b067be722c392&amp;type=3#next&apos;); width: 100px; height: 100px;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

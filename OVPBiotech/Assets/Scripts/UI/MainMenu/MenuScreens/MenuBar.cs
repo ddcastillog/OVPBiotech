@@ -91,7 +91,7 @@ namespace OVPBiotechSpace
         {
             if (menuButton == null)
                 return;
-
+            AudioManager.PlayDefaultButtonSound();
             HighlightElement(menuButton, k_ButtonInactiveClass, k_ButtonActiveClass, m_Root);
 
             // enable the label and disable others

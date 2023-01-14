@@ -12,8 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc51b9f19ed71b43bae766be4cf9bcd, type: 3}
   m_Name: Character3
   m_EditorClassIdentifier: 
-  nombre: Nombre 3
-  description: "Es un bi\xF3logo y empresario estadounidense. Fue el presidente fundador
-    de Celera Genomics, haci\xE9ndose famoso al arrancar su propio Proyecto Genoma
-    Humano en 1999"
+  nombre: Herbert Boyer
+  description: "Bioqu\xEDmico estadounidense y uno de los fundadores de la primera
+    compa\xF1\xEDa de biotecnolog\xEDa Genentech."
   btnImage: {fileID: 21300000, guid: 9e46f19496295c24aab6f23938485ddf, type: 3}

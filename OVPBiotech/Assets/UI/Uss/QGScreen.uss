@@ -74,14 +74,6 @@
     flex-direction: row;
 }
 
-.visibility-off {
-    visibility: hidden;
-}
-
-.display-on {
-    display: flex;
-}
-
 .countainer-expert-off {
     width: 500px;
     height: 100%;
@@ -115,12 +107,10 @@
 }
 
 .bnt-IsCorrect {
-    scale: 1.05 1.05;
     background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=2952183760112061380&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#bt_1');
 }
 
 .btn-IsIncorrect {
-    scale: 1.05 1.05;
     background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=-3192904842174464713&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#bt_2');
 }
 
@@ -139,4 +129,24 @@
     color: rgb(255, 255, 255);
     -unity-text-align: middle-left;
     white-space: normal;
+}
+
+.countainer-explanation {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.67);
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.visibility-off {
+    visibility: hidden;
+}
+
+.display-on {
+    display: flex;
 }
