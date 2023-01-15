@@ -1,6 +1,6 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Uss/QGScreen.uss?fileID=7433441132597879392&amp;guid=b0b9fd08449c71d48b125a4b99d7d46b&amp;type=3#QGScreen" />
-    <Style src="project://database/Assets/UI/Uss/Fonts.uss?fileID=7433441132597879392&amp;guid=ef2389dc11658624bbe2b51d440b5411&amp;type=3#Fonts" />
+    <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement style="width: 100%; height: auto; margin-left: 15px; flex-direction: row; justify-content: space-between;">
         <ui:VisualElement>
             <ui:Button display-tooltip-when-elided="true" name="btn-5050" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/5050_normal.png?fileID=21300000&amp;guid=b8528bacbcb1fa34ab10309a63b118f7&amp;type=3#5050_normal&apos;);" />

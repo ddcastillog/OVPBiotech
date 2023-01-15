@@ -51,6 +51,6 @@ MonoBehaviour:
   m_TransactionSound: {fileID: 8300000, guid: e39d7f8311ca34f4cbd60756b352e8da, type: 3}
   m_DefaultWarningSound: {fileID: 8300000, guid: 8181bfb7372b845489e06e586b9977fc,
     type: 3}
-  m_VictorySound: {fileID: 8300000, guid: 7b009c4ba264e9d4f97db6d5c40be760, type: 3}
-  m_DefeatSound: {fileID: 8300000, guid: dd367de03bf24f3419cd6f95a6ae7bf2, type: 3}
+  m_VictorySound: {fileID: 8300000, guid: e67a6e398341dd94d80d7f2cd9f7411e, type: 3}
+  m_DefeatSound: {fileID: 8300000, guid: 5c13c2f34a65a8841bf9190f50ad2a71, type: 3}
   m_PotionSound: {fileID: 8300000, guid: c820bb8be8a50402896f244c9ed89b04, type: 3}

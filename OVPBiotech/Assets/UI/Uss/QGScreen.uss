@@ -140,6 +140,8 @@
     background-color: rgba(0, 0, 0, 0.67);
     align-items: center;
     justify-content: center;
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in;
     display: none;
 }
 

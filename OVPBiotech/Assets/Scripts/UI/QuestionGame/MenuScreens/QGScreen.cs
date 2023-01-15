@@ -149,6 +149,7 @@ namespace OVPBiotechSpace
         }
         void ClickvsExplanation(ClickEvent e)
         {
+            AudioManager.PlayDefaultButtonSound();
             //Remove questions
             questionsListAll.Remove(questionsList[indexQuestionsRandom]);
             questionsList.RemoveAt(indexQuestionsRandom);
