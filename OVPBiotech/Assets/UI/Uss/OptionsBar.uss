@@ -8,22 +8,4 @@
 .options-bar__button {
     width: 128px;
     height: 128px;
-    align-items: center;
-    justify-content: center;
-    transition-duration: 0.25s;
-    background-color: rgba(0, 0, 0, 0.39);
-    border-top-left-radius: 60px;
-    border-bottom-left-radius: 60px;
-    border-top-right-radius: 60px;
-    border-bottom-right-radius: 60px;
-    border-left-color: rgba(0, 0, 0, 0);
-    border-right-color: rgba(0, 0, 0, 0);
-    border-top-color: rgba(0, 0, 0, 0);
-    border-bottom-color: rgba(0, 0, 0, 0);
-}
-
-.options-bar__button:hover {
-    -unity-background-image-tint-color: rgb(241, 196, 15);
-    transition-duration: 0.25s;
-    scale: 1.1 1.1;
 }

@@ -23,15 +23,15 @@
                     </ui:VisualElement>
                 </ui:VisualElement>
             </ui:VisualElement>
-            <ui:VisualElement style="width: 100%; height: 128px; flex-direction: row; align-items: stretch; justify-content: center; position: absolute; bottom: 30px;">
+            <ui:VisualElement style="width: 90%; height: 128px; flex-direction: row; align-items: stretch; justify-content: space-around; position: absolute; bottom: 30px;">
                 <ui:Button display-tooltip-when-elided="true" name="pause-screen__quit-button" class="pause-screen-button font-normal button-red">
                     <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/exit.png?fileID=21300000&amp;guid=9ff2f7e4f26498d4c9ae4d406ee3c3e7&amp;type=3#exit&apos;); width: 100%; height: 100%;" />
                 </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button button-blue">
+                    <ui:VisualElement class="icon-save" />
+                </ui:Button>
                 <ui:Button display-tooltip-when-elided="true" name="pause-screen__resume-button" class="pause-screen-button font-normal button-green">
                     <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/return.png?fileID=21300000&amp;guid=8a7d75a743ae4434aa6cfb9f06e18faa&amp;type=3#return&apos;); width: 100%; height: 100%;" />
-                </ui:Button>
-                <ui:Button display-tooltip-when-elided="true" name="settings-screen__back-button" class="pause-screen__back-button button-blue" style="margin-left: 20px;">
-                    <ui:VisualElement class="icon-save" />
                 </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>

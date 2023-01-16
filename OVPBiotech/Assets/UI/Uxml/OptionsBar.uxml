@@ -2,8 +2,8 @@
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <Style src="project://database/Assets/UI/Uss/OptionsBar.uss?fileID=7433441132597879392&amp;guid=a4ff7e7edea0d9e4da693f69ac77ff05&amp;type=3#OptionsBar" />
     <ui:VisualElement name="options-bar" class="options-bar" style="width: 150px; height: 113px; align-items: center; position: absolute; justify-content: flex-end; top: 20px; right: 20px; opacity: 1;">
-        <ui:Button display-tooltip-when-elided="true" name="options-bar__button" usage-hints="DynamicTransform" class="options-bar__button" style="width: 128px; height: 128px;">
-            <ui:VisualElement name="options-bar__button-icon" picking-mode="Ignore" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/gear.png?fileID=21300000&amp;guid=f406211503b66194dab083a4d1afbc5c&amp;type=3#gear&apos;); width: 128px; height: 128px; -unity-background-scale-mode: scale-and-crop;" />
+        <ui:Button display-tooltip-when-elided="true" name="options-bar__button" usage-hints="DynamicTransform" class="options-bar__button button-blue">
+            <ui:VisualElement name="options-bar__button-icon" picking-mode="Ignore" style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/gear.png?fileID=21300000&amp;guid=f406211503b66194dab083a4d1afbc5c&amp;type=3#gear&apos;); -unity-background-scale-mode: scale-and-crop;" />
         </ui:Button>
     </ui:VisualElement>
 </ui:UXML>
