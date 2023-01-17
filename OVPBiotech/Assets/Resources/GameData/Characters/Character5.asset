@@ -15,4 +15,4 @@ MonoBehaviour:
   nombre: Elizabeth Blackburn
   description: "Es una bioqu\xEDmica australiana, descubridora de la telomerasa,una
     enzima implicada en el envejecimiento celular y la formaci\xF3n de tumores."
-  btnImage: {fileID: 21300000, guid: 17b585968fa6f824189efef48f87d251, type: 3}
+  btnImage: {fileID: 21300000, guid: 667c9e8181b9b6540aa9c98a9c08df68, type: 3}

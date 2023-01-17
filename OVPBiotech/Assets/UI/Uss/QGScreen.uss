@@ -49,7 +49,7 @@
 
 .btn-wildcards:active {
     scale: 1.1 1.1;
-    -unity-background-image-tint-color: rgba(14, 130, 109, 255);
+    -unity-background-image-tint-color: rgb(14, 130, 109);
 }
 
 .btn-wildcards-used {
@@ -80,11 +80,11 @@
 .countainer-expert-off {
     width: 500px;
     height: 100%;
-    background-image: url('project://database/Assets/Art%20Gameplay/icon/Character2.png?fileID=21300000&guid=17b585968fa6f824189efef48f87d251&type=3#Character2');
     flex-direction: column-reverse;
     transition-duration: 0.25s;
     display: none;
     translate: 100% 0;
+    background-image: url('project://database/Assets/Art%20Gameplay/character-icon/oldwoman.png?fileID=21300000&guid=ea85ef934bf27e14c886f992511f49cc&type=3#oldwoman');
 }
 
 .countainer-expert-on {
@@ -161,32 +161,32 @@
 }
 
 .icon-5050 {
-    background-image: url('project://database/Assets/Art%20Gameplay/2x/5050.png?fileID=21300000&guid=14cc49516f1c63b4281b28c36f7b498c&type=3#5050');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/5050.png?fileID=21300000&guid=14cc49516f1c63b4281b28c36f7b498c&type=3#5050');
     width: 80%;
     height: 80%;
 }
 
 .icon-audience {
-    background-image: url('project://database/Assets/Art%20Gameplay/2x/massiveMultiplayer.png?fileID=21300000&guid=d5ff894d74a7bbf448d04c272389b114&type=3#massiveMultiplayer');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/massiveMultiplayer.png?fileID=21300000&guid=d5ff894d74a7bbf448d04c272389b114&type=3#massiveMultiplayer');
     width: 100%;
     height: 100%;
 }
 
 .icon-switch {
-    background-image: url('project://database/Assets/Art%20Gameplay/2x/swap.png?fileID=21300000&guid=0b370cc1187e7d44085a9c2578789f4c&type=3#swap');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/swap.png?fileID=21300000&guid=0b370cc1187e7d44085a9c2578789f4c&type=3#swap');
     width: 75%;
     height: 75%;
 }
 
 .icon-expert {
-    background-image: url('project://database/Assets/Art%20Gameplay/2x/expert.png?fileID=21300000&guid=3404ad23749286240989e871496b2225&type=3#expert');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/expert.png?fileID=21300000&guid=3404ad23749286240989e871496b2225&type=3#expert');
     width: 80%;
     height: 80%;
     position: absolute;
 }
 
 .icon-wildcards-used {
-    background-image: url('project://database/Assets/Art%20Gameplay/2x/locked.png?fileID=21300000&guid=eaaeb908548696e4dacc5850c66155fe&type=3#locked');
+    background-image: url('project://database/Assets/Art%20Gameplay/icon/locked.png?fileID=21300000&guid=eaaeb908548696e4dacc5850c66155fe&type=3#locked');
     width: 100%;
     height: 100%;
 }

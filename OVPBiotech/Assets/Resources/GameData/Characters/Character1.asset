@@ -16,4 +16,4 @@ MonoBehaviour:
   description: "Es un bi\xF3logo molecular, genetista y zo\xF3logo estadounidense.\r\nCoautor,
     junto con Francis Crick, del art\xEDculo acad\xE9mico que propon\xEDa la estructura
     de doble h\xE9lice de la mol\xE9cula de ADN."
-  btnImage: {fileID: 21300000, guid: 02f00eb122b26874e8b7aa6fd61ae299, type: 3}
+  btnImage: {fileID: 21300000, guid: 6ac69f2aea4d1014a8e44b35bee19166, type: 3}

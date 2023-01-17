@@ -37,17 +37,18 @@
     margin-top: 20px;
     margin-bottom: 20px;
     background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2010x.png?fileID=21300000&guid=16d46dbc21e0c8b41bb10f990a737636&type=3#Square Outline - 10x');
-    background-color: rgb(135, 135, 135);
     transition-timing-function: ease-in;
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-image {
-    width: 80%;
-    height: 80%;
+    width: 85%;
+    height: 85%;
     background-image: url('project://database/Assets/Art%20Gameplay/icon/1184394.png?fileID=21300000&guid=48580ac03b4207f468c7812e1acfd03e&type=3#1184394');
+    background-color: rgba(0, 0, 0, 0);
 }
 
 .btn-sc-active {
-    -unity-background-image-tint-color: rgba(0, 69, 255, 255);
+    -unity-background-image-tint-color: rgb(0, 69, 255);
     background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2020x.png?fileID=21300000&guid=f24f26369d1a39943b42bcc9cccaafb6&type=3#Square Outline - 20x');
 }

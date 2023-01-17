@@ -16,4 +16,4 @@ MonoBehaviour:
   description: "Es un genetista brit\xE1nico que desarroll\xF3 las t\xE9cnicas de
     la huella gen\xE9tica y del perfil de ADN que, en la actualidad, son usadas por
     la ciencia forense."
-  btnImage: {fileID: 21300000, guid: 02f00eb122b26874e8b7aa6fd61ae299, type: 3}
+  btnImage: {fileID: 21300000, guid: 6ac69f2aea4d1014a8e44b35bee19166, type: 3}

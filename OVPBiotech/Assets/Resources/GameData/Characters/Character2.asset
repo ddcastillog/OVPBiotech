@@ -15,4 +15,4 @@ MonoBehaviour:
   nombre: Rosalind Franklin
   description: "Fue una qu\xEDmica y cristal\xF3grafa brit\xE1nica, cuyo trabajo
     fue fundamental para la comprensi\xF3n de las estructuras moleculares del ADN."
-  btnImage: {fileID: 21300000, guid: 17b585968fa6f824189efef48f87d251, type: 3}
+  btnImage: {fileID: 21300000, guid: ea85ef934bf27e14c886f992511f49cc, type: 3}
