@@ -30,24 +30,24 @@
     transition-duration: 0.25s;
     justify-content: center;
     align-items: center;
-    width: 300px;
-    height: 300px;
+    width: 280px;
+    height: 280px;
     margin-right: 20px;
     margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 20px;
     background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2010x.png?fileID=21300000&guid=16d46dbc21e0c8b41bb10f990a737636&type=3#Square Outline - 10x');
-    background-color: rgba(135, 135, 135, 255);
-}
-
-.btn-sc:active {
-    scale: 1.05 1.05;
-    -unity-background-image-tint-color: rgba(255, 0, 0, 255);
-    background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2014x.png?fileID=21300000&guid=93336f57323910b41a642ef84a91679e&type=3#Square Outline - 14x');
+    background-color: rgb(135, 135, 135);
+    transition-timing-function: ease-in;
 }
 
 .btn-image {
     width: 80%;
     height: 80%;
     background-image: url('project://database/Assets/Art%20Gameplay/icon/1184394.png?fileID=21300000&guid=48580ac03b4207f468c7812e1acfd03e&type=3#1184394');
+}
+
+.btn-sc-active {
+    -unity-background-image-tint-color: rgba(0, 69, 255, 255);
+    background-image: url('project://database/Assets/UI/Textures/Border/Square/Square%20Outline%20-%2020x.png?fileID=21300000&guid=f24f26369d1a39943b42bcc9cccaafb6&type=3#Square Outline - 20x');
 }

@@ -1,7 +1,11 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <Style src="project://database/Assets/UI/Uss/HomeScreen.uss?fileID=7433441132597879392&amp;guid=8ac4b4fde8aa1aa46b4b38eeca967ecc&amp;type=3#HomeScreen" />
-    <ui:VisualElement name="home__panel" class="screen-anchor-bottom-center" style="opacity: 1; position: absolute; width: 100%; height: 100%; align-items: center; justify-content: flex-end; left: 0; top: 0; -unity-background-image-tint-color: rgb(255, 255, 255); -unity-text-outline-color: rgb(255, 0, 0); -unity-text-outline-width: 0; background-image: url(&apos;project://database/Assets/Art%20Gameplay/main.jpg?fileID=21300000&amp;guid=f6d354d122a1e5e439771ba11dc93644&amp;type=3#main&apos;); -unity-background-scale-mode: scale-and-crop;">
-        <ui:Button display-tooltip-when-elided="true" name="home-play__level-button" text="Jugar" class="play-level__button button-yellow font-normal" style="padding-bottom: 16px; text-shadow: 0 3px 3px rgba(0, 0, 0, 0.75);" />
+    <ui:VisualElement name="home__panel" class="screen-anchor-bottom-center" style="opacity: 1; position: absolute; width: 100%; height: 100%; align-items: center; justify-content: flex-start; left: 0; top: 0; -unity-text-outline-color: rgb(255, 255, 255); -unity-text-outline-width: 0;">
+        <ui:VisualElement style="position: absolute; left: 250px; top: 50px;">
+            <ui:Label text="QUIERES SER " display-tooltip-when-elided="true" class="title font-title" style="font-size: 80px; color: rgb(255, 255, 255); -unity-text-align: upper-left;" />
+            <ui:Label text="BIOTECNÓLOGO?" display-tooltip-when-elided="true" class="title font-title" style="font-size: 130px; color: rgb(223, 177, 53);" />
+        </ui:VisualElement>
+        <ui:Button display-tooltip-when-elided="true" name="home-play__level-button" text="Jugar" class="play-level__button button-yellow font-normal" style="text-shadow: 0 3px 3px rgba(0, 0, 0, 0.75);" />
     </ui:VisualElement>
 </ui:UXML>

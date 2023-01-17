@@ -1,42 +1,3 @@
-.play-level__number {
-    -unity-font-style: bold;
-    font-size: 275%;
-    color: rgb(255, 255, 255);
-    -unity-text-align: middle-center;
-    align-items: center;
-    justify-content: center;
-}
-
-.play-level__banner {
-    left: 5%;
-    top: -10%;
-    -unity-text-align: middle-center;
-    position: absolute;
-    width: 90%;
-    height: 15%;
-    justify-content: center;
-    align-items: center;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=7212822421042780955&guid=40b81b4b44acdfb4584319d79163acb2&type=3#Header_bg_02');
-}
-
-.play-level__name {
-    align-items: flex-start;
-    justify-content: flex-end;
-    color: rgb(236, 240, 241);
-    -unity-font-style: bold;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    width: 100%;
-    -unity-text-align: middle-center;
-    background-color: rgb(0, 0, 0);
-    top: 68%;
-    position: absolute;
-    height: 15%;
-    white-space: nowrap;
-    font-size: 140px;
-}
-
 .play-level__button {
     width: 450px;
     height: 180px;
@@ -48,55 +9,7 @@
     -unity-text-align: middle-center;
 }
 
-.play-level__panel {
-    position: absolute;
-    left: 74.5%;
-    width: 528px;
-    height: 696px;
-    top: 20%;
-    -unity-background-scale-mode: scale-and-crop;
-    background-color: rgb(77, 77, 77);
-}
-
-.play-level__frame {
-    background-color: rgb(44, 62, 80);
-    border-left-color: rgb(255, 255, 255);
-    border-right-color: rgb(255, 255, 255);
-    border-top-color: rgb(255, 255, 255);
-    border-bottom-color: rgb(255, 255, 255);
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    align-items: center;
-    justify-content: flex-start;
-    top: 3%;
-    display: flex;
-    position: absolute;
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psb?fileID=388201365816350442&guid=40b81b4b44acdfb4584319d79163acb2&type=3#frame_01');
-    -unity-background-image-tint-color: rgb(255, 255, 255);
-    border-left-width: 0;
-    border-right-width: 0;
-    border-top-width: 0;
-    border-bottom-width: 0;
-    background-color: rgba(44, 62, 80, 0);
-    -unity-background-scale-mode: stretch-to-fill;
-    height: 739px;
-    margin-top: -33px;
-    width: 588px;
-    -unity-text-outline-color: rgba(255, 0, 0, 0);
-    left: -3%;
-}
-
-.title__graphic {
-    background-image: url('project://database/Assets/UI/Textures/UI_atlas.psd?fileID=7092703706131164029&guid=68de98d899585b7469e0fb40a0fcbc56&type=3#DC_logo');
-    background-color: rgba(126, 0, 255, 0);
-    transform-origin: center;
-    -unity-background-scale-mode: scale-to-fit;
-    height: 430px;
-    width: 845px;
-    align-items: stretch;
-    left: 0;
-    position: relative;
-    top: -57%;
+.title {
+    -unity-font-style: bold;
+    color: rgb(255, 255, 255);
 }

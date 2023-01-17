@@ -5,7 +5,7 @@
         <ui:VisualElement style="align-items: center; flex-direction: column-reverse; flex-wrap: nowrap; width: 50%; height: 100%; right: 20px;">
             <ui:Button text="Comenzar" display-tooltip-when-elided="true" name="btn-Start-game" class="btn-play font-normal button-green" style="width: 60%;" />
             <ui:ScrollView name="countainer-btnSC" mode="Horizontal" horizontal-scroller-visibility="Hidden" vertical-scroller-visibility="Hidden" class="countainer-SC" style="background-color: rgba(79, 79, 79, 0.59);" />
-            <ui:VisualElement style="width: 100%; height: 400px; justify-content: space-between; margin-bottom: 20px;">
+            <ui:VisualElement style="width: 100%; height: 35%; justify-content: space-between; margin-bottom: 20px;">
                 <ui:Label text="John Craig" display-tooltip-when-elided="true" name="lbl-name" class="font-normal" style="width: 100%; height: 30%; -unity-font-style: bold; color: rgb(255, 202, 58); font-size: 100px; -unity-text-align: upper-center; white-space: normal; text-shadow: 0 3px 2px rgb(0, 0, 0); -unity-text-outline-width: 2px; -unity-text-outline-color: rgb(0, 0, 0);" />
                 <ui:Label text="Es un biólogo y empresario estadounidense. Fue el presidente fundador de Celera Genomics, haciéndose famoso al arrancar su propio Proyecto Genoma Humano en 1999." display-tooltip-when-elided="true" name="lbl-description" class="font-normal" style="width: 100%; height: 70%; color: rgb(255, 255, 255); font-size: 40px; white-space: normal; -unity-text-align: middle-center; background-color: rgba(79, 79, 79, 0.59); border-top-left-radius: 20px; border-bottom-left-radius: 20px; border-top-right-radius: 20px; border-bottom-right-radius: 20px;" />
             </ui:VisualElement>

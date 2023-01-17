@@ -15,6 +15,7 @@ namespace OVPBiotechSpace
         const string k_lblName = "lbl-name";
         const string k_lblDescription = "lbl-description";
         const string k_imageStyle = "btn-image";
+        const string k_BtnActive = "btn-sc-active";
 
         [SerializeField]
         private List<GameObject> models;
@@ -26,6 +27,7 @@ namespace OVPBiotechSpace
         Label m_lblName;
         Label m_lblDescription;
         private Character[] Characters;
+        private List<VisualElement> m_BtnSC = new List<VisualElement>();
         GameData gameData;
         //Action
         public static event Action<GameData> SettingsUpdated;
@@ -55,7 +57,7 @@ namespace OVPBiotechSpace
             {
                 VisualElement aux = new VisualElement();
                 aux.AddToClassList(k_BtnSC);
-                aux?.RegisterCallback<ClickEvent, int>(btnSC, i);
+                aux?.RegisterCallback<ClickEvent, int>(btnSC, i);                
                 //image
                 VisualElement image = new VisualElement();
                 image.AddToClassList(k_imageStyle);
@@ -63,6 +65,7 @@ namespace OVPBiotechSpace
                 //Addd
                 aux.Add(image);
                 m_countainerBtnSC?.Add(aux);
+                m_BtnSC.Add(aux);
             }
             
         }
@@ -78,8 +81,10 @@ namespace OVPBiotechSpace
             for (int i = 0; i < models.Count; i++)
             {
                 models[i].SetActive(false);
+                m_BtnSC[i].RemoveFromClassList(k_BtnActive);
             }
             models[index].SetActive(true);
+            m_BtnSC[index].AddToClassList(k_BtnActive);
             m_lblName.text = Characters[index].nombre;
             m_lblDescription.text = Characters[index].description;
         }

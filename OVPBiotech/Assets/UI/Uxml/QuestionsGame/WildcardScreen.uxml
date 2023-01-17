@@ -3,10 +3,18 @@
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement style="width: 100%; height: auto; margin-left: 15px; flex-direction: row; justify-content: space-between;">
         <ui:VisualElement>
-            <ui:Button display-tooltip-when-elided="true" name="btn-5050" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/5050_normal.png?fileID=21300000&amp;guid=b8528bacbcb1fa34ab10309a63b118f7&amp;type=3#5050_normal&apos;);" />
-            <ui:Button display-tooltip-when-elided="true" name="btn-audience" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/audience_normal.png?fileID=21300000&amp;guid=00f78474f5a29b744b13dfaba6330678&amp;type=3#audience_normal&apos;);" />
-            <ui:Button display-tooltip-when-elided="true" name="btn-switch" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/switch_2_normal.png?fileID=21300000&amp;guid=5fe0be33724e51b41aa07854418e1f2a&amp;type=3#switch_2_normal&apos;);" />
-            <ui:Button display-tooltip-when-elided="true" name="btn-expert" class="btn-wildcards" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/expert_normal.png?fileID=2800000&amp;guid=9767541c83cbc1347bd2c3dc948ddc0b&amp;type=3#expert_normal&apos;);" />
+            <ui:Button display-tooltip-when-elided="true" name="btn-5050" class="btn-wildcards">
+                <ui:VisualElement name="icon-btn1" class="icon-5050" />
+            </ui:Button>
+            <ui:Button display-tooltip-when-elided="true" name="btn-audience" class="btn-wildcards">
+                <ui:VisualElement name="icon-btn2" class="icon-audience" />
+            </ui:Button>
+            <ui:Button display-tooltip-when-elided="true" name="btn-switch" class="btn-wildcards">
+                <ui:VisualElement name="icon-btn3" class="icon-switch" />
+            </ui:Button>
+            <ui:Button display-tooltip-when-elided="true" name="btn-expert" class="btn-wildcards">
+                <ui:VisualElement name="icon-btn4" class="icon-expert" />
+            </ui:Button>
         </ui:VisualElement>
         <ui:VisualElement name="countainer-expertV" class="countainer-expert-off">
             <ui:Label text="Creo que la respuesta es ...." display-tooltip-when-elided="true" name="lbl-Expert" class="font-normal" style="font-size: 70px; -unity-font-style: bold; width: 100%; -unity-text-align: upper-center; -unity-text-outline-width: 3px; -unity-text-outline-color: rgb(0, 0, 0); white-space: normal; color: rgb(255, 255, 255); background-color: rgba(0, 0, 0, 0.47);" />

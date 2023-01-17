@@ -7,25 +7,6 @@ namespace OVPBiotechSpace
 {
     public class WildcardScreen : MenuScreenQG
     {
-        [Header("Normal Sprite")]
-        [SerializeField]
-        private Sprite normal5050Sprite;
-        [SerializeField]
-        private Sprite normalAudienceSprite;
-        [SerializeField]
-        private Sprite normalSwitchSprite;
-        [SerializeField]
-        private Sprite normalExpertSprite;
-        [Header("Used Sprite")]
-        [SerializeField]
-        private Sprite used5050Sprite;
-        [SerializeField]
-        private Sprite usedAudienceSprite;
-        [SerializeField]
-        private Sprite usedSwitchSprite;
-        [SerializeField]
-        private Sprite usedExpertSprite;
-
         #region UI-Style
         const string k_5050 = "btn-5050";
         const string k_audience = "btn-audience";
@@ -34,6 +15,9 @@ namespace OVPBiotechSpace
         const string k_countainerExpert = "countainer-expertV";
         const string k_countainerExpertStyle = "countainer-expert-on";
         const string k_lblExpert = "lbl-Expert";
+        const string k_StyleBtnWildcardsUsed = "btn-wildcards-used";
+        const string k_StyleIconWildcardsUsed = "icon-wildcards-used";
+        const string k_IconBtn = "icon-btn";
         #endregion
 
         #region Variables
@@ -42,6 +26,7 @@ namespace OVPBiotechSpace
         bool usedAudience = false;
         bool usedSwitch = false;
         bool usedExpert = false;
+        private List<VisualElement> m_IconBtn = new List<VisualElement>();
         private int probabilityOfCorrectAnswer = 90;
         private int persentsOfRightAnswer = 80;
         private bool[] isAnswerAvailable = new bool[4];
@@ -80,9 +65,10 @@ namespace OVPBiotechSpace
             m_expert = m_Root.Q<Button>(k_expert);
             m_countainerExpert = m_Root.Q<VisualElement>(k_countainerExpert);
             m_lblExpert = m_Root.Q<Label>(k_lblExpert);
-            for (int i = 1; i < 5; i++)
+            for (int i = 0; i < 4; i++)
             {               
-                isAnswerAvailable[i - 1] = true;
+                isAnswerAvailable[i] = true;
+                m_IconBtn.Add(m_Root.Q<VisualElement>(k_IconBtn + (i+1)));
             }
 
         }
@@ -114,8 +100,9 @@ namespace OVPBiotechSpace
                 used5050Right = true;
                 Update5050?.Invoke(wrongAnswers);
                 isAnswerAvailable[wrongAnswers[0] - 1] = false;
-                isAnswerAvailable[wrongAnswers[1] - 1] = false;
-                m_5050.style.backgroundImage = new StyleBackground(used5050Sprite);
+                isAnswerAvailable[wrongAnswers[1] - 1] = false;                
+                m_5050.AddToClassList(k_StyleBtnWildcardsUsed);
+                m_IconBtn[0].AddToClassList(k_StyleIconWildcardsUsed);
             }
         }
         void btnAudience(ClickEvent e)
@@ -124,7 +111,8 @@ namespace OVPBiotechSpace
             {
                 AudioManager.PlayDefaultButtonSound();
                 usedAudience = true;
-                m_audience.style.backgroundImage = new StyleBackground(usedAudienceSprite);
+                m_audience.AddToClassList(k_StyleBtnWildcardsUsed);
+                m_IconBtn[1].AddToClassList(k_StyleIconWildcardsUsed);                
                 int[] results = new int[4];
                 int idOfRightAnswer = q_option_correct; // (1 to 4)
 
@@ -234,7 +222,8 @@ namespace OVPBiotechSpace
                 AudioManager.PlayDefaultButtonSound();
                 UpdateSwitch.Invoke();
                 usedSwitch = true;
-                m_switch.style.backgroundImage = new StyleBackground(usedSwitchSprite);
+                m_switch.AddToClassList(k_StyleBtnWildcardsUsed);
+                m_IconBtn[2].AddToClassList(k_StyleIconWildcardsUsed);
             }
         }
         void btnExpert(ClickEvent e)
@@ -243,7 +232,8 @@ namespace OVPBiotechSpace
             {
                 AudioManager.PlayDefaultButtonSound();
                 usedExpert = true;
-                m_expert.style.backgroundImage = new StyleBackground(usedExpertSprite);
+                m_expert.AddToClassList(k_StyleBtnWildcardsUsed);
+                m_IconBtn[3].AddToClassList(k_StyleIconWildcardsUsed);                
                 if (used5050Right)
                 {
                     //probability of true equals to persentsOfRightAnswer%
@@ -339,10 +329,14 @@ namespace OVPBiotechSpace
             usedAudience = false;
             usedSwitch = false;
             usedExpert = false;
-            m_5050.style.backgroundImage = new StyleBackground(normal5050Sprite);
-            m_audience.style.backgroundImage = new StyleBackground(normalAudienceSprite);
-            m_switch.style.backgroundImage = new StyleBackground(normalSwitchSprite);
-            m_expert.style.backgroundImage = new StyleBackground(normalExpertSprite);
+            m_5050.RemoveFromClassList(k_StyleBtnWildcardsUsed);            
+            m_audience.RemoveFromClassList(k_StyleBtnWildcardsUsed);            
+            m_switch.RemoveFromClassList(k_StyleBtnWildcardsUsed);            
+            m_expert.RemoveFromClassList(k_StyleBtnWildcardsUsed);            
+            for (int i = 0; i < 4; i++)
+            {
+                m_IconBtn[i].RemoveFromClassList(k_StyleIconWildcardsUsed);
+            }
         }
     }
 }

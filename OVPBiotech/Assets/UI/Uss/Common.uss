@@ -230,3 +230,8 @@ GroupBox {
 .window2 {
     background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=-1359897187408746894&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#Window_bg2');
 }
+
+.font-title {
+    -unity-font-definition: none;
+    -unity-font: url('project://database/Assets/UI/Fonts/Bungee-Regular.ttf?fileID=12800000&guid=813d16ff0e2029449bcd6a328355c204&type=3#Bungee-Regular');
+}

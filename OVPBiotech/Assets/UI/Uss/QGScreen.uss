@@ -31,10 +31,10 @@
 }
 
 .btn-wildcards {
-    -unity-background-scale-mode: scale-to-fit;
+    -unity-background-scale-mode: scale-and-crop;
     -unity-background-image-tint-color: rgb(255, 255, 255);
-    width: 128px;
-    height: 96px;
+    width: 110px;
+    height: 110px;
     transition-duration: 0.25s;
     margin-bottom: 10px;
     background-color: rgba(255, 255, 255, 0);
@@ -42,11 +42,14 @@
     border-right-color: rgba(0, 0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0);
     border-bottom-color: rgba(0, 0, 0, 0);
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=2952183760112061380&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#bt_1');
+    justify-content: center;
+    align-items: center;
 }
 
-.btn-wildcards:hover {
+.btn-wildcards:active {
     scale: 1.1 1.1;
-    -unity-background-image-tint-color: rgb(255, 203, 0);
+    -unity-background-image-tint-color: rgba(14, 130, 109, 255);
 }
 
 .btn-wildcards-used {
@@ -151,4 +154,39 @@
 
 .display-on {
     display: flex;
+}
+
+.btn-wildcards-used {
+    background-image: url('project://database/Assets/UI/Textures/ui_atlas.psb?fileID=-3192904842174464713&guid=fc7e193f4985a6443ae96e9d0cc9c005&type=3#bt_2');
+}
+
+.icon-5050 {
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/5050.png?fileID=21300000&guid=14cc49516f1c63b4281b28c36f7b498c&type=3#5050');
+    width: 80%;
+    height: 80%;
+}
+
+.icon-audience {
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/massiveMultiplayer.png?fileID=21300000&guid=d5ff894d74a7bbf448d04c272389b114&type=3#massiveMultiplayer');
+    width: 100%;
+    height: 100%;
+}
+
+.icon-switch {
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/swap.png?fileID=21300000&guid=0b370cc1187e7d44085a9c2578789f4c&type=3#swap');
+    width: 75%;
+    height: 75%;
+}
+
+.icon-expert {
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/expert.png?fileID=21300000&guid=3404ad23749286240989e871496b2225&type=3#expert');
+    width: 80%;
+    height: 80%;
+    position: absolute;
+}
+
+.icon-wildcards-used {
+    background-image: url('project://database/Assets/Art%20Gameplay/2x/locked.png?fileID=21300000&guid=eaaeb908548696e4dacc5850c66155fe&type=3#locked');
+    width: 100%;
+    height: 100%;
 }
