@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fc51b9f19ed71b43bae766be4cf9bcd, type: 3}
   m_Name: Character5
   m_EditorClassIdentifier: 
-  nombre: Elizabeth Blackburn
-  description: "Es una bioqu\xEDmica australiana, descubridora de la telomerasa,una
-    enzima implicada en el envejecimiento celular y la formaci\xF3n de tumores."
-  btnImage: {fileID: 21300000, guid: 667c9e8181b9b6540aa9c98a9c08df68, type: 3}
+  nombre: J Craig Venter
+  description: "Fue el presidente fundador de Celera Genomics, haci\xE9ndose famoso
+    al arrancar su propio Proyecto Genoma Humano en 1999"
+  btnImage: {fileID: 21300000, guid: c8826212ca904ac46991bdb058909022, type: 3}

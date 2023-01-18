@@ -18,7 +18,7 @@
                 <ui:Button text="Manual" display-tooltip-when-elided="true" name="info-content__docs-button" class="button-orange info-bottom-button font-normal button-blue" />
                 <ui:Button text="Foro" display-tooltip-when-elided="true" name="info-content__forum-button" class="button-orange info-bottom-button font-normal button-blue" />
                 <ui:Button text="Blog" display-tooltip-when-elided="true" name="info-content__blog-button" class="button-orange info-bottom-button font-normal button-blue" />
-                <ui:Button text="Recursos" display-tooltip-when-elided="true" name="info-content__asset-button" class="button-orange info-bottom-button font-normal button-blue" />
+                <ui:Button text="Créditos" display-tooltip-when-elided="true" name="info-content__asset-button" class="button-orange info-bottom-button font-normal button-blue" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>
