@@ -15,4 +15,4 @@ MonoBehaviour:
   nombre: Herbert Boyer
   description: "Bioqu\xEDmico estadounidense y uno de los fundadores de la primera
     compa\xF1\xEDa de biotecnolog\xEDa Genentech."
-  btnImage: {fileID: 21300000, guid: 148f617d318fc0a4580c5d7f5cea8bc3, type: 3}
+  btnImage: {fileID: 21300000, guid: a0bb06d537b05bb42beb7dc879541327, type: 3}
