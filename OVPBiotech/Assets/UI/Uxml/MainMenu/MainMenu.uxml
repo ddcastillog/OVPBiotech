@@ -1,13 +1,15 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
     <ui:Template name="HomeScreen" src="project://database/Assets/UI/Uxml/MainMenu/HomeScreen.uxml?fileID=9197481963319205126&amp;guid=015c643d742c0c84499b44c0776ad69d&amp;type=3#HomeScreen" />
     <ui:Template name="InfoScreen" src="project://database/Assets/UI/Uxml/MainMenu/InfoScreen.uxml?fileID=9197481963319205126&amp;guid=dabb8b1b8ef78bd42bd893ab76127257&amp;type=3#InfoScreen" />
+    <ui:Template name="CategoryScreen" src="project://database/Assets/UI/Uxml/MainMenu/CategoryScreen.uxml?fileID=9197481963319205126&amp;guid=3b0fb6d3cb9cdc84694a7766890d38bf&amp;type=3#CategoryScreen" />
     <ui:Template name="MenuBar" src="project://database/Assets/UI/Uxml/MainMenu/MenuBar.uxml?fileID=9197481963319205126&amp;guid=870424c256eda4c458e29b8b80f662c5&amp;type=3#MenuBar" />
     <ui:Template name="OptionsBar" src="project://database/Assets/UI/Uxml/OptionsBar.uxml?fileID=9197481963319205126&amp;guid=1f7c51bb9190976498e000a6f9926f95&amp;type=3#OptionsBar" />
     <ui:Template name="SettingsScreen" src="project://database/Assets/UI/Uxml/MainMenu/SettingsScreen.uxml?fileID=9197481963319205126&amp;guid=9fafd901d5061ad4dbc2a5ae6f7baca2&amp;type=3#SettingsScreen" />
-    <ui:Template name="CategoryScreen" src="project://database/Assets/UI/Uxml/MainMenu/CategoryScreen.uxml?fileID=9197481963319205126&amp;guid=3b0fb6d3cb9cdc84694a7766890d38bf&amp;type=3#CategoryScreen" />
+    <ui:Template name="leaderboardScreen" src="project://database/Assets/UI/Uxml/MainMenu/leaderboardScreen.uxml?fileID=9197481963319205126&amp;guid=f894405615489a9458a1371c972c59b7&amp;type=3#leaderboardScreen" />
     <ui:Instance template="HomeScreen" name="HomeScreen" style="left: 0; top: 0; width: 100%; height: 100%; position: absolute; display: flex;" />
     <ui:Instance template="InfoScreen" name="InfoScreen" style="position: absolute; height: 100%; width: 100%; right: 0; bottom: 0; display: none;" />
     <ui:Instance template="CategoryScreen" name="CategoryScreen" style="width: 100%; height: 100%; position: absolute; right: 0; bottom: 0; display: none;" />
+    <ui:Instance template="leaderboardScreen" name="leaderboardScreen" style="width: 100%; height: 100%; display: none; position: absolute; right: 0; bottom: 0;" />
     <ui:Instance template="MenuBar" name="MenuBar" picking-mode="Ignore" style="height: 100%; width: 270px; position: absolute; left: 0;" />
     <ui:Instance template="OptionsBar" name="OptionsBar" style="position: absolute; right: 0; top: 0;" />
     <ui:Instance template="SettingsScreen" name="SettingsScreen" style="width: 100%; height: 100%; display: none;" />

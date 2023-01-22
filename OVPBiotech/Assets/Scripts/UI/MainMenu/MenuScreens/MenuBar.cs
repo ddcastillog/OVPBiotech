@@ -2,7 +2,8 @@ using System;
 using UnityEngine;
 using UnityEngine.UIElements;
 using System.Collections;
-
+using GooglePlayGames;
+using GooglePlayGames.BasicApi;
 namespace OVPBiotechSpace
 {
     // shows the menu buttons (bottom left) and level experience meter (top left)
@@ -13,11 +14,7 @@ namespace OVPBiotechSpace
         const string k_HomeScreenMenuButton = "menu__home-button";
         const string k_CategoryScreenMenuButton = "menu__category-button";
         const string k_InfoScreenMenuButton = "menu__info-button";       
-        const string k_BoardsScreenMenuButton = "menu__boards-button";
-
-        
-
-      
+        const string k_BoardsScreenMenuButton = "menu__boards-button";      
 
         // classes/selectors for toggling between active and inactive states
         const string k_LabelInactiveClass = "menu__label";
@@ -26,18 +23,14 @@ namespace OVPBiotechSpace
         const string k_IconActiveClass = "menu__icon--active";
 
         const string k_ButtonInactiveClass = "menu__button";
-        const string k_ButtonActiveClass = "menu__button--active";       
+        const string k_ButtonActiveClass = "menu__button--active";      
 
         // UI Buttons
         Button m_HomeScreenMenuButton;
         Button m_CategoryScreenMenuButton;
         Button m_InfoScreenMenuButton;        
         Button m_BoardsScreenMenuButton;
-
         
-
-        // root element to apply theme
-        VisualElement m_ThemeRootElement;
 
         protected override void SetVisualElements()
         {
@@ -58,13 +51,12 @@ namespace OVPBiotechSpace
             m_CategoryScreenMenuButton?.RegisterCallback<ClickEvent>(ShowCategoryScreen);
             m_InfoScreenMenuButton?.RegisterCallback<ClickEvent>(ShowInfoScreen);
             m_BoardsScreenMenuButton?.RegisterCallback<ClickEvent>(ShowBoardsScreen);            
-        }       
+        }        
 
         void ShowHomeScreen(ClickEvent evt)
         {
             ActivateButton(m_HomeScreenMenuButton);
-            m_MainMenuUIManager?.ShowHomeScreen();
-            
+            m_MainMenuUIManager?.ShowHomeScreen();            
         }
 
         void ShowCategoryScreen(ClickEvent evt)
@@ -77,14 +69,14 @@ namespace OVPBiotechSpace
         void ShowInfoScreen(ClickEvent evt)
         {
             ActivateButton(m_InfoScreenMenuButton);
-            m_MainMenuUIManager?.ShowInfoScreen();
-            
+            m_MainMenuUIManager?.ShowInfoScreen();           
 
         }
         
         void ShowBoardsScreen(ClickEvent evt)
         {           
-            ActivateButton(m_BoardsScreenMenuButton);           
+            ActivateButton(m_BoardsScreenMenuButton);
+            PlayGameManager.instance.ShowLeaderboarScreen();
         }
 
         void ActivateButton(Button menuButton)
@@ -117,13 +109,12 @@ namespace OVPBiotechSpace
             {
                 return;
             }
-
             // de-highlight whatever is currently active
             currentSelect?.RemoveFromClassList(activeClass);
             currentSelect?.AddToClassList(inactiveClass);
-
             visualElem.RemoveFromClassList(inactiveClass);
             visualElem.AddToClassList(activeClass);
         }
+        
     }
 }

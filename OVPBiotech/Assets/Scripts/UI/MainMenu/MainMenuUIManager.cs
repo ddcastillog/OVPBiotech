@@ -18,7 +18,7 @@ namespace OVPBiotechSpace
         [Tooltip("Only one modal interface can appear on-screen at a time.")]
         [SerializeField] HomeScreen m_HomeModalScreen;
         [SerializeField] InfoScreen m_InfoModalScreen;
-        [SerializeField] CategoryScreen m_CategoryModalScreen;
+        [SerializeField] CategoryScreen m_CategoryModalScreen;        
 
         [Header("Toolbars")]
         [Tooltip("Toolbars remain active at all times unless explicitly disabled.")]
@@ -53,7 +53,7 @@ namespace OVPBiotechSpace
             if (m_InfoModalScreen != null)
                 m_AllModalScreens.Add(m_InfoModalScreen);
             if (m_CategoryModalScreen != null)
-                m_AllModalScreens.Add(m_CategoryModalScreen);
+                m_AllModalScreens.Add(m_CategoryModalScreen);           
         }
 
         // shows one screen at a time
@@ -86,7 +86,7 @@ namespace OVPBiotechSpace
         public void ShowCategoryScreen()
         {
             ShowModalScreen(m_CategoryModalScreen);
-        }
+        }       
 
         // overlay screen methods
         public void ShowSettingsScreen()

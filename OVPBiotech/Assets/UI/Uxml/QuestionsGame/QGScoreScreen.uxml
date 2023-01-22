@@ -2,17 +2,18 @@
     <Style src="project://database/Assets/UI/Uss/QGWinScreen.uss?fileID=7433441132597879392&amp;guid=1e19d6ab4c3e0574aaf2637e0d57cbde&amp;type=3#QGWinScreen" />
     <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
     <ui:VisualElement class="countainer">
-        <ui:VisualElement class="window2" style="width: 700px; height: 500px; -unity-background-scale-mode: stretch-to-fill;">
-            <ui:VisualElement style="width: 100%; height: 50%; align-items: center;">
-                <ui:Label text="Puntuación" display-tooltip-when-elided="true" class="font-normal header" style="width: 90%; height: 45%; font-size: 80px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(255, 255, 255); margin-top: 30px; background-color: rgba(0, 0, 0, 0); top: -80px;" />
-                <ui:Label text="5/10" display-tooltip-when-elided="true" name="lbl-score" class="font-normal" style="width: 100%; height: 45%; font-size: 120px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(0, 0, 0);" />
+        <ui:VisualElement class="window2" style="width: 700px; height: 700px; -unity-background-scale-mode: stretch-to-fill;">
+            <ui:VisualElement style="width: 100%; height: 70%; align-items: center; justify-content: flex-start;">
+                <ui:Label text="Puntuación" display-tooltip-when-elided="true" class="font-normal header" style="width: 90%; height: 25%; font-size: 80px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(255, 255, 255); margin-top: 30px; background-color: rgba(0, 0, 0, 0); top: -80px; position: relative;" />
+                <ui:Label text="30" display-tooltip-when-elided="true" name="lbl-score" class="font-normal" style="width: 100%; height: 40%; font-size: 170px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(0, 135, 6); top: -50px;" />
+                <ui:Label text="5/10" display-tooltip-when-elided="true" name="lbl-correct-questions" class="font-normal" style="width: 100%; height: 35%; font-size: 120px; -unity-font-style: bold; -unity-text-align: middle-center; color: rgb(0, 0, 0); top: -50px;" />
             </ui:VisualElement>
             <ui:VisualElement style="width: 100%; height: auto; align-items: center; justify-content: center; position: absolute; bottom: 30px; flex-direction: row;">
                 <ui:Button display-tooltip-when-elided="true" name="btn-replay" class="btn-QGwin font-normal button-green">
-                    <ui:VisualElement style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/repit.png?fileID=21300000&amp;guid=f75a1e72c34b2e849be3eb5bd1ebd896&amp;type=3#repit&apos;);" />
+                    <ui:VisualElement style="width: 100%; height: 100%; background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/repit.png?fileID=21300000&amp;guid=f75a1e72c34b2e849be3eb5bd1ebd896&amp;type=3#repit&apos;);" />
                 </ui:Button>
                 <ui:Button display-tooltip-when-elided="true" name="btn-back" class="btn-QGwin font-normal button-red">
-                    <ui:VisualElement style="height: 100%; width: 100%; background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/exit.png?fileID=21300000&amp;guid=9ff2f7e4f26498d4c9ae4d406ee3c3e7&amp;type=3#exit&apos;);" />
+                    <ui:VisualElement style="height: 100%; width: 100%; background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/exit.png?fileID=21300000&amp;guid=9ff2f7e4f26498d4c9ae4d406ee3c3e7&amp;type=3#exit&apos;);" />
                 </ui:Button>
             </ui:VisualElement>
         </ui:VisualElement>

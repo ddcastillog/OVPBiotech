@@ -11,7 +11,7 @@ namespace OVPBiotechSpace
 {  // This controls general settings for the game. Many of these options are non-functional in this demo but
     // show how to sync data from a UI with the GameDataManager.
     public class PauseScreenQG : MenuScreenQG
-    {
+    {        
         public static event Action SettingsShown;
         public static event Action<GameData> SettingsUpdated;
         public static event Action MainMenuExited;
@@ -62,11 +62,10 @@ namespace OVPBiotechSpace
         public override void ShowScreen()
         {
             base.ShowScreen();
-
+            Time.timeScale = 0f;
             // add active style
             m_Panel.RemoveFromClassList(k_PanelInactiveClass);
-            m_Panel.AddToClassList(k_PanelActiveClass);
-
+            m_Panel.AddToClassList(k_PanelActiveClass);            
             // notify GameDataManager
             SettingsShown?.Invoke();
         }
@@ -150,12 +149,10 @@ namespace OVPBiotechSpace
         {
             m_Panel.RemoveFromClassList(k_PanelActiveClass);
             m_Panel.AddToClassList(k_PanelInactiveClass);
-
             AudioManager.PlayDefaultButtonSound();
-
             SettingsUpdated?.Invoke(m_SettingsData);
-
             HideScreen();
+            Time.timeScale = 1.0f;
         }
 
         // syncs saved data from the GameDataManager to the UI elements

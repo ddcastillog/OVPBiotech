@@ -80,6 +80,7 @@ namespace OVPBiotechSpace
                 }
                 this.gameData.categoryList = aux;
             }
+            SettingsUpdated?.Invoke(gameData);
             for (int i = 0; i < categoryList.Count; i++)
             {
                 Toggle tg = new Toggle();
@@ -89,14 +90,11 @@ namespace OVPBiotechSpace
                 tg.text = categoryList[i].name;
                 m_CountainerCategory?.Add(tg);
             }
-
-
         }
         private void BtnCategory(ChangeEvent<bool> evt, int index)
         {
             AudioManager.PlayDefaultButtonSound();
-            this.gameData.categoryList[index].IsSelect = evt.newValue;
-            this.gameData.categoryList[index].IsSelect = evt.newValue;
+            this.gameData.categoryList[index].IsSelect = evt.newValue;            
             SettingsUpdated?.Invoke(gameData);
         }
 
