@@ -46,7 +46,7 @@ namespace OVPBiotechSpace
         {
             FirebaseFirestore db = FirebaseFirestore.DefaultInstance;
             QuerySnapshot categorys;
-            categorys = await db.Collection(pathcategory).GetSnapshotAsync();
+            categorys = await db.Collection(pathcategory).GetSnapshotAsync(Source.Cache);
             foreach (DocumentSnapshot document in categorys.Documents)
             {
                 categoryList.Add(document.ConvertTo<Category>());

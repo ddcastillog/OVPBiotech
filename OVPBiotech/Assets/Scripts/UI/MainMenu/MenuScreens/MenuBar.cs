@@ -29,8 +29,8 @@ namespace OVPBiotechSpace
         Button m_HomeScreenMenuButton;
         Button m_CategoryScreenMenuButton;
         Button m_InfoScreenMenuButton;        
-        Button m_BoardsScreenMenuButton;
-        
+        Button m_BoardsScreenMenuButton;      
+
 
         protected override void SetVisualElements()
         {

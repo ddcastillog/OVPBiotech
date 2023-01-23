@@ -111,7 +111,7 @@ namespace OVPBiotechSpace
         void changeQuitButton(ClickEvent e)
         {
             MainMenuExited?.Invoke();
-            SceneManager.LoadScene(0);
+            SceneManager.LoadSceneAsync((int)NumberScenes.MAIN_MENU);
         }
 
         void ChangeSfxVolume(ClickEvent evt)

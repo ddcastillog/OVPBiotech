@@ -670,8 +670,6 @@ MonoBehaviour:
   m_ScreenName: HomeScreen
   m_MainMenuUIManager: {fileID: 2045776438}
   m_Document: {fileID: 2045776439}
-  pathquestion: question
-  pathdifficultyLevel: difficultyLevel
 --- !u!1 &1039473096
 GameObject:
   m_ObjectHideFlags: 0

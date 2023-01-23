@@ -2,7 +2,7 @@
 using UnityEngine.UIElements;
 using System;
 using System.Collections.Generic;
-
+using Firebase.Firestore;
 
 namespace OVPBiotechSpace
 {
@@ -16,6 +16,7 @@ namespace OVPBiotechSpace
         public bool musicVolume;
         public bool sfxVolume;
         public List<CategorySave> categoryList;
+        public string date_publish;
 
 
         // constructor, starting values

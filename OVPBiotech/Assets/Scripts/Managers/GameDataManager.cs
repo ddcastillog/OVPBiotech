@@ -10,27 +10,22 @@ namespace OVPBiotechSpace
     public class GameDataManager : MonoBehaviour
     {
         public static event Action<GameData> PotionsUpdated;
-        public static event Action<GameData> FundsUpdated;              
-        public static event Action<string> HomeMessageShown;
+        public static event Action<GameData> FundsUpdated;             
+       
 
         [SerializeField] GameData m_GameData;
         public GameData GameData { set => m_GameData = value; get => m_GameData; }
 
-        SaveManager m_SaveManager;
-        bool m_IsGameDataInitialized;
+        SaveManager m_SaveManager;        
 
         void OnEnable()
-        {
-            HomeScreen.HomeScreenShown += OnHomeScreenShown;
-            SettingsScreen.SettingsUpdated += OnSettingsUpdated;
-            
+        {            
+            SettingsScreen.SettingsUpdated += OnSettingsUpdated;            
         }
 
         void OnDisable()
-        {
-            HomeScreen.HomeScreenShown -= OnHomeScreenShown;
-            SettingsScreen.SettingsUpdated -= OnSettingsUpdated;
-           
+        {            
+            SettingsScreen.SettingsUpdated -= OnSettingsUpdated;           
         }
 
         void Awake()
@@ -42,10 +37,7 @@ namespace OVPBiotechSpace
         {
             //if saved data exists, load saved data
             m_SaveManager?.LoadGame();
-
-            // flag that GameData is loaded the first time
-            m_IsGameDataInitialized = true;
-            ShowWelcomeMessage();
+            // flag that GameData is loaded the first time                 
             UpdateFunds();
             UpdatePotions();
         }
@@ -61,13 +53,8 @@ namespace OVPBiotechSpace
         {
             if (m_GameData != null)
                 PotionsUpdated?.Invoke(m_GameData);
-        }
+        }        
         
-        void ShowWelcomeMessage()
-        {
-            string message = "Welcome "  + GameData.username;
-            HomeMessageShown?.Invoke(message);
-        }
         // update values from SettingsScreen
         void OnSettingsUpdated(GameData gameData)
         {
@@ -78,15 +65,6 @@ namespace OVPBiotechSpace
             m_GameData.sfxVolume = gameData.sfxVolume;
             m_GameData.musicVolume = gameData.musicVolume;          
            
-        }       
-
-        void OnHomeScreenShown()
-        {
-            if (m_IsGameDataInitialized)
-            {
-                ShowWelcomeMessage();
-            }
-        }     
-
+        }
     }
 }

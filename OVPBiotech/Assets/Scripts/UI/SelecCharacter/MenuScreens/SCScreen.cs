@@ -90,7 +90,7 @@ namespace OVPBiotechSpace
         }
         private void BtnStartGame(ClickEvent e)
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadSceneAsync((int)NumberScenes.QUESTIONGAME);
         }
         void OnGameDataLoaded(GameData gameData)
         {

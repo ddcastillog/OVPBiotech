@@ -210,7 +210,7 @@ namespace OVPBiotechSpace
             // use the gameData to set the music and sfx volume
 
             SetVolume(MusicGroup + k_Parameter, gameData.musicVolume?1:0);
-            SetVolume(SfxGroup + k_Parameter, gameData.sfxVolume ? 1 : 0);
+            SetVolume(SfxGroup + k_Parameter, gameData.sfxVolume?1:0);
         }
     }
 }

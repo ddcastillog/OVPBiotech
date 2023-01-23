@@ -218,6 +218,8 @@ namespace OVPBiotechSpace
             ResetGame.Invoke();
             correctAnswerOptions = 0;
             AnswerQuestions = 0;
+            AnswerQuestionsConsecutively = 0;
+            Score = 0;
             if (difficultyLevelList.Count > 0)
             {
                 if (categorySaves.Count > 0)

@@ -5,6 +5,7 @@ using UnityEngine.UIElements;
 using UnityEngine.Serialization;
 using System;
 
+
 namespace OVPBiotechSpace
 {
     // high-level manager for the various parts of the Main Menu UI. Here we use one master UXML and one UIDocument.
@@ -18,7 +19,7 @@ namespace OVPBiotechSpace
         [Tooltip("Only one modal interface can appear on-screen at a time.")]
         [SerializeField] HomeScreen m_HomeModalScreen;
         [SerializeField] InfoScreen m_InfoModalScreen;
-        [SerializeField] CategoryScreen m_CategoryModalScreen;        
+        [SerializeField] CategoryScreen m_CategoryModalScreen;
 
         [Header("Toolbars")]
         [Tooltip("Toolbars remain active at all times unless explicitly disabled.")]
@@ -27,9 +28,10 @@ namespace OVPBiotechSpace
 
         [Header("Full-screen overlays")]
         [Tooltip("Full-screen overlays block other controls until dismissed.")]
-        [SerializeField] SettingsScreen m_SettingsScreen;
+        [SerializeField] SettingsScreen m_SettingsScreen;       
 
-        List<MenuScreen> m_AllModalScreens = new List<MenuScreen>();
+
+        List<MenuScreen> m_AllModalScreens = new();
 
         UIDocument m_MainMenuDocument;
         public UIDocument MainMenuDocument => m_MainMenuDocument;
@@ -37,15 +39,14 @@ namespace OVPBiotechSpace
         void OnEnable()
         {
             m_MainMenuDocument = GetComponent<UIDocument>();
-            SetupModalScreens();
+            SetupModalScreens();            
             ShowHomeScreen();
         }
 
         void Start()
         {
-            Time.timeScale = 1f;
-        }
-
+            Time.timeScale = 1f;            
+        }       
         void SetupModalScreens()
         {
             if (m_HomeModalScreen != null)
@@ -53,7 +54,7 @@ namespace OVPBiotechSpace
             if (m_InfoModalScreen != null)
                 m_AllModalScreens.Add(m_InfoModalScreen);
             if (m_CategoryModalScreen != null)
-                m_AllModalScreens.Add(m_CategoryModalScreen);           
+                m_AllModalScreens.Add(m_CategoryModalScreen);
         }
 
         // shows one screen at a time
@@ -71,7 +72,7 @@ namespace OVPBiotechSpace
                 }
             }
         }
-        
+
 
         // modal screen methods 
         public void ShowHomeScreen()
@@ -86,13 +87,14 @@ namespace OVPBiotechSpace
         public void ShowCategoryScreen()
         {
             ShowModalScreen(m_CategoryModalScreen);
-        }       
+        }
 
         // overlay screen methods
         public void ShowSettingsScreen()
         {
             m_SettingsScreen?.ShowScreen();
         }
+        
 
     }
 

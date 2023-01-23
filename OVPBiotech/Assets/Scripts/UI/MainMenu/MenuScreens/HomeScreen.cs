@@ -2,8 +2,7 @@ using UnityEngine;
 using UnityEngine.UIElements;
 using UnityEngine.SceneManagement;
 using System;
-using Firebase.Firestore;
-using Firebase.Extensions;
+
 
 
 namespace OVPBiotechSpace
@@ -13,25 +12,13 @@ namespace OVPBiotechSpace
         public static event Action HomeScreenShown;
         const string k_PlayLevelButtonName = "home-play__level-button";
 
-        VisualElement m_PlayLevelButton;
-
-        [SerializeField]
-        private string pathquestion = "question";
-        [SerializeField]
-        private string pathdifficultyLevel = "difficultyLevel";   
+        VisualElement m_PlayLevelButton;        
 
         protected override void SetVisualElements()
         {
             base.SetVisualElements();
-            m_PlayLevelButton = m_Root.Q(k_PlayLevelButtonName);           
-            getData();
-        }
-         void getData()
-        {
-            FirebaseFirestore db = FirebaseFirestore.DefaultInstance;      
-            db.Collection(pathquestion).GetSnapshotAsync();
-            db.Collection(pathdifficultyLevel).GetSnapshotAsync();                    
-        }
+            m_PlayLevelButton = m_Root.Q(k_PlayLevelButtonName);          
+        }        
         
 
         protected override void RegisterButtonCallbacks()
@@ -42,7 +29,7 @@ namespace OVPBiotechSpace
         private void ClickPlayButton(ClickEvent evt)
         {
             AudioManager.PlayDefaultButtonSound();
-            SceneManager.LoadSceneAsync(1);
+            SceneManager.LoadSceneAsync((int)NumberScenes.SELECT_CHARACTER);
         }
 
         public override void ShowScreen()

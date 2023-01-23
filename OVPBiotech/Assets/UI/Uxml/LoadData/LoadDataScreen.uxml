@@ -1,0 +1,6 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/UI/Uss/Common.uss?fileID=7433441132597879392&amp;guid=463d710b9ab873a4e98850c5473d5fe8&amp;type=3#Common" />
+    <ui:VisualElement style="width: 100%; height: 100%; justify-content: center; align-items: center; background-image: url(&apos;project://database/Assets/UI/Textures/Border/bg/bg.png?fileID=21300000&amp;guid=712a4638f89d72a409927d60eaeb1acf&amp;type=3#bg&apos;);">
+        <ui:Label text="Cargando" display-tooltip-when-elided="true" name="lbl_message" class="font-title" style="-unity-text-align: upper-left; font-size: 100px; color: rgb(255, 255, 255); -unity-font-style: bold; width: 50%; position: absolute; bottom: 20%; left: 30%;" />
+    </ui:VisualElement>
+</ui:UXML>

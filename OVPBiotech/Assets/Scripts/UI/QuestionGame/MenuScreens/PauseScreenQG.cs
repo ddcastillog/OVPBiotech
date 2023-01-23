@@ -89,26 +89,14 @@ namespace OVPBiotechSpace
             m_PanelBackButton?.RegisterCallback<ClickEvent>(ClosePanel);
             m_Music?.RegisterCallback<ClickEvent>(ChangeMusicVolume);
             m_Sfx?.RegisterCallback<ClickEvent>(ChangeSfxVolume);
-            m_ResumeButton?.RegisterCallback<ClickEvent>(changeResumeButtton);
+            m_ResumeButton?.RegisterCallback<ClickEvent>(ClosePanel);
             m_QuitButton?.RegisterCallback<ClickEvent>(changeQuitButton);
             m_SettingsOverlay?.RegisterCallback<ClickEvent>(ClosePanel);
-        }
-        void changeResumeButtton(ClickEvent e)
-        {
-            m_Panel.RemoveFromClassList(k_PanelActiveClass);
-            m_Panel.AddToClassList(k_PanelInactiveClass);
-
-            AudioManager.PlayDefaultButtonSound();
-
-            SettingsUpdated?.Invoke(m_SettingsData);
-
-            HideScreen();
-
-        }
+        }        
         void changeQuitButton(ClickEvent e)
         {
             MainMenuExited?.Invoke();
-            SceneManager.LoadScene(0);
+            SceneManager.LoadSceneAsync((int)NumberScenes.MAIN_MENU);
         }
 
         void ChangeSfxVolume(ClickEvent evt)

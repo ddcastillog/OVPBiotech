@@ -47,7 +47,7 @@ namespace OVPBiotechSpace
         }
         void Back(ClickEvent e)
         {
-            SceneManager.LoadScene(0);
+            SceneManager.LoadSceneAsync((int)NumberScenes.MAIN_MENU);
         }
         void Replay(ClickEvent e)
         {
