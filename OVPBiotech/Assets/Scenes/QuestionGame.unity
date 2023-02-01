@@ -759,7 +759,7 @@ MonoBehaviour:
   - {fileID: 2094004852}
   - {fileID: 207125751}
   - {fileID: 361177677}
-  maxQuestions: 5
+  maxQuestions: 10
   rangeLevelUpDifficulty: 2
   timer: {fileID: 292847009}
 --- !u!1001 &621261726
@@ -1669,7 +1669,6 @@ MonoBehaviour:
   m_ScreenName: PauseScreen
   m_MainMenuUIManager: {fileID: 1943209221}
   m_Document: {fileID: 1943209219}
-  timer: {fileID: 292847009}
 --- !u!1 &1369668944 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6064494519603855497, guid: fabc79265d8501043a80b7c3e76d9431,
@@ -1708,7 +1707,7 @@ AudioSource:
   m_GameObject: {fileID: 1449583232}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 1604718913182635227, guid: ac794248e9b1e8a4195696f279f2d1cc,
+  OutputAudioMixerGroup: {fileID: -3152877372444680183, guid: 9007b3771ad666c499336b2023315763,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: aef600018b5d50049bb09d7fb9e31c63, type: 3}
   m_PlayOnAwake: 1

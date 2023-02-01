@@ -4,20 +4,20 @@
     <ui:VisualElement name="menu__background" picking-mode="Ignore" class="menu__background" style="align-items: flex-start; left: 0; flex-direction: column; justify-content: center;">
         <ui:VisualElement name="menu__button-group" picking-mode="Ignore" style="width: 200px; flex-grow: 0; display: flex; height: 75%; opacity: 1; background-color: rgba(191, 0, 255, 0); position: relative; justify-content: flex-end; margin-left: 0; min-height: 75%; min-width: 190px; margin-top: 1px; bottom: 1%; left: 6%; margin-bottom: 5px; flex-basis: 74%; max-height: 75%;">
             <ui:Button display-tooltip-when-elided="true" name="menu__home-button" class="menu__button--active cursor-b" style="flex-grow: 0; flex-shrink: 1;">
-                <ui:VisualElement name="menu-home-icon" picking-mode="Ignore" class="menu__icon--active" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/home.png?fileID=21300000&amp;guid=ac41d43b2b7c3b245ac23eee8fb715f2&amp;type=3#home&apos;); background-color: rgba(255, 255, 255, 0);" />
+                <ui:VisualElement name="menu-home-icon" picking-mode="Ignore" class="menu__icon--active" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/home.png?fileID=21300000&amp;guid=ac41d43b2b7c3b245ac23eee8fb715f2&amp;type=3#home&apos;); background-color: rgba(255, 255, 255, 0);" />
                 <ui:Label text="Inicio" display-tooltip-when-elided="true" name="menu-home-label" picking-mode="Ignore" class="menu__label--active font-normal" />
             </ui:Button>
             <ui:Button display-tooltip-when-elided="true" name="menu__category-button" class="menu__button cursor-b" style="margin-bottom: 0; flex-shrink: 1;">
-                <ui:VisualElement name="menu-category-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/categorias.png?fileID=21300000&amp;guid=04a453c4367947848b9a1d67c259ace5&amp;type=3#categorias&apos;); background-color: rgba(255, 255, 255, 0); width: 100px; height: 100px;" />
+                <ui:VisualElement name="menu-category-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/categorias.png?fileID=21300000&amp;guid=04a453c4367947848b9a1d67c259ace5&amp;type=3#categorias&apos;); background-color: rgba(255, 255, 255, 0); width: 100px; height: 100px;" />
                 <ui:Label text="Categoría" display-tooltip-when-elided="true" name="menu-char-label" picking-mode="Ignore" class="menu-label menu__label font-normal" style="position: absolute; bottom: 0;" />
             </ui:Button>
             <ui:Button display-tooltip-when-elided="true" name="menu__info-button" class="menu__button cursor-b">
-                <ui:VisualElement name="menu-info-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/information.png?fileID=21300000&amp;guid=a2d576d3840c4ca448f5524987f5dbd8&amp;type=3#information&apos;); background-color: rgba(255, 255, 255, 0);" />
+                <ui:VisualElement name="menu-info-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/information.png?fileID=21300000&amp;guid=a2d576d3840c4ca448f5524987f5dbd8&amp;type=3#information&apos;); background-color: rgba(255, 255, 255, 0);" />
                 <ui:Label text="Información" display-tooltip-when-elided="true" name="menu-info-label" picking-mode="Ignore" class="menu-label menu__label font-normal" />
             </ui:Button>
-            <ui:Button display-tooltip-when-elided="true" name="menu__boards-button" class="menu__button cursor-b">
-                <ui:VisualElement name="menu-boards-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/leaderboardsComplex.png?fileID=21300000&amp;guid=741f7d7f7dd052444b391f48a6e6e583&amp;type=3#leaderboardsComplex&apos;); background-color: rgba(255, 255, 255, 0);" />
-                <ui:Label text="Noticias" display-tooltip-when-elided="true" name="menu-mail-label" enable-rich-text="false" picking-mode="Ignore" class="menu-label menu__label font-normal" />
+            <ui:Button display-tooltip-when-elided="true" name="menu__boards-button" class="menu__button cursor-b" style="display: none;">
+                <ui:VisualElement name="menu-boards-icon" picking-mode="Ignore" class="menu__icon" style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/leaderboardsComplex.png?fileID=21300000&amp;guid=741f7d7f7dd052444b391f48a6e6e583&amp;type=3#leaderboardsComplex&apos;); background-color: rgba(255, 255, 255, 0);" />
+                <ui:Label text="Clasificación" display-tooltip-when-elided="true" name="menu-mail-label" enable-rich-text="false" picking-mode="Ignore" class="menu-label menu__label font-normal" />
             </ui:Button>
         </ui:VisualElement>
     </ui:VisualElement>

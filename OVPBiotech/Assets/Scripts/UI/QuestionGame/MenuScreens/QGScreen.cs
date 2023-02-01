@@ -267,7 +267,9 @@ namespace OVPBiotechSpace
             {
                 m_QGPanel.RemoveFromClassList(k_QGPanelActive);
                 timer.DisableTimer();
-                PlayGameManager.instance.sendScore(Score);
+#if PLATFORM_ANDROID
+                PlayGameManager.instance?.sendScore(Score);
+#endif
                 UpdateScore.Invoke(Score.ToString(),correctAnswerOptions + "/" + AnswerQuestions);
                 m_MainMenuUIManager?.ShowQGScoreScreen();
             } 

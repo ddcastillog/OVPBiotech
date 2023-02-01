@@ -5,7 +5,7 @@
     <ui:VisualElement name="QGPanel" class="countainer">
         <ui:VisualElement style="width: 100%; height: 50%; background-color: rgba(0, 0, 0, 0.71);">
             <ui:VisualElement style="width: 100%; height: 35%; align-items: center;">
-                <ui:Label text="Pregunta" display-tooltip-when-elided="true" name="lbl-question" class="lbl-question font-normal" />
+                <ui:Label text="Pregunta" display-tooltip-when-elided="true" name="lbl-question" class="lbl-question font-normal" style="-unity-font-style: bold;" />
             </ui:VisualElement>
             <ui:VisualElement style="width: 100%; height: 65%; flex-direction: column; justify-content: space-between;">
                 <ui:VisualElement class="countainer-answer">
@@ -52,7 +52,7 @@
             </ui:VisualElement>
             <ui:VisualElement style="flex-direction: row; position: absolute; bottom: 0; right: 0;">
                 <ui:Label text="Toca para continuar" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 50px; -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
-                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/2x/next.png?fileID=21300000&amp;guid=a0e1698c538737d44a1b067be722c392&amp;type=3#next&apos;); width: 100px; height: 100px;" />
+                <ui:VisualElement style="background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/next.png?fileID=21300000&amp;guid=a0e1698c538737d44a1b067be722c392&amp;type=3#next&apos;); width: 100px; height: 100px;" />
             </ui:VisualElement>
         </ui:VisualElement>
     </ui:VisualElement>

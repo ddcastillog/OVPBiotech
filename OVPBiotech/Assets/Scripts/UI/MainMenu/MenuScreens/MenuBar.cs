@@ -40,6 +40,9 @@ namespace OVPBiotechSpace
             m_CategoryScreenMenuButton = m_Root.Q<Button>(k_CategoryScreenMenuButton);
             m_InfoScreenMenuButton = m_Root.Q<Button>(k_InfoScreenMenuButton);
             m_BoardsScreenMenuButton = m_Root.Q<Button>(k_BoardsScreenMenuButton);
+#if PLATFORM_ANDROID
+            m_BoardsScreenMenuButton.style.display = DisplayStyle.Flex;
+#endif
         }
 
         protected override void RegisterButtonCallbacks()
@@ -63,8 +66,6 @@ namespace OVPBiotechSpace
         {
             ActivateButton(m_CategoryScreenMenuButton);
             m_MainMenuUIManager?.ShowCategoryScreen();
-           
-
         }
         void ShowInfoScreen(ClickEvent evt)
         {

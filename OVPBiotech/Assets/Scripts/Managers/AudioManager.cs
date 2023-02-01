@@ -84,10 +84,10 @@ namespace OVPBiotechSpace
             AudioMixerGroup[] groups = audioManager.m_MainAudioMixer.FindMatchingGroups(groupName);
 
             foreach (AudioMixerGroup match in groups)
-            {
-                if (match.ToString() == groupName)
+            {                
+                if (match.name == groupName)
                     return match;
-            }
+            }           
             return null;
 
         }
@@ -207,8 +207,7 @@ namespace OVPBiotechSpace
         // event-handling methods
         void OnSettingsUpdated(GameData gameData)
         {
-            // use the gameData to set the music and sfx volume
-
+            // use the gameData to set the music and sfx volume            
             SetVolume(MusicGroup + k_Parameter, gameData.musicVolume?1:0);
             SetVolume(SfxGroup + k_Parameter, gameData.sfxVolume?1:0);
         }

@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56662d7438cc11b42bebf96c5230efa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MainAudioMixer: {fileID: 24100000, guid: ac794248e9b1e8a4195696f279f2d1cc, type: 2}
+  m_MainAudioMixer: {fileID: 24100000, guid: 9007b3771ad666c499336b2023315763, type: 2}
   m_DefaultButtonSound: {fileID: 8300000, guid: 7541256652c8520439cc1d114678ddfe,
     type: 3}
   m_AltButtonSound: {fileID: 8300000, guid: 62cbc11087e0e13428202f666bf68755, type: 3}

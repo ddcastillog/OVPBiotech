@@ -7,6 +7,7 @@
     -unity-text-outline-color: rgba(0, 0, 0, 0.78);
     -unity-text-align: middle-center;
     white-space: normal;
+    -unity-font-style: bold;
 }
 
 .countainer-answer {
@@ -84,7 +85,7 @@
     transition-duration: 0.25s;
     display: none;
     translate: 100% 0;
-    background-image: url('project://database/Assets/Art%20Gameplay/character-icon/oldwoman.png?fileID=21300000&guid=ea85ef934bf27e14c886f992511f49cc&type=3#oldwoman');
+    background-image: url('project://database/Assets/Art%20Gameplay/character-icon/oldWoman.png?fileID=21300000&guid=ea85ef934bf27e14c886f992511f49cc&type=3#oldWoman');
 }
 
 .countainer-expert-on {
