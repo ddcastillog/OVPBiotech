@@ -45,10 +45,13 @@
         <ui:Instance template="WildcardScreen" name="WildcardScreen" style="width: 100%;" />
         <ui:VisualElement name="vs-explanation" class="countainer-explanation">
             <ui:VisualElement class="window" style="width: 70%; height: 70%; align-items: center; justify-content: flex-start;">
-                <ui:VisualElement class="header" style="width: 65%; height: auto; top: -30px; position: absolute;">
+                <ui:VisualElement class="header" style="width: 65%; height: auto; top: -30px; position: absolute; align-items: center; left: auto;">
                     <ui:Label text="EXPLICACIÓN" display-tooltip-when-elided="true" focusable="true" name="Label" class="font-normal" style="height: auto; width: 100%; font-size: 100px; -unity-text-align: middle-center; color: rgb(255, 255, 255); -unity-font-style: bold;" />
                 </ui:VisualElement>
                 <ui:Label display-tooltip-when-elided="true" name="lbl-explanation" class="font-normal" style="font-size: 65px; color: rgb(0, 0, 0); -unity-text-align: middle-center; width: 95%; white-space: normal; height: 76%; position: absolute; top: 100px;" />
+                <ui:Button display-tooltip-when-elided="true" name="btn-close-quest" class="font-normal button-red" style="justify-content: flex-start; align-items: stretch; position: absolute; right: -40px; top: -40px; width: 160px; height: 160px;">
+                    <ui:VisualElement style="height: 100%; width: 100%; background-image: url(&apos;project://database/Assets/Art%20Gameplay/icon/cross.png?fileID=21300000&amp;guid=4e8fa304e83cc81458055d253bf9b01f&amp;type=3#cross&apos;);" />
+                </ui:Button>
             </ui:VisualElement>
             <ui:VisualElement style="flex-direction: row; position: absolute; bottom: 0; right: 0;">
                 <ui:Label text="Toca para continuar" display-tooltip-when-elided="true" style="color: rgb(255, 255, 255); -unity-text-align: middle-left; font-size: 50px; -unity-font-style: bold; -unity-text-outline-width: 1px; -unity-text-outline-color: rgb(0, 0, 0);" />
